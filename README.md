@@ -11,7 +11,7 @@ To install, create a build folder:
     cd build
     cmake .. -DCUDA_USE_STATIC_CUDA_RUNTIME=OFF
 
-Make sure to install all the required dependencies from the original Caffe installation guide below before you compile Caffe or after when you get errors :). To replicate the results in the paper, make sure CUDNN is installed and configured for Caffe (i.e., by uncommenting the ``USE_CUDNN :=1`` flag in ``Makefile.config``).
+Make sure to install all the required dependencies from the original Caffe installation guide below before you compile Caffe or after you get errors :). To replicate the results in the paper, make sure CUDNN is installed and configured for Caffe (i.e., by uncommenting the ``USE_CUDNN :=1`` flag in ``Makefile.config``).
 
 ## Step 3
 Download your desired weights or train them in the form of a ``.caffemodel`` and put them in the ``models`` folder. You also need the lowrank version of your model. We have provided a few python scripts in ``models/lowrank`` that convert the DNNs used in the paper to their lowrank version. However, extending this technique to other DNNs is very easy by just using one of these scripts as a template.

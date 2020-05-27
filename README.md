@@ -1,20 +1,20 @@
 # NeuOS
 This is an implementation of the paper "A Latency-Predictable Multi-Dimensional Optimization Framework forDNN-driven Autonomous Systems". You can follow the normal Caffe build procedure. However, you would need a modified version of energymon for both the NVIDIA AGX Xavier and NVIDIA Jetson TX2. A repository with our version will follow up soon. You also need lowrank versions of a model. We have included the scripts for AlexNet, CaffeNet, GoogleNet, ResNet, and VGGNet to convert your trained or downloaded ".caffemodel" files to the lowrank version. Finally, you need a hash table for DVFS configurations. The execution format would then be:
 
-./classify.bin \
-  $proto \
-  $weight \
-  /home/nvidia/caffe-build/data/ilsvrc12/imagenet_mean.binaryproto \
-  /home/nvidia/caffe-build/data/ilsvrc12/synset_words.txt \
-  /home/nvidia/caffe-build/examples/images/cat.jpg \
-  15 \
-  25 \
-  5 \
-  DVFS configs \ # The index for possible DVFS configurations.
-  $HASH_TABLE \
-  $lowrank_proto \
-  $lowrank_weight
-
+    './classify.bin \
+      $proto \
+      $weight \
+      /home/nvidia/caffe-build/data/ilsvrc12/imagenet_mean.binaryproto \
+      /home/nvidia/caffe-build/data/ilsvrc12/synset_words.txt \
+      /home/nvidia/caffe-build/examples/images/cat.jpg \
+      15 \
+      25 \
+      5 \
+      DVFS configs \ # The index for possible DVFS configurations.
+      $HASH_TABLE \
+      $lowrank_proto \
+      $lowrank_weight'
+    
 Further instructions will soon follow.
 
 

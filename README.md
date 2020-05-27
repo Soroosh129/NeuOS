@@ -19,6 +19,8 @@ Download your desired weights or train them in the form of a ``.caffemodel`` and
 ## Step 4
 You need a hash table for DVFS configurations and their impact on performance and energy consumption. We have provided one for the Jetson TX2 located in the ``hashtables`` folder. We will add instruction on how to generate your own here soon. Since we are using only one approximation configuration (i.e., the lowrank) in this implementation (in addition to the baseline), no approximation hash table is required (i.e., the semantic is built-in to NeuOS).
 
+You also need a file containing all the possible DVFS configurations for your system, including memory, etc. in a partially sorted format. We have provided an ``all-TX2.config`` for the TX2.
+
 ## Step 5
 We have created a custom ``classification.cpp``, along with its own makefile in ``examples/triangle``:
 

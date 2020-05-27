@@ -26,7 +26,7 @@ We have created a custom ``classification.cpp``, along with its own makefile in 
 Make sure to modify the ``Makefile`` to reflect the folder structure on your device.
 
 ## Step 6
-In the same folder, you find the run-cudnn.sh, which has the following format (also node the preloading of your newly compiled Caffe, which is now the default TX2/AGX folder structure but should be changed according to your installation):
+In the same folder, you find the ``run-cudnn.sh``, which has the following format (also note the preloading of your newly compiled Caffe, which is now the default TX2/AGX folder structure but should be changed according to your installation):
 
     ./classify.bin \
       $proto \
@@ -43,7 +43,7 @@ In the same folder, you find the run-cudnn.sh, which has the following format (a
       $lowrank_weight'
     
 
-You can also use the ``parrallel.sh`` to run multiple instances of DNNs at the same time.
+You can re-use ``run-cudnn.sh`` or run using your own command. You can also use the ``parrallel.sh`` to run multiple instances of DNNs at the same time.
 
 
 # Caffe

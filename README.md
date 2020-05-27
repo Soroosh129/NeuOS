@@ -47,6 +47,9 @@ In the same folder, you find the run-cudnn.sh, which has the following format (a
 
 You can also use the ``parrallel.sh`` to run multiple instances of DNNs at the same time.
 
+Please cite NeuOS in your publications if it helps your research (please also cite Caffe below):
+
+    coming soon
 
 # Caffe
 

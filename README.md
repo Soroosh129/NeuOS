@@ -1,21 +1,49 @@
 # NeuOS
-This is an implementation of the paper "A Latency-Predictable Multi-Dimensional Optimization Framework forDNN-driven Autonomous Systems". You can follow the normal Caffe build procedure. However, you would need a modified version of energymon for both the NVIDIA AGX Xavier and NVIDIA Jetson TX2. A repository with our version will follow up soon. You also need lowrank versions of a model. We have included the scripts for AlexNet, CaffeNet, GoogleNet, ResNet, and VGGNet to convert your trained or downloaded ".caffemodel" files to the lowrank version. Finally, you need a hash table for DVFS configurations. The execution format would then be:
+This is an implementation of the paper "A Latency-Predictable Multi-Dimensional Optimization Framework forDNN-driven Autonomous Systems". 
 
-    './classify.bin \
+## Step 1
+Install the energymon located in energymon/TX2 following the instructions in the README file (the AGX version will follow soon).
+
+## Step 2
+To install, create a build folder:
+    mkdir build
+    cd build
+    cmake .. -DCUDA_USE_STATIC_CUDA_RUNTIME=OFF
+
+Make sure to install all the required dependencies from the original Caffe installation guide below before you compile Caffe or after when you get errors :). To replicate the results in the paper, make sure CUDNN is installed and configured for Caffe (i.e., by uncommenting the ``USE_CUDNN :=1`` flag in ``Makefile.config``).
+
+## Step 3
+Download your desired weights or train them in the form of a ``.caffemodel`` and put them in the ``models`` folder. You also need the lowrank version of your model. We have provided a few python scripts in ``models/lowrank`` that convert the DNNs used in the paper to their lowrank version. However, extending this technique to other DNNs is very easy by just using one of these scripts as a template.
+
+## Step 4
+You need a hash table for DVFS configurations and their impact on performance and energy consumption. We have provided one for the Jetson TX2 located in the ``hashtables`` folder. We will add instruction on how to generate your own here soon. Since we are using only one approximation configuration (i.e., the lowrank) in this implementation (in addition to the baseline), no approximation hash table is required (i.e., the semantic is built-in to NeuOS).
+
+## Step 5
+We have created a custom ``classification.cpp``, along with its own makefile in ``examples/triangle``:
+    cd examples/triangle
+    make
+
+Make sure to modify the ``Makefile`` to reflect the folder structure on your device.
+
+## Step 6
+In the same folder, you find the run-cudnn.sh, which has the following format (also node the preloading of your newly compiled Caffe, which is now the default TX2/AGX folder structure but should be changed according to your installation):
+
+    ./classify.bin \
       $proto \
       $weight \
       /home/nvidia/caffe-build/data/ilsvrc12/imagenet_mean.binaryproto \
       /home/nvidia/caffe-build/data/ilsvrc12/synset_words.txt \
       /home/nvidia/caffe-build/examples/images/cat.jpg \
-      15 \
-      25 \
-      5 \
+      15 \	     # Cohort Size
+      25 \           # Period (not used for now)
+      5 \            # Deadline
       DVFS configs \ # The index for possible DVFS configurations.
       $HASH_TABLE \
       $lowrank_proto \
       $lowrank_weight'
     
-Further instructions will soon follow.
+
+You can also use the ``parrallel.sh`` to run multiple instances of DNNs at the same time.
 
 
 # Caffe

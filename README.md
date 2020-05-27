@@ -34,9 +34,9 @@ In the same folder, you find the run-cudnn.sh, which has the following format (a
       /home/nvidia/caffe-build/data/ilsvrc12/imagenet_mean.binaryproto \
       /home/nvidia/caffe-build/data/ilsvrc12/synset_words.txt \
       /home/nvidia/caffe-build/examples/images/cat.jpg \
-      15 \	     # Cohort Size
-      25 \           # Period (not used for now)
-      5 \            # Deadline
+      15 \	     # Number of iterations (for research purposes and getting the average execution times)
+      25 \           # Deadline
+      5 \            # Initial slack (useless for now)
       DVFS configs \ # The index for possible DVFS configurations.
       $HASH_TABLE \
       $lowrank_proto \

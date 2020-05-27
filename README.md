@@ -6,6 +6,7 @@ Install the energymon located in energymon/TX2 following the instructions in the
 
 ## Step 2
 To install, create a build folder:
+
     mkdir build
     cd build
     cmake .. -DCUDA_USE_STATIC_CUDA_RUNTIME=OFF
@@ -20,6 +21,7 @@ You need a hash table for DVFS configurations and their impact on performance an
 
 ## Step 5
 We have created a custom ``classification.cpp``, along with its own makefile in ``examples/triangle``:
+
     cd examples/triangle
     make
 

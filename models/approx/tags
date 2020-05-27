@@ -1,0 +1,20 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CAFFE_ROOT	lowrank_approx.py	/^CAFFE_ROOT = '\/home\/nvidia\/caffe-build'$/;"	v
+_create_new	lowrank_approx.py	/^    def _create_new(name):$/;"	f	function:vh_decompose
+approx_lowrank_weights	lowrank_approx.py	/^def approx_lowrank_weights(orig_model, orig_weights, conf,$/;"	f
+args	lowrank_approx.py	/^    args = parser.parse_args()$/;"	v
+help	lowrank_approx.py	/^        help="Caffemodel of the original net")$/;"	v
+help	lowrank_approx.py	/^        help="JSON config file specifying the low-rank approximation")$/;"	v
+help	lowrank_approx.py	/^        help="Path to the caffemodel of the low-rank approximated net")$/;"	v
+help	lowrank_approx.py	/^        help="Path to the prototxt of the low-rank approximated net")$/;"	v
+help	lowrank_approx.py	/^        help="Prototxt of the original net")$/;"	v
+load_config	lowrank_approx.py	/^def load_config(config_file):$/;"	f
+main	lowrank_approx.py	/^def main(args):$/;"	f
+make_lowrank_model	lowrank_approx.py	/^def make_lowrank_model(input_file, conf, output_file):$/;"	f
+parser	lowrank_approx.py	/^    parser = ArgumentParser(description="Low-rank approximation")$/;"	v
+vh_decompose	lowrank_approx.py	/^def vh_decompose(conv, K):$/;"	f

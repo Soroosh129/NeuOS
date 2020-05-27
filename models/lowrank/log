@@ -1,0 +1,2025 @@
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W0417 03:05:01.485153 19818 _caffe.cpp:139] DEPRECATION WARNING - deprecated use of Python interface
+W0417 03:05:01.485247 19818 _caffe.cpp:140] Use this instead (with the named "weights" parameter):
+W0417 03:05:01.485292 19818 _caffe.cpp:142] Net('/home/nvidia/caffe-build/models/vggnet/VGG_ILSVRC_19_layers_deploy_V2.prototxt', 1, weights='/home/nvidia/caffe-build/models/vggnet/VGG_ILSVRC_19_layers.caffemodel')
+I0417 03:05:02.010569 19818 net.cpp:55] Initializing net from parameters: 
+name: "VGG_ILSVRC_19_layers"
+state {
+  phase: TEST
+  level: 0
+}
+layer {
+  name: "input"
+  type: "Input"
+  top: "data"
+  input_param {
+    shape {
+      dim: 1
+      dim: 3
+      dim: 224
+      dim: 224
+    }
+  }
+}
+layer {
+  name: "conv1_1"
+  type: "Convolution"
+  bottom: "data"
+  top: "conv1_1"
+  convolution_param {
+    num_output: 64
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "relu1_1"
+  type: "ReLU"
+  bottom: "conv1_1"
+  top: "conv1_1"
+}
+layer {
+  name: "conv1_2"
+  type: "Convolution"
+  bottom: "conv1_1"
+  top: "conv1_2"
+  convolution_param {
+    num_output: 64
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "relu1_2"
+  type: "ReLU"
+  bottom: "conv1_2"
+  top: "conv1_2"
+}
+layer {
+  name: "pool1"
+  type: "Pooling"
+  bottom: "conv1_2"
+  top: "pool1"
+  pooling_param {
+    pool: MAX
+    kernel_size: 2
+    stride: 2
+  }
+}
+layer {
+  name: "conv2_1"
+  type: "Convolution"
+  bottom: "pool1"
+  top: "conv2_1"
+  convolution_param {
+    num_output: 128
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "relu2_1"
+  type: "ReLU"
+  bottom: "conv2_1"
+  top: "conv2_1"
+}
+layer {
+  name: "conv2_2"
+  type: "Convolution"
+  bottom: "conv2_1"
+  top: "conv2_2"
+  convolution_param {
+    num_output: 128
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "relu2_2"
+  type: "ReLU"
+  bottom: "conv2_2"
+  top: "conv2_2"
+}
+layer {
+  name: "pool2"
+  type: "Pooling"
+  bottom: "conv2_2"
+  top: "pool2"
+  pooling_param {
+    pool: MAX
+    kernel_size: 2
+    stride: 2
+  }
+}
+layer {
+  name: "conv3_1"
+  type: "Convolution"
+  bottom: "pool2"
+  top: "conv3_1"
+  convolution_param {
+    num_output: 256
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "relu3_1"
+  type: "ReLU"
+  bottom: "conv3_1"
+  top: "conv3_1"
+}
+layer {
+  name: "conv3_2"
+  type: "Convolution"
+  bottom: "conv3_1"
+  top: "conv3_2"
+  convolution_param {
+    num_output: 256
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "relu3_2"
+  type: "ReLU"
+  bottom: "conv3_2"
+  top: "conv3_2"
+}
+layer {
+  name: "conv3_3"
+  type: "Convolution"
+  bottom: "conv3_2"
+  top: "conv3_3"
+  convolution_param {
+    num_output: 256
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "relu3_3"
+  type: "ReLU"
+  bottom: "conv3_3"
+  top: "conv3_3"
+}
+layer {
+  name: "conv3_4"
+  type: "Convolution"
+  bottom: "conv3_3"
+  top: "conv3_4"
+  convolution_param {
+    num_output: 256
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "relu3_4"
+  type: "ReLU"
+  bottom: "conv3_4"
+  top: "conv3_4"
+}
+layer {
+  name: "pool3"
+  type: "Pooling"
+  bottom: "conv3_4"
+  top: "pool3"
+  pooling_param {
+    pool: MAX
+    kernel_size: 2
+    stride: 2
+  }
+}
+layer {
+  name: "conv4_1"
+  type: "Convolution"
+  bottom: "pool3"
+  top: "conv4_1"
+  convolution_param {
+    num_output: 512
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "relu4_1"
+  type: "ReLU"
+  bottom: "conv4_1"
+  top: "conv4_1"
+}
+layer {
+  name: "conv4_2"
+  type: "Convolution"
+  bottom: "conv4_1"
+  top: "conv4_2"
+  convolution_param {
+    num_output: 512
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "relu4_2"
+  type: "ReLU"
+  bottom: "conv4_2"
+  top: "conv4_2"
+}
+layer {
+  name: "conv4_3"
+  type: "Convolution"
+  bottom: "conv4_2"
+  top: "conv4_3"
+  convolution_param {
+    num_output: 512
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "relu4_3"
+  type: "ReLU"
+  bottom: "conv4_3"
+  top: "conv4_3"
+}
+layer {
+  name: "conv4_4"
+  type: "Convolution"
+  bottom: "conv4_3"
+  top: "conv4_4"
+  convolution_param {
+    num_output: 512
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "relu4_4"
+  type: "ReLU"
+  bottom: "conv4_4"
+  top: "conv4_4"
+}
+layer {
+  name: "pool4"
+  type: "Pooling"
+  bottom: "conv4_4"
+  top: "pool4"
+  pooling_param {
+    pool: MAX
+    kernel_size: 2
+    stride: 2
+  }
+}
+layer {
+  name: "conv5_1"
+  type: "Convolution"
+  bottom: "pool4"
+  top: "conv5_1"
+  convolution_param {
+    num_output: 512
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "relu5_1"
+  type: "ReLU"
+  bottom: "conv5_1"
+  top: "conv5_1"
+}
+layer {
+  name: "conv5_2"
+  type: "Convolution"
+  bottom: "conv5_1"
+  top: "conv5_2"
+  convolution_param {
+    num_output: 512
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "relu5_2"
+  type: "ReLU"
+  bottom: "conv5_2"
+  top: "conv5_2"
+}
+layer {
+  name: "conv5_3"
+  type: "Convolution"
+  bottom: "conv5_2"
+  top: "conv5_3"
+  convolution_param {
+    num_output: 512
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "relu5_3"
+  type: "ReLU"
+  bottom: "conv5_3"
+  top: "conv5_3"
+}
+layer {
+  name: "conv5_4"
+  type: "Convolution"
+  bottom: "conv5_3"
+  top: "conv5_4"
+  convolution_param {
+    num_output: 512
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "relu5_4"
+  type: "ReLU"
+  bottom: "conv5_4"
+  top: "conv5_4"
+}
+layer {
+  name: "pool5"
+  type: "Pooling"
+  bottom: "conv5_4"
+  top: "pool5"
+  pooling_param {
+    pool: MAX
+    kernel_size: 2
+    stride: 2
+  }
+}
+layer {
+  name: "fc6"
+  type: "InnerProduct"
+  bottom: "pool5"
+  top: "fc6"
+  inner_product_param {
+    num_output: 4096
+  }
+}
+layer {
+  name: "relu6"
+  type: "ReLU"
+  bottom: "fc6"
+  top: "fc6"
+}
+layer {
+  name: "drop6"
+  type: "Dropout"
+  bottom: "fc6"
+  top: "fc6"
+  dropout_param {
+    dropout_ratio: 0.5
+  }
+}
+layer {
+  name: "fc7"
+  type: "InnerProduct"
+  bottom: "fc6"
+  top: "fc7"
+  inner_product_param {
+    num_output: 4096
+  }
+}
+layer {
+  name: "relu7"
+  type: "ReLU"
+  bottom: "fc7"
+  top: "fc7"
+}
+layer {
+  name: "drop7"
+  type: "Dropout"
+  bottom: "fc7"
+  top: "fc7"
+  dropout_param {
+    dropout_ratio: 0.5
+  }
+}
+layer {
+  name: "fc8"
+  type: "InnerProduct"
+  bottom: "fc7"
+  top: "fc8"
+  inner_product_param {
+    num_output: 1000
+  }
+}
+layer {
+  name: "prob"
+  type: "Softmax"
+  bottom: "fc8"
+  top: "prob"
+}
+I0417 03:05:02.011929 19818 layer_factory.hpp:77] Creating layer input
+I0417 03:05:02.011982 19818 net.cpp:88] Creating Layer input
+I0417 03:05:02.012003 19818 net.cpp:384] input -> data
+I0417 03:05:02.012068 19818 net.cpp:126] Setting up input
+I0417 03:05:02.012089 19818 net.cpp:133] Top shape: 1 3 224 224 (150528)
+I0417 03:05:02.012115 19818 net.cpp:141] Memory required for data: 602112
+I0417 03:05:02.012131 19818 layer_factory.hpp:77] Creating layer conv1_1
+I0417 03:05:02.012158 19818 net.cpp:88] Creating Layer conv1_1
+I0417 03:05:02.012174 19818 net.cpp:410] conv1_1 <- data
+I0417 03:05:02.012197 19818 net.cpp:384] conv1_1 -> conv1_1
+I0417 03:05:03.654760 19818 net.cpp:126] Setting up conv1_1
+I0417 03:05:03.654851 19818 net.cpp:133] Top shape: 1 64 224 224 (3211264)
+I0417 03:05:03.654881 19818 net.cpp:141] Memory required for data: 13447168
+I0417 03:05:03.654925 19818 layer_factory.hpp:77] Creating layer relu1_1
+I0417 03:05:03.654959 19818 net.cpp:88] Creating Layer relu1_1
+I0417 03:05:03.654978 19818 net.cpp:410] relu1_1 <- conv1_1
+I0417 03:05:03.654999 19818 net.cpp:371] relu1_1 -> conv1_1 (in-place)
+I0417 03:05:03.656153 19818 net.cpp:126] Setting up relu1_1
+I0417 03:05:03.656200 19818 net.cpp:133] Top shape: 1 64 224 224 (3211264)
+I0417 03:05:03.656226 19818 net.cpp:141] Memory required for data: 26292224
+I0417 03:05:03.656244 19818 layer_factory.hpp:77] Creating layer conv1_2
+I0417 03:05:03.656277 19818 net.cpp:88] Creating Layer conv1_2
+I0417 03:05:03.656294 19818 net.cpp:410] conv1_2 <- conv1_1
+I0417 03:05:03.656325 19818 net.cpp:384] conv1_2 -> conv1_2
+I0417 03:05:03.659876 19818 net.cpp:126] Setting up conv1_2
+I0417 03:05:03.659962 19818 net.cpp:133] Top shape: 1 64 224 224 (3211264)
+I0417 03:05:03.660014 19818 net.cpp:141] Memory required for data: 39137280
+I0417 03:05:03.660054 19818 layer_factory.hpp:77] Creating layer relu1_2
+I0417 03:05:03.660089 19818 net.cpp:88] Creating Layer relu1_2
+I0417 03:05:03.660107 19818 net.cpp:410] relu1_2 <- conv1_2
+I0417 03:05:03.660169 19818 net.cpp:371] relu1_2 -> conv1_2 (in-place)
+I0417 03:05:03.661010 19818 net.cpp:126] Setting up relu1_2
+I0417 03:05:03.661063 19818 net.cpp:133] Top shape: 1 64 224 224 (3211264)
+I0417 03:05:03.661089 19818 net.cpp:141] Memory required for data: 51982336
+I0417 03:05:03.661108 19818 layer_factory.hpp:77] Creating layer pool1
+I0417 03:05:03.661134 19818 net.cpp:88] Creating Layer pool1
+I0417 03:05:03.661150 19818 net.cpp:410] pool1 <- conv1_2
+I0417 03:05:03.661172 19818 net.cpp:384] pool1 -> pool1
+I0417 03:05:03.661206 19818 net.cpp:126] Setting up pool1
+I0417 03:05:03.661223 19818 net.cpp:133] Top shape: 1 64 112 112 (802816)
+I0417 03:05:03.661243 19818 net.cpp:141] Memory required for data: 55193600
+I0417 03:05:03.661258 19818 layer_factory.hpp:77] Creating layer conv2_1
+I0417 03:05:03.661286 19818 net.cpp:88] Creating Layer conv2_1
+I0417 03:05:03.661303 19818 net.cpp:410] conv2_1 <- pool1
+I0417 03:05:03.661324 19818 net.cpp:384] conv2_1 -> conv2_1
+I0417 03:05:03.664541 19818 net.cpp:126] Setting up conv2_1
+I0417 03:05:03.664613 19818 net.cpp:133] Top shape: 1 128 112 112 (1605632)
+I0417 03:05:03.664641 19818 net.cpp:141] Memory required for data: 61616128
+I0417 03:05:03.664678 19818 layer_factory.hpp:77] Creating layer relu2_1
+I0417 03:05:03.664707 19818 net.cpp:88] Creating Layer relu2_1
+I0417 03:05:03.664726 19818 net.cpp:410] relu2_1 <- conv2_1
+I0417 03:05:03.664747 19818 net.cpp:371] relu2_1 -> conv2_1 (in-place)
+I0417 03:05:03.665973 19818 net.cpp:126] Setting up relu2_1
+I0417 03:05:03.666014 19818 net.cpp:133] Top shape: 1 128 112 112 (1605632)
+I0417 03:05:03.666039 19818 net.cpp:141] Memory required for data: 68038656
+I0417 03:05:03.666057 19818 layer_factory.hpp:77] Creating layer conv2_2
+I0417 03:05:03.666095 19818 net.cpp:88] Creating Layer conv2_2
+I0417 03:05:03.666111 19818 net.cpp:410] conv2_2 <- conv2_1
+I0417 03:05:03.666134 19818 net.cpp:384] conv2_2 -> conv2_2
+I0417 03:05:03.669659 19818 net.cpp:126] Setting up conv2_2
+I0417 03:05:03.669734 19818 net.cpp:133] Top shape: 1 128 112 112 (1605632)
+I0417 03:05:03.669764 19818 net.cpp:141] Memory required for data: 74461184
+I0417 03:05:03.669796 19818 layer_factory.hpp:77] Creating layer relu2_2
+I0417 03:05:03.669826 19818 net.cpp:88] Creating Layer relu2_2
+I0417 03:05:03.669848 19818 net.cpp:410] relu2_2 <- conv2_2
+I0417 03:05:03.669900 19818 net.cpp:371] relu2_2 -> conv2_2 (in-place)
+I0417 03:05:03.671396 19818 net.cpp:126] Setting up relu2_2
+I0417 03:05:03.671483 19818 net.cpp:133] Top shape: 1 128 112 112 (1605632)
+I0417 03:05:03.671543 19818 net.cpp:141] Memory required for data: 80883712
+I0417 03:05:03.671561 19818 layer_factory.hpp:77] Creating layer pool2
+I0417 03:05:03.671588 19818 net.cpp:88] Creating Layer pool2
+I0417 03:05:03.671605 19818 net.cpp:410] pool2 <- conv2_2
+I0417 03:05:03.671628 19818 net.cpp:384] pool2 -> pool2
+I0417 03:05:03.671663 19818 net.cpp:126] Setting up pool2
+I0417 03:05:03.671681 19818 net.cpp:133] Top shape: 1 128 56 56 (401408)
+I0417 03:05:03.671701 19818 net.cpp:141] Memory required for data: 82489344
+I0417 03:05:03.671716 19818 layer_factory.hpp:77] Creating layer conv3_1
+I0417 03:05:03.671744 19818 net.cpp:88] Creating Layer conv3_1
+I0417 03:05:03.671761 19818 net.cpp:410] conv3_1 <- pool2
+I0417 03:05:03.671780 19818 net.cpp:384] conv3_1 -> conv3_1
+I0417 03:05:03.675710 19818 net.cpp:126] Setting up conv3_1
+I0417 03:05:03.675791 19818 net.cpp:133] Top shape: 1 256 56 56 (802816)
+I0417 03:05:03.675817 19818 net.cpp:141] Memory required for data: 85700608
+I0417 03:05:03.675860 19818 layer_factory.hpp:77] Creating layer relu3_1
+I0417 03:05:03.675892 19818 net.cpp:88] Creating Layer relu3_1
+I0417 03:05:03.675910 19818 net.cpp:410] relu3_1 <- conv3_1
+I0417 03:05:03.675933 19818 net.cpp:371] relu3_1 -> conv3_1 (in-place)
+I0417 03:05:03.677096 19818 net.cpp:126] Setting up relu3_1
+I0417 03:05:03.677139 19818 net.cpp:133] Top shape: 1 256 56 56 (802816)
+I0417 03:05:03.677191 19818 net.cpp:141] Memory required for data: 88911872
+I0417 03:05:03.677211 19818 layer_factory.hpp:77] Creating layer conv3_2
+I0417 03:05:03.677269 19818 net.cpp:88] Creating Layer conv3_2
+I0417 03:05:03.677290 19818 net.cpp:410] conv3_2 <- conv3_1
+I0417 03:05:03.677314 19818 net.cpp:384] conv3_2 -> conv3_2
+I0417 03:05:03.683760 19818 net.cpp:126] Setting up conv3_2
+I0417 03:05:03.683845 19818 net.cpp:133] Top shape: 1 256 56 56 (802816)
+I0417 03:05:03.683902 19818 net.cpp:141] Memory required for data: 92123136
+I0417 03:05:03.683936 19818 layer_factory.hpp:77] Creating layer relu3_2
+I0417 03:05:03.683967 19818 net.cpp:88] Creating Layer relu3_2
+I0417 03:05:03.683986 19818 net.cpp:410] relu3_2 <- conv3_2
+I0417 03:05:03.684010 19818 net.cpp:371] relu3_2 -> conv3_2 (in-place)
+I0417 03:05:03.685310 19818 net.cpp:126] Setting up relu3_2
+I0417 03:05:03.685349 19818 net.cpp:133] Top shape: 1 256 56 56 (802816)
+I0417 03:05:03.685372 19818 net.cpp:141] Memory required for data: 95334400
+I0417 03:05:03.685390 19818 layer_factory.hpp:77] Creating layer conv3_3
+I0417 03:05:03.685422 19818 net.cpp:88] Creating Layer conv3_3
+I0417 03:05:03.685441 19818 net.cpp:410] conv3_3 <- conv3_2
+I0417 03:05:03.685463 19818 net.cpp:384] conv3_3 -> conv3_3
+I0417 03:05:03.691709 19818 net.cpp:126] Setting up conv3_3
+I0417 03:05:03.691792 19818 net.cpp:133] Top shape: 1 256 56 56 (802816)
+I0417 03:05:03.691828 19818 net.cpp:141] Memory required for data: 98545664
+I0417 03:05:03.691898 19818 layer_factory.hpp:77] Creating layer relu3_3
+I0417 03:05:03.691959 19818 net.cpp:88] Creating Layer relu3_3
+I0417 03:05:03.691979 19818 net.cpp:410] relu3_3 <- conv3_3
+I0417 03:05:03.692003 19818 net.cpp:371] relu3_3 -> conv3_3 (in-place)
+I0417 03:05:03.693662 19818 net.cpp:126] Setting up relu3_3
+I0417 03:05:03.693715 19818 net.cpp:133] Top shape: 1 256 56 56 (802816)
+I0417 03:05:03.693748 19818 net.cpp:141] Memory required for data: 101756928
+I0417 03:05:03.693769 19818 layer_factory.hpp:77] Creating layer conv3_4
+I0417 03:05:03.693804 19818 net.cpp:88] Creating Layer conv3_4
+I0417 03:05:03.693822 19818 net.cpp:410] conv3_4 <- conv3_3
+I0417 03:05:03.693846 19818 net.cpp:384] conv3_4 -> conv3_4
+I0417 03:05:03.700520 19818 net.cpp:126] Setting up conv3_4
+I0417 03:05:03.700599 19818 net.cpp:133] Top shape: 1 256 56 56 (802816)
+I0417 03:05:03.700662 19818 net.cpp:141] Memory required for data: 104968192
+I0417 03:05:03.700695 19818 layer_factory.hpp:77] Creating layer relu3_4
+I0417 03:05:03.700726 19818 net.cpp:88] Creating Layer relu3_4
+I0417 03:05:03.700743 19818 net.cpp:410] relu3_4 <- conv3_4
+I0417 03:05:03.700773 19818 net.cpp:371] relu3_4 -> conv3_4 (in-place)
+I0417 03:05:03.702292 19818 net.cpp:126] Setting up relu3_4
+I0417 03:05:03.702338 19818 net.cpp:133] Top shape: 1 256 56 56 (802816)
+I0417 03:05:03.702386 19818 net.cpp:141] Memory required for data: 108179456
+I0417 03:05:03.702405 19818 layer_factory.hpp:77] Creating layer pool3
+I0417 03:05:03.702431 19818 net.cpp:88] Creating Layer pool3
+I0417 03:05:03.702447 19818 net.cpp:410] pool3 <- conv3_4
+I0417 03:05:03.702474 19818 net.cpp:384] pool3 -> pool3
+I0417 03:05:03.702512 19818 net.cpp:126] Setting up pool3
+I0417 03:05:03.702529 19818 net.cpp:133] Top shape: 1 256 28 28 (200704)
+I0417 03:05:03.702548 19818 net.cpp:141] Memory required for data: 108982272
+I0417 03:05:03.702561 19818 layer_factory.hpp:77] Creating layer conv4_1
+I0417 03:05:03.702594 19818 net.cpp:88] Creating Layer conv4_1
+I0417 03:05:03.702612 19818 net.cpp:410] conv4_1 <- pool3
+I0417 03:05:03.702632 19818 net.cpp:384] conv4_1 -> conv4_1
+I0417 03:05:03.712524 19818 net.cpp:126] Setting up conv4_1
+I0417 03:05:03.712610 19818 net.cpp:133] Top shape: 1 512 28 28 (401408)
+I0417 03:05:03.712678 19818 net.cpp:141] Memory required for data: 110587904
+I0417 03:05:03.712733 19818 layer_factory.hpp:77] Creating layer relu4_1
+I0417 03:05:03.712769 19818 net.cpp:88] Creating Layer relu4_1
+I0417 03:05:03.712787 19818 net.cpp:410] relu4_1 <- conv4_1
+I0417 03:05:03.712836 19818 net.cpp:371] relu4_1 -> conv4_1 (in-place)
+I0417 03:05:03.715023 19818 net.cpp:126] Setting up relu4_1
+I0417 03:05:03.715068 19818 net.cpp:133] Top shape: 1 512 28 28 (401408)
+I0417 03:05:03.715124 19818 net.cpp:141] Memory required for data: 112193536
+I0417 03:05:03.715183 19818 layer_factory.hpp:77] Creating layer conv4_2
+I0417 03:05:03.715227 19818 net.cpp:88] Creating Layer conv4_2
+I0417 03:05:03.715246 19818 net.cpp:410] conv4_2 <- conv4_1
+I0417 03:05:03.715276 19818 net.cpp:384] conv4_2 -> conv4_2
+I0417 03:05:03.728049 19818 net.cpp:126] Setting up conv4_2
+I0417 03:05:03.728130 19818 net.cpp:133] Top shape: 1 512 28 28 (401408)
+I0417 03:05:03.728157 19818 net.cpp:141] Memory required for data: 113799168
+I0417 03:05:03.728190 19818 layer_factory.hpp:77] Creating layer relu4_2
+I0417 03:05:03.728219 19818 net.cpp:88] Creating Layer relu4_2
+I0417 03:05:03.728237 19818 net.cpp:410] relu4_2 <- conv4_2
+I0417 03:05:03.728268 19818 net.cpp:371] relu4_2 -> conv4_2 (in-place)
+I0417 03:05:03.729696 19818 net.cpp:126] Setting up relu4_2
+I0417 03:05:03.729740 19818 net.cpp:133] Top shape: 1 512 28 28 (401408)
+I0417 03:05:03.729789 19818 net.cpp:141] Memory required for data: 115404800
+I0417 03:05:03.729807 19818 layer_factory.hpp:77] Creating layer conv4_3
+I0417 03:05:03.729845 19818 net.cpp:88] Creating Layer conv4_3
+I0417 03:05:03.729863 19818 net.cpp:410] conv4_3 <- conv4_2
+I0417 03:05:03.729885 19818 net.cpp:384] conv4_3 -> conv4_3
+I0417 03:05:03.742887 19818 net.cpp:126] Setting up conv4_3
+I0417 03:05:03.742976 19818 net.cpp:133] Top shape: 1 512 28 28 (401408)
+I0417 03:05:03.743002 19818 net.cpp:141] Memory required for data: 117010432
+I0417 03:05:03.743062 19818 layer_factory.hpp:77] Creating layer relu4_3
+I0417 03:05:03.743098 19818 net.cpp:88] Creating Layer relu4_3
+I0417 03:05:03.743119 19818 net.cpp:410] relu4_3 <- conv4_3
+I0417 03:05:03.743140 19818 net.cpp:371] relu4_3 -> conv4_3 (in-place)
+I0417 03:05:03.744349 19818 net.cpp:126] Setting up relu4_3
+I0417 03:05:03.744386 19818 net.cpp:133] Top shape: 1 512 28 28 (401408)
+I0417 03:05:03.744436 19818 net.cpp:141] Memory required for data: 118616064
+I0417 03:05:03.744458 19818 layer_factory.hpp:77] Creating layer conv4_4
+I0417 03:05:03.744495 19818 net.cpp:88] Creating Layer conv4_4
+I0417 03:05:03.744513 19818 net.cpp:410] conv4_4 <- conv4_3
+I0417 03:05:03.744545 19818 net.cpp:384] conv4_4 -> conv4_4
+I0417 03:05:03.757747 19818 net.cpp:126] Setting up conv4_4
+I0417 03:05:03.757845 19818 net.cpp:133] Top shape: 1 512 28 28 (401408)
+I0417 03:05:03.757870 19818 net.cpp:141] Memory required for data: 120221696
+I0417 03:05:03.757908 19818 layer_factory.hpp:77] Creating layer relu4_4
+I0417 03:05:03.757939 19818 net.cpp:88] Creating Layer relu4_4
+I0417 03:05:03.757956 19818 net.cpp:410] relu4_4 <- conv4_4
+I0417 03:05:03.757978 19818 net.cpp:371] relu4_4 -> conv4_4 (in-place)
+I0417 03:05:03.759093 19818 net.cpp:126] Setting up relu4_4
+I0417 03:05:03.759121 19818 net.cpp:133] Top shape: 1 512 28 28 (401408)
+I0417 03:05:03.759142 19818 net.cpp:141] Memory required for data: 121827328
+I0417 03:05:03.759189 19818 layer_factory.hpp:77] Creating layer pool4
+I0417 03:05:03.759222 19818 net.cpp:88] Creating Layer pool4
+I0417 03:05:03.759238 19818 net.cpp:410] pool4 <- conv4_4
+I0417 03:05:03.759259 19818 net.cpp:384] pool4 -> pool4
+I0417 03:05:03.759302 19818 net.cpp:126] Setting up pool4
+I0417 03:05:03.759321 19818 net.cpp:133] Top shape: 1 512 14 14 (100352)
+I0417 03:05:03.759341 19818 net.cpp:141] Memory required for data: 122228736
+I0417 03:05:03.759356 19818 layer_factory.hpp:77] Creating layer conv5_1
+I0417 03:05:03.759389 19818 net.cpp:88] Creating Layer conv5_1
+I0417 03:05:03.759405 19818 net.cpp:410] conv5_1 <- pool4
+I0417 03:05:03.759425 19818 net.cpp:384] conv5_1 -> conv5_1
+I0417 03:05:03.772881 19818 net.cpp:126] Setting up conv5_1
+I0417 03:05:03.772969 19818 net.cpp:133] Top shape: 1 512 14 14 (100352)
+I0417 03:05:03.772995 19818 net.cpp:141] Memory required for data: 122630144
+I0417 03:05:03.773027 19818 layer_factory.hpp:77] Creating layer relu5_1
+I0417 03:05:03.773087 19818 net.cpp:88] Creating Layer relu5_1
+I0417 03:05:03.773106 19818 net.cpp:410] relu5_1 <- conv5_1
+I0417 03:05:03.773134 19818 net.cpp:371] relu5_1 -> conv5_1 (in-place)
+I0417 03:05:03.774919 19818 net.cpp:126] Setting up relu5_1
+I0417 03:05:03.775000 19818 net.cpp:133] Top shape: 1 512 14 14 (100352)
+I0417 03:05:03.775033 19818 net.cpp:141] Memory required for data: 123031552
+I0417 03:05:03.775051 19818 layer_factory.hpp:77] Creating layer conv5_2
+I0417 03:05:03.775112 19818 net.cpp:88] Creating Layer conv5_2
+I0417 03:05:03.775159 19818 net.cpp:410] conv5_2 <- conv5_1
+I0417 03:05:03.775185 19818 net.cpp:384] conv5_2 -> conv5_2
+I0417 03:05:03.788558 19818 net.cpp:126] Setting up conv5_2
+I0417 03:05:03.788656 19818 net.cpp:133] Top shape: 1 512 14 14 (100352)
+I0417 03:05:03.788699 19818 net.cpp:141] Memory required for data: 123432960
+I0417 03:05:03.788733 19818 layer_factory.hpp:77] Creating layer relu5_2
+I0417 03:05:03.788808 19818 net.cpp:88] Creating Layer relu5_2
+I0417 03:05:03.788830 19818 net.cpp:410] relu5_2 <- conv5_2
+I0417 03:05:03.788853 19818 net.cpp:371] relu5_2 -> conv5_2 (in-place)
+I0417 03:05:03.790572 19818 net.cpp:126] Setting up relu5_2
+I0417 03:05:03.790619 19818 net.cpp:133] Top shape: 1 512 14 14 (100352)
+I0417 03:05:03.790642 19818 net.cpp:141] Memory required for data: 123834368
+I0417 03:05:03.790657 19818 layer_factory.hpp:77] Creating layer conv5_3
+I0417 03:05:03.790726 19818 net.cpp:88] Creating Layer conv5_3
+I0417 03:05:03.790746 19818 net.cpp:410] conv5_3 <- conv5_2
+I0417 03:05:03.790768 19818 net.cpp:384] conv5_3 -> conv5_3
+I0417 03:05:03.804271 19818 net.cpp:126] Setting up conv5_3
+I0417 03:05:03.804360 19818 net.cpp:133] Top shape: 1 512 14 14 (100352)
+I0417 03:05:03.804386 19818 net.cpp:141] Memory required for data: 124235776
+I0417 03:05:03.804419 19818 layer_factory.hpp:77] Creating layer relu5_3
+I0417 03:05:03.804466 19818 net.cpp:88] Creating Layer relu5_3
+I0417 03:05:03.804484 19818 net.cpp:410] relu5_3 <- conv5_3
+I0417 03:05:03.804513 19818 net.cpp:371] relu5_3 -> conv5_3 (in-place)
+I0417 03:05:03.805963 19818 net.cpp:126] Setting up relu5_3
+I0417 03:05:03.806005 19818 net.cpp:133] Top shape: 1 512 14 14 (100352)
+I0417 03:05:03.806026 19818 net.cpp:141] Memory required for data: 124637184
+I0417 03:05:03.806042 19818 layer_factory.hpp:77] Creating layer conv5_4
+I0417 03:05:03.806107 19818 net.cpp:88] Creating Layer conv5_4
+I0417 03:05:03.806125 19818 net.cpp:410] conv5_4 <- conv5_3
+I0417 03:05:03.806149 19818 net.cpp:384] conv5_4 -> conv5_4
+I0417 03:05:03.820267 19818 net.cpp:126] Setting up conv5_4
+I0417 03:05:03.820354 19818 net.cpp:133] Top shape: 1 512 14 14 (100352)
+I0417 03:05:03.820389 19818 net.cpp:141] Memory required for data: 125038592
+I0417 03:05:03.820421 19818 layer_factory.hpp:77] Creating layer relu5_4
+I0417 03:05:03.820475 19818 net.cpp:88] Creating Layer relu5_4
+I0417 03:05:03.820494 19818 net.cpp:410] relu5_4 <- conv5_4
+I0417 03:05:03.820523 19818 net.cpp:371] relu5_4 -> conv5_4 (in-place)
+I0417 03:05:03.822005 19818 net.cpp:126] Setting up relu5_4
+I0417 03:05:03.822046 19818 net.cpp:133] Top shape: 1 512 14 14 (100352)
+I0417 03:05:03.822067 19818 net.cpp:141] Memory required for data: 125440000
+I0417 03:05:03.822084 19818 layer_factory.hpp:77] Creating layer pool5
+I0417 03:05:03.822114 19818 net.cpp:88] Creating Layer pool5
+I0417 03:05:03.822160 19818 net.cpp:410] pool5 <- conv5_4
+I0417 03:05:03.822185 19818 net.cpp:384] pool5 -> pool5
+I0417 03:05:03.822245 19818 net.cpp:126] Setting up pool5
+I0417 03:05:03.822263 19818 net.cpp:133] Top shape: 1 512 7 7 (25088)
+I0417 03:05:03.822281 19818 net.cpp:141] Memory required for data: 125540352
+I0417 03:05:03.822296 19818 layer_factory.hpp:77] Creating layer fc6
+I0417 03:05:03.822317 19818 net.cpp:88] Creating Layer fc6
+I0417 03:05:03.822333 19818 net.cpp:410] fc6 <- pool5
+I0417 03:05:03.822357 19818 net.cpp:384] fc6 -> fc6
+I0417 03:05:04.188470 19818 net.cpp:126] Setting up fc6
+I0417 03:05:04.188730 19818 net.cpp:133] Top shape: 1 4096 (4096)
+I0417 03:05:04.188762 19818 net.cpp:141] Memory required for data: 125556736
+I0417 03:05:04.188849 19818 layer_factory.hpp:77] Creating layer relu6
+I0417 03:05:04.188882 19818 net.cpp:88] Creating Layer relu6
+I0417 03:05:04.188900 19818 net.cpp:410] relu6 <- fc6
+I0417 03:05:04.188922 19818 net.cpp:371] relu6 -> fc6 (in-place)
+I0417 03:05:04.190269 19818 net.cpp:126] Setting up relu6
+I0417 03:05:04.190304 19818 net.cpp:133] Top shape: 1 4096 (4096)
+I0417 03:05:04.190321 19818 net.cpp:141] Memory required for data: 125573120
+I0417 03:05:04.190338 19818 layer_factory.hpp:77] Creating layer drop6
+I0417 03:05:04.190368 19818 net.cpp:88] Creating Layer drop6
+I0417 03:05:04.190410 19818 net.cpp:410] drop6 <- fc6
+I0417 03:05:04.190433 19818 net.cpp:371] drop6 -> fc6 (in-place)
+I0417 03:05:04.190460 19818 net.cpp:126] Setting up drop6
+I0417 03:05:04.190474 19818 net.cpp:133] Top shape: 1 4096 (4096)
+I0417 03:05:04.190491 19818 net.cpp:141] Memory required for data: 125589504
+I0417 03:05:04.190505 19818 layer_factory.hpp:77] Creating layer fc7
+I0417 03:05:04.190532 19818 net.cpp:88] Creating Layer fc7
+I0417 03:05:04.190548 19818 net.cpp:410] fc7 <- fc6
+I0417 03:05:04.190567 19818 net.cpp:384] fc7 -> fc7
+I0417 03:05:04.250452 19818 net.cpp:126] Setting up fc7
+I0417 03:05:04.250542 19818 net.cpp:133] Top shape: 1 4096 (4096)
+I0417 03:05:04.250566 19818 net.cpp:141] Memory required for data: 125605888
+I0417 03:05:04.250598 19818 layer_factory.hpp:77] Creating layer relu7
+I0417 03:05:04.250627 19818 net.cpp:88] Creating Layer relu7
+I0417 03:05:04.250669 19818 net.cpp:410] relu7 <- fc7
+I0417 03:05:04.250711 19818 net.cpp:371] relu7 -> fc7 (in-place)
+I0417 03:05:04.252496 19818 net.cpp:126] Setting up relu7
+I0417 03:05:04.252550 19818 net.cpp:133] Top shape: 1 4096 (4096)
+I0417 03:05:04.252573 19818 net.cpp:141] Memory required for data: 125622272
+I0417 03:05:04.252591 19818 layer_factory.hpp:77] Creating layer drop7
+I0417 03:05:04.252624 19818 net.cpp:88] Creating Layer drop7
+I0417 03:05:04.252641 19818 net.cpp:410] drop7 <- fc7
+I0417 03:05:04.252696 19818 net.cpp:371] drop7 -> fc7 (in-place)
+I0417 03:05:04.252729 19818 net.cpp:126] Setting up drop7
+I0417 03:05:04.252744 19818 net.cpp:133] Top shape: 1 4096 (4096)
+I0417 03:05:04.252768 19818 net.cpp:141] Memory required for data: 125638656
+I0417 03:05:04.252782 19818 layer_factory.hpp:77] Creating layer fc8
+I0417 03:05:04.252804 19818 net.cpp:88] Creating Layer fc8
+I0417 03:05:04.252817 19818 net.cpp:410] fc8 <- fc7
+I0417 03:05:04.252836 19818 net.cpp:384] fc8 -> fc8
+I0417 03:05:04.267503 19818 net.cpp:126] Setting up fc8
+I0417 03:05:04.267590 19818 net.cpp:133] Top shape: 1 1000 (1000)
+I0417 03:05:04.267613 19818 net.cpp:141] Memory required for data: 125642656
+I0417 03:05:04.267643 19818 layer_factory.hpp:77] Creating layer prob
+I0417 03:05:04.267673 19818 net.cpp:88] Creating Layer prob
+I0417 03:05:04.267690 19818 net.cpp:410] prob <- fc8
+I0417 03:05:04.267757 19818 net.cpp:384] prob -> prob
+I0417 03:05:04.269089 19818 net.cpp:126] Setting up prob
+I0417 03:05:04.269138 19818 net.cpp:133] Top shape: 1 1000 (1000)
+I0417 03:05:04.269170 19818 net.cpp:141] Memory required for data: 125646656
+I0417 03:05:04.269193 19818 net.cpp:204] prob does not need backward computation.
+I0417 03:05:04.269210 19818 net.cpp:204] fc8 does not need backward computation.
+I0417 03:05:04.269224 19818 net.cpp:204] drop7 does not need backward computation.
+I0417 03:05:04.269238 19818 net.cpp:204] relu7 does not need backward computation.
+I0417 03:05:04.269251 19818 net.cpp:204] fc7 does not need backward computation.
+I0417 03:05:04.269266 19818 net.cpp:204] drop6 does not need backward computation.
+I0417 03:05:04.269279 19818 net.cpp:204] relu6 does not need backward computation.
+I0417 03:05:04.269294 19818 net.cpp:204] fc6 does not need backward computation.
+I0417 03:05:04.269340 19818 net.cpp:204] pool5 does not need backward computation.
+I0417 03:05:04.269356 19818 net.cpp:204] relu5_4 does not need backward computation.
+I0417 03:05:04.269368 19818 net.cpp:204] conv5_4 does not need backward computation.
+I0417 03:05:04.269381 19818 net.cpp:204] relu5_3 does not need backward computation.
+I0417 03:05:04.269394 19818 net.cpp:204] conv5_3 does not need backward computation.
+I0417 03:05:04.269408 19818 net.cpp:204] relu5_2 does not need backward computation.
+I0417 03:05:04.269423 19818 net.cpp:204] conv5_2 does not need backward computation.
+I0417 03:05:04.269469 19818 net.cpp:204] relu5_1 does not need backward computation.
+I0417 03:05:04.269484 19818 net.cpp:204] conv5_1 does not need backward computation.
+I0417 03:05:04.269500 19818 net.cpp:204] pool4 does not need backward computation.
+I0417 03:05:04.269515 19818 net.cpp:204] relu4_4 does not need backward computation.
+I0417 03:05:04.269528 19818 net.cpp:204] conv4_4 does not need backward computation.
+I0417 03:05:04.269543 19818 net.cpp:204] relu4_3 does not need backward computation.
+I0417 03:05:04.269557 19818 net.cpp:204] conv4_3 does not need backward computation.
+I0417 03:05:04.269572 19818 net.cpp:204] relu4_2 does not need backward computation.
+I0417 03:05:04.269599 19818 net.cpp:204] conv4_2 does not need backward computation.
+I0417 03:05:04.269615 19818 net.cpp:204] relu4_1 does not need backward computation.
+I0417 03:05:04.269629 19818 net.cpp:204] conv4_1 does not need backward computation.
+I0417 03:05:04.269644 19818 net.cpp:204] pool3 does not need backward computation.
+I0417 03:05:04.269659 19818 net.cpp:204] relu3_4 does not need backward computation.
+I0417 03:05:04.269672 19818 net.cpp:204] conv3_4 does not need backward computation.
+I0417 03:05:04.269686 19818 net.cpp:204] relu3_3 does not need backward computation.
+I0417 03:05:04.269701 19818 net.cpp:204] conv3_3 does not need backward computation.
+I0417 03:05:04.269714 19818 net.cpp:204] relu3_2 does not need backward computation.
+I0417 03:05:04.269728 19818 net.cpp:204] conv3_2 does not need backward computation.
+I0417 03:05:04.269743 19818 net.cpp:204] relu3_1 does not need backward computation.
+I0417 03:05:04.269757 19818 net.cpp:204] conv3_1 does not need backward computation.
+I0417 03:05:04.269773 19818 net.cpp:204] pool2 does not need backward computation.
+I0417 03:05:04.269788 19818 net.cpp:204] relu2_2 does not need backward computation.
+I0417 03:05:04.269801 19818 net.cpp:204] conv2_2 does not need backward computation.
+I0417 03:05:04.269815 19818 net.cpp:204] relu2_1 does not need backward computation.
+I0417 03:05:04.269829 19818 net.cpp:204] conv2_1 does not need backward computation.
+I0417 03:05:04.269845 19818 net.cpp:204] pool1 does not need backward computation.
+I0417 03:05:04.269858 19818 net.cpp:204] relu1_2 does not need backward computation.
+I0417 03:05:04.269872 19818 net.cpp:204] conv1_2 does not need backward computation.
+I0417 03:05:04.269887 19818 net.cpp:204] relu1_1 does not need backward computation.
+I0417 03:05:04.269901 19818 net.cpp:204] conv1_1 does not need backward computation.
+I0417 03:05:04.269917 19818 net.cpp:204] input does not need backward computation.
+I0417 03:05:04.269929 19818 net.cpp:246] This network produces output prob
+I0417 03:05:04.270038 19818 net.cpp:259] Network initialization done.
+[libprotobuf WARNING google/protobuf/io/coded_stream.cc:537] Reading dangerously large protocol message.  If the message turns out to be larger than 2147483647 bytes, parsing will be halted for security reasons.  To increase the limit (or to disable these warnings), see CodedInputStream::SetTotalBytesLimit() in google/protobuf/io/coded_stream.h.
+[libprotobuf WARNING google/protobuf/io/coded_stream.cc:78] The total number of bytes read was 574671192
+I0417 03:05:04.949697 19818 upgrade_proto.cpp:53] Attempting to upgrade input file specified using deprecated V1LayerParameter: /home/nvidia/caffe-build/models/vggnet/VGG_ILSVRC_19_layers.caffemodel
+I0417 03:05:06.503553 19818 upgrade_proto.cpp:61] Successfully upgraded file specified using deprecated V1LayerParameter
+I0417 03:05:06.528146 19818 upgrade_proto.cpp:67] Attempting to upgrade input file specified using deprecated input fields: /home/nvidia/caffe-build/models/vggnet/VGG_ILSVRC_19_layers.caffemodel
+I0417 03:05:06.528249 19818 upgrade_proto.cpp:70] Successfully upgraded file specified using deprecated input fields.
+W0417 03:05:06.528264 19818 upgrade_proto.cpp:72] Note that future Caffe releases will only support input layers and not input fields.
+W0417 03:05:06.665140 19818 _caffe.cpp:139] DEPRECATION WARNING - deprecated use of Python interface
+W0417 03:05:06.665262 19818 _caffe.cpp:140] Use this instead (with the named "weights" parameter):
+W0417 03:05:06.665280 19818 _caffe.cpp:142] Net('vggnet_lowrank_deploy.prototxt', 1, weights='/home/nvidia/caffe-build/models/vggnet/VGG_ILSVRC_19_layers.caffemodel')
+I0417 03:05:06.666862 19818 net.cpp:55] Initializing net from parameters: 
+name: "VGG_ILSVRC_19_layers"
+state {
+  phase: TEST
+  level: 0
+}
+layer {
+  name: "input"
+  type: "Input"
+  top: "data"
+  input_param {
+    shape {
+      dim: 1
+      dim: 3
+      dim: 224
+      dim: 224
+    }
+  }
+}
+layer {
+  name: "conv1_1_v"
+  type: "Convolution"
+  bottom: "data"
+  top: "conv1_1_v"
+  convolution_param {
+    num_output: 8
+    pad_h: 1
+    pad_w: 0
+    kernel_h: 3
+    kernel_w: 1
+    stride_h: 1
+    stride_w: 1
+  }
+}
+layer {
+  name: "conv1_1_h"
+  type: "Convolution"
+  bottom: "conv1_1_v"
+  top: "conv1_1"
+  convolution_param {
+    num_output: 64
+    pad_h: 0
+    pad_w: 1
+    kernel_h: 1
+    kernel_w: 3
+    stride_h: 1
+    stride_w: 1
+  }
+}
+layer {
+  name: "relu1_1"
+  type: "ReLU"
+  bottom: "conv1_1"
+  top: "conv1_1"
+}
+layer {
+  name: "conv1_2_v"
+  type: "Convolution"
+  bottom: "conv1_1"
+  top: "conv1_2_v"
+  convolution_param {
+    num_output: 40
+    pad_h: 1
+    pad_w: 0
+    kernel_h: 3
+    kernel_w: 1
+    stride_h: 1
+    stride_w: 1
+  }
+}
+layer {
+  name: "conv1_2_h"
+  type: "Convolution"
+  bottom: "conv1_2_v"
+  top: "conv1_2"
+  convolution_param {
+    num_output: 64
+    pad_h: 0
+    pad_w: 1
+    kernel_h: 1
+    kernel_w: 3
+    stride_h: 1
+    stride_w: 1
+  }
+}
+layer {
+  name: "relu1_2"
+  type: "ReLU"
+  bottom: "conv1_2"
+  top: "conv1_2"
+}
+layer {
+  name: "pool1"
+  type: "Pooling"
+  bottom: "conv1_2"
+  top: "pool1"
+  pooling_param {
+    pool: MAX
+    kernel_size: 2
+    stride: 2
+  }
+}
+layer {
+  name: "conv2_1_v"
+  type: "Convolution"
+  bottom: "pool1"
+  top: "conv2_1_v"
+  convolution_param {
+    num_output: 60
+    pad_h: 1
+    pad_w: 0
+    kernel_h: 3
+    kernel_w: 1
+    stride_h: 1
+    stride_w: 1
+  }
+}
+layer {
+  name: "conv2_1_h"
+  type: "Convolution"
+  bottom: "conv2_1_v"
+  top: "conv2_1"
+  convolution_param {
+    num_output: 128
+    pad_h: 0
+    pad_w: 1
+    kernel_h: 1
+    kernel_w: 3
+    stride_h: 1
+    stride_w: 1
+  }
+}
+layer {
+  name: "relu2_1"
+  type: "ReLU"
+  bottom: "conv2_1"
+  top: "conv2_1"
+}
+layer {
+  name: "conv2_2_v"
+  type: "Convolution"
+  bottom: "conv2_1"
+  top: "conv2_2_v"
+  convolution_param {
+    num_output: 100
+    pad_h: 1
+    pad_w: 0
+    kernel_h: 3
+    kernel_w: 1
+    stride_h: 1
+    stride_w: 1
+  }
+}
+layer {
+  name: "conv2_2_h"
+  type: "Convolution"
+  bottom: "conv2_2_v"
+  top: "conv2_2"
+  convolution_param {
+    num_output: 128
+    pad_h: 0
+    pad_w: 1
+    kernel_h: 1
+    kernel_w: 3
+    stride_h: 1
+    stride_w: 1
+  }
+}
+layer {
+  name: "relu2_2"
+  type: "ReLU"
+  bottom: "conv2_2"
+  top: "conv2_2"
+}
+layer {
+  name: "pool2"
+  type: "Pooling"
+  bottom: "conv2_2"
+  top: "pool2"
+  pooling_param {
+    pool: MAX
+    kernel_size: 2
+    stride: 2
+  }
+}
+layer {
+  name: "conv3_1_v"
+  type: "Convolution"
+  bottom: "pool2"
+  top: "conv3_1_v"
+  convolution_param {
+    num_output: 200
+    pad_h: 1
+    pad_w: 0
+    kernel_h: 3
+    kernel_w: 1
+    stride_h: 1
+    stride_w: 1
+  }
+}
+layer {
+  name: "conv3_1_h"
+  type: "Convolution"
+  bottom: "conv3_1_v"
+  top: "conv3_1"
+  convolution_param {
+    num_output: 256
+    pad_h: 0
+    pad_w: 1
+    kernel_h: 1
+    kernel_w: 3
+    stride_h: 1
+    stride_w: 1
+  }
+}
+layer {
+  name: "relu3_1"
+  type: "ReLU"
+  bottom: "conv3_1"
+  top: "conv3_1"
+}
+layer {
+  name: "conv3_2_v"
+  type: "Convolution"
+  bottom: "conv3_1"
+  top: "conv3_2_v"
+  convolution_param {
+    num_output: 200
+    pad_h: 1
+    pad_w: 0
+    kernel_h: 3
+    kernel_w: 1
+    stride_h: 1
+    stride_w: 1
+  }
+}
+layer {
+  name: "conv3_2_h"
+  type: "Convolution"
+  bottom: "conv3_2_v"
+  top: "conv3_2"
+  convolution_param {
+    num_output: 256
+    pad_h: 0
+    pad_w: 1
+    kernel_h: 1
+    kernel_w: 3
+    stride_h: 1
+    stride_w: 1
+  }
+}
+layer {
+  name: "relu3_2"
+  type: "ReLU"
+  bottom: "conv3_2"
+  top: "conv3_2"
+}
+layer {
+  name: "conv3_3_v"
+  type: "Convolution"
+  bottom: "conv3_2"
+  top: "conv3_3_v"
+  convolution_param {
+    num_output: 200
+    pad_h: 1
+    pad_w: 0
+    kernel_h: 3
+    kernel_w: 1
+    stride_h: 1
+    stride_w: 1
+  }
+}
+layer {
+  name: "conv3_3_h"
+  type: "Convolution"
+  bottom: "conv3_3_v"
+  top: "conv3_3"
+  convolution_param {
+    num_output: 256
+    pad_h: 0
+    pad_w: 1
+    kernel_h: 1
+    kernel_w: 3
+    stride_h: 1
+    stride_w: 1
+  }
+}
+layer {
+  name: "relu3_3"
+  type: "ReLU"
+  bottom: "conv3_3"
+  top: "conv3_3"
+}
+layer {
+  name: "conv3_4_v"
+  type: "Convolution"
+  bottom: "conv3_3"
+  top: "conv3_4_v"
+  convolution_param {
+    num_output: 200
+    pad_h: 1
+    pad_w: 0
+    kernel_h: 3
+    kernel_w: 1
+    stride_h: 1
+    stride_w: 1
+  }
+}
+layer {
+  name: "conv3_4_h"
+  type: "Convolution"
+  bottom: "conv3_4_v"
+  top: "conv3_4"
+  convolution_param {
+    num_output: 256
+    pad_h: 0
+    pad_w: 1
+    kernel_h: 1
+    kernel_w: 3
+    stride_h: 1
+    stride_w: 1
+  }
+}
+layer {
+  name: "relu3_4"
+  type: "ReLU"
+  bottom: "conv3_4"
+  top: "conv3_4"
+}
+layer {
+  name: "pool3"
+  type: "Pooling"
+  bottom: "conv3_4"
+  top: "pool3"
+  pooling_param {
+    pool: MAX
+    kernel_size: 2
+    stride: 2
+  }
+}
+layer {
+  name: "conv4_1_v"
+  type: "Convolution"
+  bottom: "pool3"
+  top: "conv4_1_v"
+  convolution_param {
+    num_output: 200
+    pad_h: 1
+    pad_w: 0
+    kernel_h: 3
+    kernel_w: 1
+    stride_h: 1
+    stride_w: 1
+  }
+}
+layer {
+  name: "conv4_1_h"
+  type: "Convolution"
+  bottom: "conv4_1_v"
+  top: "conv4_1"
+  convolution_param {
+    num_output: 512
+    pad_h: 0
+    pad_w: 1
+    kernel_h: 1
+    kernel_w: 3
+    stride_h: 1
+    stride_w: 1
+  }
+}
+layer {
+  name: "relu4_1"
+  type: "ReLU"
+  bottom: "conv4_1"
+  top: "conv4_1"
+}
+layer {
+  name: "conv4_2_v"
+  type: "Convolution"
+  bottom: "conv4_1"
+  top: "conv4_2_v"
+  convolution_param {
+    num_output: 400
+    pad_h: 1
+    pad_w: 0
+    kernel_h: 3
+    kernel_w: 1
+    stride_h: 1
+    stride_w: 1
+  }
+}
+layer {
+  name: "conv4_2_h"
+  type: "Convolution"
+  bottom: "conv4_2_v"
+  top: "conv4_2"
+  convolution_param {
+    num_output: 512
+    pad_h: 0
+    pad_w: 1
+    kernel_h: 1
+    kernel_w: 3
+    stride_h: 1
+    stride_w: 1
+  }
+}
+layer {
+  name: "relu4_2"
+  type: "ReLU"
+  bottom: "conv4_2"
+  top: "conv4_2"
+}
+layer {
+  name: "conv4_3_v"
+  type: "Convolution"
+  bottom: "conv4_2"
+  top: "conv4_3_v"
+  convolution_param {
+    num_output: 400
+    pad_h: 1
+    pad_w: 0
+    kernel_h: 3
+    kernel_w: 1
+    stride_h: 1
+    stride_w: 1
+  }
+}
+layer {
+  name: "conv4_3_h"
+  type: "Convolution"
+  bottom: "conv4_3_v"
+  top: "conv4_3"
+  convolution_param {
+    num_output: 512
+    pad_h: 0
+    pad_w: 1
+    kernel_h: 1
+    kernel_w: 3
+    stride_h: 1
+    stride_w: 1
+  }
+}
+layer {
+  name: "relu4_3"
+  type: "ReLU"
+  bottom: "conv4_3"
+  top: "conv4_3"
+}
+layer {
+  name: "conv4_4_v"
+  type: "Convolution"
+  bottom: "conv4_3"
+  top: "conv4_4_v"
+  convolution_param {
+    num_output: 400
+    pad_h: 1
+    pad_w: 0
+    kernel_h: 3
+    kernel_w: 1
+    stride_h: 1
+    stride_w: 1
+  }
+}
+layer {
+  name: "conv4_4_h"
+  type: "Convolution"
+  bottom: "conv4_4_v"
+  top: "conv4_4"
+  convolution_param {
+    num_output: 512
+    pad_h: 0
+    pad_w: 1
+    kernel_h: 1
+    kernel_w: 3
+    stride_h: 1
+    stride_w: 1
+  }
+}
+layer {
+  name: "relu4_4"
+  type: "ReLU"
+  bottom: "conv4_4"
+  top: "conv4_4"
+}
+layer {
+  name: "pool4"
+  type: "Pooling"
+  bottom: "conv4_4"
+  top: "pool4"
+  pooling_param {
+    pool: MAX
+    kernel_size: 2
+    stride: 2
+  }
+}
+layer {
+  name: "conv5_1_v"
+  type: "Convolution"
+  bottom: "pool4"
+  top: "conv5_1_v"
+  convolution_param {
+    num_output: 200
+    pad_h: 1
+    pad_w: 0
+    kernel_h: 3
+    kernel_w: 1
+    stride_h: 1
+    stride_w: 1
+  }
+}
+layer {
+  name: "conv5_1_h"
+  type: "Convolution"
+  bottom: "conv5_1_v"
+  top: "conv5_1"
+  convolution_param {
+    num_output: 512
+    pad_h: 0
+    pad_w: 1
+    kernel_h: 1
+    kernel_w: 3
+    stride_h: 1
+    stride_w: 1
+  }
+}
+layer {
+  name: "relu5_1"
+  type: "ReLU"
+  bottom: "conv5_1"
+  top: "conv5_1"
+}
+layer {
+  name: "conv5_2_v"
+  type: "Convolution"
+  bottom: "conv5_1"
+  top: "conv5_2_v"
+  convolution_param {
+    num_output: 400
+    pad_h: 1
+    pad_w: 0
+    kernel_h: 3
+    kernel_w: 1
+    stride_h: 1
+    stride_w: 1
+  }
+}
+layer {
+  name: "conv5_2_h"
+  type: "Convolution"
+  bottom: "conv5_2_v"
+  top: "conv5_2"
+  convolution_param {
+    num_output: 512
+    pad_h: 0
+    pad_w: 1
+    kernel_h: 1
+    kernel_w: 3
+    stride_h: 1
+    stride_w: 1
+  }
+}
+layer {
+  name: "relu5_2"
+  type: "ReLU"
+  bottom: "conv5_2"
+  top: "conv5_2"
+}
+layer {
+  name: "conv5_3_v"
+  type: "Convolution"
+  bottom: "conv5_2"
+  top: "conv5_3_v"
+  convolution_param {
+    num_output: 400
+    pad_h: 1
+    pad_w: 0
+    kernel_h: 3
+    kernel_w: 1
+    stride_h: 1
+    stride_w: 1
+  }
+}
+layer {
+  name: "conv5_3_h"
+  type: "Convolution"
+  bottom: "conv5_3_v"
+  top: "conv5_3"
+  convolution_param {
+    num_output: 512
+    pad_h: 0
+    pad_w: 1
+    kernel_h: 1
+    kernel_w: 3
+    stride_h: 1
+    stride_w: 1
+  }
+}
+layer {
+  name: "relu5_3"
+  type: "ReLU"
+  bottom: "conv5_3"
+  top: "conv5_3"
+}
+layer {
+  name: "conv5_4_v"
+  type: "Convolution"
+  bottom: "conv5_3"
+  top: "conv5_4_v"
+  convolution_param {
+    num_output: 400
+    pad_h: 1
+    pad_w: 0
+    kernel_h: 3
+    kernel_w: 1
+    stride_h: 1
+    stride_w: 1
+  }
+}
+layer {
+  name: "conv5_4_h"
+  type: "Convolution"
+  bottom: "conv5_4_v"
+  top: "conv5_4"
+  convolution_param {
+    num_output: 512
+    pad_h: 0
+    pad_w: 1
+    kernel_h: 1
+    kernel_w: 3
+    stride_h: 1
+    stride_w: 1
+  }
+}
+layer {
+  name: "relu5_4"
+  type: "ReLU"
+  bottom: "conv5_4"
+  top: "conv5_4"
+}
+layer {
+  name: "pool5"
+  type: "Pooling"
+  bottom: "conv5_4"
+  top: "pool5"
+  pooling_param {
+    pool: MAX
+    kernel_size: 2
+    stride: 2
+  }
+}
+layer {
+  name: "fc6"
+  type: "InnerProduct"
+  bottom: "pool5"
+  top: "fc6"
+  inner_product_param {
+    num_output: 4096
+  }
+}
+layer {
+  name: "relu6"
+  type: "ReLU"
+  bottom: "fc6"
+  top: "fc6"
+}
+layer {
+  name: "drop6"
+  type: "Dropout"
+  bottom: "fc6"
+  top: "fc6"
+  dropout_param {
+    dropout_ratio: 0.5
+  }
+}
+layer {
+  name: "fc7"
+  type: "InnerProduct"
+  bottom: "fc6"
+  top: "fc7"
+  inner_product_param {
+    num_output: 4096
+  }
+}
+layer {
+  name: "relu7"
+  type: "ReLU"
+  bottom: "fc7"
+  top: "fc7"
+}
+layer {
+  name: "drop7"
+  type: "Dropout"
+  bottom: "fc7"
+  top: "fc7"
+  dropout_param {
+    dropout_ratio: 0.5
+  }
+}
+layer {
+  name: "fc8"
+  type: "InnerProduct"
+  bottom: "fc7"
+  top: "fc8"
+  inner_product_param {
+    num_output: 1000
+  }
+}
+layer {
+  name: "prob"
+  type: "Softmax"
+  bottom: "fc8"
+  top: "prob"
+}
+I0417 03:05:06.668215 19818 layer_factory.hpp:77] Creating layer input
+I0417 03:05:06.668248 19818 net.cpp:88] Creating Layer input
+I0417 03:05:06.668267 19818 net.cpp:384] input -> data
+I0417 03:05:06.668308 19818 net.cpp:126] Setting up input
+I0417 03:05:06.668324 19818 net.cpp:133] Top shape: 1 3 224 224 (150528)
+I0417 03:05:06.668349 19818 net.cpp:141] Memory required for data: 602112
+I0417 03:05:06.668365 19818 layer_factory.hpp:77] Creating layer conv1_1_v
+I0417 03:05:06.668388 19818 net.cpp:88] Creating Layer conv1_1_v
+I0417 03:05:06.668403 19818 net.cpp:410] conv1_1_v <- data
+I0417 03:05:06.668422 19818 net.cpp:384] conv1_1_v -> conv1_1_v
+I0417 03:05:06.672210 19818 net.cpp:126] Setting up conv1_1_v
+I0417 03:05:06.672289 19818 net.cpp:133] Top shape: 1 8 224 224 (401408)
+I0417 03:05:06.672315 19818 net.cpp:141] Memory required for data: 2207744
+I0417 03:05:06.672387 19818 layer_factory.hpp:77] Creating layer conv1_1_h
+I0417 03:05:06.672426 19818 net.cpp:88] Creating Layer conv1_1_h
+I0417 03:05:06.672442 19818 net.cpp:410] conv1_1_h <- conv1_1_v
+I0417 03:05:06.672464 19818 net.cpp:384] conv1_1_h -> conv1_1
+I0417 03:05:06.676061 19818 net.cpp:126] Setting up conv1_1_h
+I0417 03:05:06.676139 19818 net.cpp:133] Top shape: 1 64 224 224 (3211264)
+I0417 03:05:06.676164 19818 net.cpp:141] Memory required for data: 15052800
+I0417 03:05:06.676204 19818 layer_factory.hpp:77] Creating layer relu1_1
+I0417 03:05:06.676286 19818 net.cpp:88] Creating Layer relu1_1
+I0417 03:05:06.676304 19818 net.cpp:410] relu1_1 <- conv1_1
+I0417 03:05:06.676324 19818 net.cpp:371] relu1_1 -> conv1_1 (in-place)
+I0417 03:05:06.677266 19818 net.cpp:126] Setting up relu1_1
+I0417 03:05:06.677294 19818 net.cpp:133] Top shape: 1 64 224 224 (3211264)
+I0417 03:05:06.677314 19818 net.cpp:141] Memory required for data: 27897856
+I0417 03:05:06.677330 19818 layer_factory.hpp:77] Creating layer conv1_2_v
+I0417 03:05:06.677359 19818 net.cpp:88] Creating Layer conv1_2_v
+I0417 03:05:06.677374 19818 net.cpp:410] conv1_2_v <- conv1_1
+I0417 03:05:06.677395 19818 net.cpp:384] conv1_2_v -> conv1_2_v
+I0417 03:05:06.680800 19818 net.cpp:126] Setting up conv1_2_v
+I0417 03:05:06.680873 19818 net.cpp:133] Top shape: 1 40 224 224 (2007040)
+I0417 03:05:06.680899 19818 net.cpp:141] Memory required for data: 35926016
+I0417 03:05:06.680936 19818 layer_factory.hpp:77] Creating layer conv1_2_h
+I0417 03:05:06.680969 19818 net.cpp:88] Creating Layer conv1_2_h
+I0417 03:05:06.680985 19818 net.cpp:410] conv1_2_h <- conv1_2_v
+I0417 03:05:06.681007 19818 net.cpp:384] conv1_2_h -> conv1_2
+I0417 03:05:06.684535 19818 net.cpp:126] Setting up conv1_2_h
+I0417 03:05:06.684612 19818 net.cpp:133] Top shape: 1 64 224 224 (3211264)
+I0417 03:05:06.684636 19818 net.cpp:141] Memory required for data: 48771072
+I0417 03:05:06.684695 19818 layer_factory.hpp:77] Creating layer relu1_2
+I0417 03:05:06.684725 19818 net.cpp:88] Creating Layer relu1_2
+I0417 03:05:06.684741 19818 net.cpp:410] relu1_2 <- conv1_2
+I0417 03:05:06.684759 19818 net.cpp:371] relu1_2 -> conv1_2 (in-place)
+I0417 03:05:06.685616 19818 net.cpp:126] Setting up relu1_2
+I0417 03:05:06.685643 19818 net.cpp:133] Top shape: 1 64 224 224 (3211264)
+I0417 03:05:06.685663 19818 net.cpp:141] Memory required for data: 61616128
+I0417 03:05:06.685678 19818 layer_factory.hpp:77] Creating layer pool1
+I0417 03:05:06.685698 19818 net.cpp:88] Creating Layer pool1
+I0417 03:05:06.685712 19818 net.cpp:410] pool1 <- conv1_2
+I0417 03:05:06.685730 19818 net.cpp:384] pool1 -> pool1
+I0417 03:05:06.685761 19818 net.cpp:126] Setting up pool1
+I0417 03:05:06.685776 19818 net.cpp:133] Top shape: 1 64 112 112 (802816)
+I0417 03:05:06.685809 19818 net.cpp:141] Memory required for data: 64827392
+I0417 03:05:06.685824 19818 layer_factory.hpp:77] Creating layer conv2_1_v
+I0417 03:05:06.685853 19818 net.cpp:88] Creating Layer conv2_1_v
+I0417 03:05:06.685866 19818 net.cpp:410] conv2_1_v <- pool1
+I0417 03:05:06.685884 19818 net.cpp:384] conv2_1_v -> conv2_1_v
+I0417 03:05:06.688997 19818 net.cpp:126] Setting up conv2_1_v
+I0417 03:05:06.689064 19818 net.cpp:133] Top shape: 1 60 112 112 (752640)
+I0417 03:05:06.689087 19818 net.cpp:141] Memory required for data: 67837952
+I0417 03:05:06.689157 19818 layer_factory.hpp:77] Creating layer conv2_1_h
+I0417 03:05:06.689189 19818 net.cpp:88] Creating Layer conv2_1_h
+I0417 03:05:06.689204 19818 net.cpp:410] conv2_1_h <- conv2_1_v
+I0417 03:05:06.689224 19818 net.cpp:384] conv2_1_h -> conv2_1
+I0417 03:05:06.692792 19818 net.cpp:126] Setting up conv2_1_h
+I0417 03:05:06.692864 19818 net.cpp:133] Top shape: 1 128 112 112 (1605632)
+I0417 03:05:06.692888 19818 net.cpp:141] Memory required for data: 74260480
+I0417 03:05:06.692916 19818 layer_factory.hpp:77] Creating layer relu2_1
+I0417 03:05:06.692942 19818 net.cpp:88] Creating Layer relu2_1
+I0417 03:05:06.692958 19818 net.cpp:410] relu2_1 <- conv2_1
+I0417 03:05:06.692978 19818 net.cpp:371] relu2_1 -> conv2_1 (in-place)
+I0417 03:05:06.693856 19818 net.cpp:126] Setting up relu2_1
+I0417 03:05:06.693883 19818 net.cpp:133] Top shape: 1 128 112 112 (1605632)
+I0417 03:05:06.693904 19818 net.cpp:141] Memory required for data: 80683008
+I0417 03:05:06.693918 19818 layer_factory.hpp:77] Creating layer conv2_2_v
+I0417 03:05:06.693943 19818 net.cpp:88] Creating Layer conv2_2_v
+I0417 03:05:06.693958 19818 net.cpp:410] conv2_2_v <- conv2_1
+I0417 03:05:06.693977 19818 net.cpp:384] conv2_2_v -> conv2_2_v
+I0417 03:05:06.697084 19818 net.cpp:126] Setting up conv2_2_v
+I0417 03:05:06.697155 19818 net.cpp:133] Top shape: 1 100 112 112 (1254400)
+I0417 03:05:06.697180 19818 net.cpp:141] Memory required for data: 85700608
+I0417 03:05:06.697207 19818 layer_factory.hpp:77] Creating layer conv2_2_h
+I0417 03:05:06.697294 19818 net.cpp:88] Creating Layer conv2_2_h
+I0417 03:05:06.697312 19818 net.cpp:410] conv2_2_h <- conv2_2_v
+I0417 03:05:06.697335 19818 net.cpp:384] conv2_2_h -> conv2_2
+I0417 03:05:06.700970 19818 net.cpp:126] Setting up conv2_2_h
+I0417 03:05:06.701042 19818 net.cpp:133] Top shape: 1 128 112 112 (1605632)
+I0417 03:05:06.701067 19818 net.cpp:141] Memory required for data: 92123136
+I0417 03:05:06.701094 19818 layer_factory.hpp:77] Creating layer relu2_2
+I0417 03:05:06.701122 19818 net.cpp:88] Creating Layer relu2_2
+I0417 03:05:06.701136 19818 net.cpp:410] relu2_2 <- conv2_2
+I0417 03:05:06.701177 19818 net.cpp:371] relu2_2 -> conv2_2 (in-place)
+I0417 03:05:06.702039 19818 net.cpp:126] Setting up relu2_2
+I0417 03:05:06.702064 19818 net.cpp:133] Top shape: 1 128 112 112 (1605632)
+I0417 03:05:06.702083 19818 net.cpp:141] Memory required for data: 98545664
+I0417 03:05:06.702097 19818 layer_factory.hpp:77] Creating layer pool2
+I0417 03:05:06.702119 19818 net.cpp:88] Creating Layer pool2
+I0417 03:05:06.702132 19818 net.cpp:410] pool2 <- conv2_2
+I0417 03:05:06.702150 19818 net.cpp:384] pool2 -> pool2
+I0417 03:05:06.702180 19818 net.cpp:126] Setting up pool2
+I0417 03:05:06.702194 19818 net.cpp:133] Top shape: 1 128 56 56 (401408)
+I0417 03:05:06.702211 19818 net.cpp:141] Memory required for data: 100151296
+I0417 03:05:06.702247 19818 layer_factory.hpp:77] Creating layer conv3_1_v
+I0417 03:05:06.702283 19818 net.cpp:88] Creating Layer conv3_1_v
+I0417 03:05:06.702297 19818 net.cpp:410] conv3_1_v <- pool2
+I0417 03:05:06.702314 19818 net.cpp:384] conv3_1_v -> conv3_1_v
+I0417 03:05:06.705440 19818 net.cpp:126] Setting up conv3_1_v
+I0417 03:05:06.705507 19818 net.cpp:133] Top shape: 1 200 56 56 (627200)
+I0417 03:05:06.705530 19818 net.cpp:141] Memory required for data: 102660096
+I0417 03:05:06.705566 19818 layer_factory.hpp:77] Creating layer conv3_1_h
+I0417 03:05:06.705601 19818 net.cpp:88] Creating Layer conv3_1_h
+I0417 03:05:06.705616 19818 net.cpp:410] conv3_1_h <- conv3_1_v
+I0417 03:05:06.705639 19818 net.cpp:384] conv3_1_h -> conv3_1
+I0417 03:05:06.709486 19818 net.cpp:126] Setting up conv3_1_h
+I0417 03:05:06.709556 19818 net.cpp:133] Top shape: 1 256 56 56 (802816)
+I0417 03:05:06.709581 19818 net.cpp:141] Memory required for data: 105871360
+I0417 03:05:06.709656 19818 layer_factory.hpp:77] Creating layer relu3_1
+I0417 03:05:06.709686 19818 net.cpp:88] Creating Layer relu3_1
+I0417 03:05:06.709700 19818 net.cpp:410] relu3_1 <- conv3_1
+I0417 03:05:06.709720 19818 net.cpp:371] relu3_1 -> conv3_1 (in-place)
+I0417 03:05:06.710569 19818 net.cpp:126] Setting up relu3_1
+I0417 03:05:06.710593 19818 net.cpp:133] Top shape: 1 256 56 56 (802816)
+I0417 03:05:06.710613 19818 net.cpp:141] Memory required for data: 109082624
+I0417 03:05:06.710625 19818 layer_factory.hpp:77] Creating layer conv3_2_v
+I0417 03:05:06.710649 19818 net.cpp:88] Creating Layer conv3_2_v
+I0417 03:05:06.710664 19818 net.cpp:410] conv3_2_v <- conv3_1
+I0417 03:05:06.710682 19818 net.cpp:384] conv3_2_v -> conv3_2_v
+I0417 03:05:06.713986 19818 net.cpp:126] Setting up conv3_2_v
+I0417 03:05:06.714054 19818 net.cpp:133] Top shape: 1 200 56 56 (627200)
+I0417 03:05:06.714078 19818 net.cpp:141] Memory required for data: 111591424
+I0417 03:05:06.714107 19818 layer_factory.hpp:77] Creating layer conv3_2_h
+I0417 03:05:06.714136 19818 net.cpp:88] Creating Layer conv3_2_h
+I0417 03:05:06.714151 19818 net.cpp:410] conv3_2_h <- conv3_2_v
+I0417 03:05:06.714172 19818 net.cpp:384] conv3_2_h -> conv3_2
+I0417 03:05:06.717734 19818 net.cpp:126] Setting up conv3_2_h
+I0417 03:05:06.717804 19818 net.cpp:133] Top shape: 1 256 56 56 (802816)
+I0417 03:05:06.717829 19818 net.cpp:141] Memory required for data: 114802688
+I0417 03:05:06.717856 19818 layer_factory.hpp:77] Creating layer relu3_2
+I0417 03:05:06.717882 19818 net.cpp:88] Creating Layer relu3_2
+I0417 03:05:06.717897 19818 net.cpp:410] relu3_2 <- conv3_2
+I0417 03:05:06.717941 19818 net.cpp:371] relu3_2 -> conv3_2 (in-place)
+I0417 03:05:06.718786 19818 net.cpp:126] Setting up relu3_2
+I0417 03:05:06.718812 19818 net.cpp:133] Top shape: 1 256 56 56 (802816)
+I0417 03:05:06.718864 19818 net.cpp:141] Memory required for data: 118013952
+I0417 03:05:06.718881 19818 layer_factory.hpp:77] Creating layer conv3_3_v
+I0417 03:05:06.718907 19818 net.cpp:88] Creating Layer conv3_3_v
+I0417 03:05:06.718921 19818 net.cpp:410] conv3_3_v <- conv3_2
+I0417 03:05:06.718940 19818 net.cpp:384] conv3_3_v -> conv3_3_v
+I0417 03:05:06.722276 19818 net.cpp:126] Setting up conv3_3_v
+I0417 03:05:06.722345 19818 net.cpp:133] Top shape: 1 200 56 56 (627200)
+I0417 03:05:06.722369 19818 net.cpp:141] Memory required for data: 120522752
+I0417 03:05:06.722398 19818 layer_factory.hpp:77] Creating layer conv3_3_h
+I0417 03:05:06.722426 19818 net.cpp:88] Creating Layer conv3_3_h
+I0417 03:05:06.722442 19818 net.cpp:410] conv3_3_h <- conv3_3_v
+I0417 03:05:06.722462 19818 net.cpp:384] conv3_3_h -> conv3_3
+I0417 03:05:06.726223 19818 net.cpp:126] Setting up conv3_3_h
+I0417 03:05:06.726300 19818 net.cpp:133] Top shape: 1 256 56 56 (802816)
+I0417 03:05:06.726325 19818 net.cpp:141] Memory required for data: 123734016
+I0417 03:05:06.726362 19818 layer_factory.hpp:77] Creating layer relu3_3
+I0417 03:05:06.726388 19818 net.cpp:88] Creating Layer relu3_3
+I0417 03:05:06.726403 19818 net.cpp:410] relu3_3 <- conv3_3
+I0417 03:05:06.726423 19818 net.cpp:371] relu3_3 -> conv3_3 (in-place)
+I0417 03:05:06.727586 19818 net.cpp:126] Setting up relu3_3
+I0417 03:05:06.727627 19818 net.cpp:133] Top shape: 1 256 56 56 (802816)
+I0417 03:05:06.727648 19818 net.cpp:141] Memory required for data: 126945280
+I0417 03:05:06.727663 19818 layer_factory.hpp:77] Creating layer conv3_4_v
+I0417 03:05:06.727689 19818 net.cpp:88] Creating Layer conv3_4_v
+I0417 03:05:06.727702 19818 net.cpp:410] conv3_4_v <- conv3_3
+I0417 03:05:06.727722 19818 net.cpp:384] conv3_4_v -> conv3_4_v
+I0417 03:05:06.730988 19818 net.cpp:126] Setting up conv3_4_v
+I0417 03:05:06.731051 19818 net.cpp:133] Top shape: 1 200 56 56 (627200)
+I0417 03:05:06.731076 19818 net.cpp:141] Memory required for data: 129454080
+I0417 03:05:06.731103 19818 layer_factory.hpp:77] Creating layer conv3_4_h
+I0417 03:05:06.731132 19818 net.cpp:88] Creating Layer conv3_4_h
+I0417 03:05:06.731148 19818 net.cpp:410] conv3_4_h <- conv3_4_v
+I0417 03:05:06.731169 19818 net.cpp:384] conv3_4_h -> conv3_4
+I0417 03:05:06.734850 19818 net.cpp:126] Setting up conv3_4_h
+I0417 03:05:06.734923 19818 net.cpp:133] Top shape: 1 256 56 56 (802816)
+I0417 03:05:06.734947 19818 net.cpp:141] Memory required for data: 132665344
+I0417 03:05:06.734977 19818 layer_factory.hpp:77] Creating layer relu3_4
+I0417 03:05:06.735002 19818 net.cpp:88] Creating Layer relu3_4
+I0417 03:05:06.735016 19818 net.cpp:410] relu3_4 <- conv3_4
+I0417 03:05:06.735036 19818 net.cpp:371] relu3_4 -> conv3_4 (in-place)
+I0417 03:05:06.736027 19818 net.cpp:126] Setting up relu3_4
+I0417 03:05:06.736057 19818 net.cpp:133] Top shape: 1 256 56 56 (802816)
+I0417 03:05:06.736076 19818 net.cpp:141] Memory required for data: 135876608
+I0417 03:05:06.736091 19818 layer_factory.hpp:77] Creating layer pool3
+I0417 03:05:06.736111 19818 net.cpp:88] Creating Layer pool3
+I0417 03:05:06.736125 19818 net.cpp:410] pool3 <- conv3_4
+I0417 03:05:06.736145 19818 net.cpp:384] pool3 -> pool3
+I0417 03:05:06.736176 19818 net.cpp:126] Setting up pool3
+I0417 03:05:06.736188 19818 net.cpp:133] Top shape: 1 256 28 28 (200704)
+I0417 03:05:06.736225 19818 net.cpp:141] Memory required for data: 136679424
+I0417 03:05:06.736238 19818 layer_factory.hpp:77] Creating layer conv4_1_v
+I0417 03:05:06.736260 19818 net.cpp:88] Creating Layer conv4_1_v
+I0417 03:05:06.736274 19818 net.cpp:410] conv4_1_v <- pool3
+I0417 03:05:06.736291 19818 net.cpp:384] conv4_1_v -> conv4_1_v
+I0417 03:05:06.739878 19818 net.cpp:126] Setting up conv4_1_v
+I0417 03:05:06.739946 19818 net.cpp:133] Top shape: 1 200 28 28 (156800)
+I0417 03:05:06.739971 19818 net.cpp:141] Memory required for data: 137306624
+I0417 03:05:06.740043 19818 layer_factory.hpp:77] Creating layer conv4_1_h
+I0417 03:05:06.740077 19818 net.cpp:88] Creating Layer conv4_1_h
+I0417 03:05:06.740092 19818 net.cpp:410] conv4_1_h <- conv4_1_v
+I0417 03:05:06.740146 19818 net.cpp:384] conv4_1_h -> conv4_1
+I0417 03:05:06.744215 19818 net.cpp:126] Setting up conv4_1_h
+I0417 03:05:06.744288 19818 net.cpp:133] Top shape: 1 512 28 28 (401408)
+I0417 03:05:06.744313 19818 net.cpp:141] Memory required for data: 138912256
+I0417 03:05:06.744341 19818 layer_factory.hpp:77] Creating layer relu4_1
+I0417 03:05:06.744367 19818 net.cpp:88] Creating Layer relu4_1
+I0417 03:05:06.744382 19818 net.cpp:410] relu4_1 <- conv4_1
+I0417 03:05:06.744402 19818 net.cpp:371] relu4_1 -> conv4_1 (in-place)
+I0417 03:05:06.745291 19818 net.cpp:126] Setting up relu4_1
+I0417 03:05:06.745317 19818 net.cpp:133] Top shape: 1 512 28 28 (401408)
+I0417 03:05:06.745337 19818 net.cpp:141] Memory required for data: 140517888
+I0417 03:05:06.745349 19818 layer_factory.hpp:77] Creating layer conv4_2_v
+I0417 03:05:06.745374 19818 net.cpp:88] Creating Layer conv4_2_v
+I0417 03:05:06.745388 19818 net.cpp:410] conv4_2_v <- conv4_1
+I0417 03:05:06.745407 19818 net.cpp:384] conv4_2_v -> conv4_2_v
+I0417 03:05:06.749287 19818 net.cpp:126] Setting up conv4_2_v
+I0417 03:05:06.749361 19818 net.cpp:133] Top shape: 1 400 28 28 (313600)
+I0417 03:05:06.749384 19818 net.cpp:141] Memory required for data: 141772288
+I0417 03:05:06.749413 19818 layer_factory.hpp:77] Creating layer conv4_2_h
+I0417 03:05:06.749477 19818 net.cpp:88] Creating Layer conv4_2_h
+I0417 03:05:06.749495 19818 net.cpp:410] conv4_2_h <- conv4_2_v
+I0417 03:05:06.749516 19818 net.cpp:384] conv4_2_h -> conv4_2
+I0417 03:05:06.753787 19818 net.cpp:126] Setting up conv4_2_h
+I0417 03:05:06.753860 19818 net.cpp:133] Top shape: 1 512 28 28 (401408)
+I0417 03:05:06.753885 19818 net.cpp:141] Memory required for data: 143377920
+I0417 03:05:06.753913 19818 layer_factory.hpp:77] Creating layer relu4_2
+I0417 03:05:06.753939 19818 net.cpp:88] Creating Layer relu4_2
+I0417 03:05:06.753955 19818 net.cpp:410] relu4_2 <- conv4_2
+I0417 03:05:06.753975 19818 net.cpp:371] relu4_2 -> conv4_2 (in-place)
+I0417 03:05:06.754891 19818 net.cpp:126] Setting up relu4_2
+I0417 03:05:06.754920 19818 net.cpp:133] Top shape: 1 512 28 28 (401408)
+I0417 03:05:06.754940 19818 net.cpp:141] Memory required for data: 144983552
+I0417 03:05:06.754952 19818 layer_factory.hpp:77] Creating layer conv4_3_v
+I0417 03:05:06.754977 19818 net.cpp:88] Creating Layer conv4_3_v
+I0417 03:05:06.754992 19818 net.cpp:410] conv4_3_v <- conv4_2
+I0417 03:05:06.755010 19818 net.cpp:384] conv4_3_v -> conv4_3_v
+I0417 03:05:06.758971 19818 net.cpp:126] Setting up conv4_3_v
+I0417 03:05:06.759047 19818 net.cpp:133] Top shape: 1 400 28 28 (313600)
+I0417 03:05:06.759073 19818 net.cpp:141] Memory required for data: 146237952
+I0417 03:05:06.759101 19818 layer_factory.hpp:77] Creating layer conv4_3_h
+I0417 03:05:06.759133 19818 net.cpp:88] Creating Layer conv4_3_h
+I0417 03:05:06.759150 19818 net.cpp:410] conv4_3_h <- conv4_3_v
+I0417 03:05:06.759171 19818 net.cpp:384] conv4_3_h -> conv4_3
+I0417 03:05:06.763420 19818 net.cpp:126] Setting up conv4_3_h
+I0417 03:05:06.763602 19818 net.cpp:133] Top shape: 1 512 28 28 (401408)
+I0417 03:05:06.763628 19818 net.cpp:141] Memory required for data: 147843584
+I0417 03:05:06.763655 19818 layer_factory.hpp:77] Creating layer relu4_3
+I0417 03:05:06.763681 19818 net.cpp:88] Creating Layer relu4_3
+I0417 03:05:06.763698 19818 net.cpp:410] relu4_3 <- conv4_3
+I0417 03:05:06.763718 19818 net.cpp:371] relu4_3 -> conv4_3 (in-place)
+I0417 03:05:06.764602 19818 net.cpp:126] Setting up relu4_3
+I0417 03:05:06.764627 19818 net.cpp:133] Top shape: 1 512 28 28 (401408)
+I0417 03:05:06.764645 19818 net.cpp:141] Memory required for data: 149449216
+I0417 03:05:06.764659 19818 layer_factory.hpp:77] Creating layer conv4_4_v
+I0417 03:05:06.764683 19818 net.cpp:88] Creating Layer conv4_4_v
+I0417 03:05:06.764698 19818 net.cpp:410] conv4_4_v <- conv4_3
+I0417 03:05:06.764716 19818 net.cpp:384] conv4_4_v -> conv4_4_v
+I0417 03:05:06.768666 19818 net.cpp:126] Setting up conv4_4_v
+I0417 03:05:06.768738 19818 net.cpp:133] Top shape: 1 400 28 28 (313600)
+I0417 03:05:06.768762 19818 net.cpp:141] Memory required for data: 150703616
+I0417 03:05:06.768843 19818 layer_factory.hpp:77] Creating layer conv4_4_h
+I0417 03:05:06.768878 19818 net.cpp:88] Creating Layer conv4_4_h
+I0417 03:05:06.768895 19818 net.cpp:410] conv4_4_h <- conv4_4_v
+I0417 03:05:06.768916 19818 net.cpp:384] conv4_4_h -> conv4_4
+I0417 03:05:06.773476 19818 net.cpp:126] Setting up conv4_4_h
+I0417 03:05:06.773550 19818 net.cpp:133] Top shape: 1 512 28 28 (401408)
+I0417 03:05:06.773576 19818 net.cpp:141] Memory required for data: 152309248
+I0417 03:05:06.773604 19818 layer_factory.hpp:77] Creating layer relu4_4
+I0417 03:05:06.773630 19818 net.cpp:88] Creating Layer relu4_4
+I0417 03:05:06.773646 19818 net.cpp:410] relu4_4 <- conv4_4
+I0417 03:05:06.773666 19818 net.cpp:371] relu4_4 -> conv4_4 (in-place)
+I0417 03:05:06.774565 19818 net.cpp:126] Setting up relu4_4
+I0417 03:05:06.774592 19818 net.cpp:133] Top shape: 1 512 28 28 (401408)
+I0417 03:05:06.774611 19818 net.cpp:141] Memory required for data: 153914880
+I0417 03:05:06.774626 19818 layer_factory.hpp:77] Creating layer pool4
+I0417 03:05:06.774646 19818 net.cpp:88] Creating Layer pool4
+I0417 03:05:06.774660 19818 net.cpp:410] pool4 <- conv4_4
+I0417 03:05:06.774678 19818 net.cpp:384] pool4 -> pool4
+I0417 03:05:06.774710 19818 net.cpp:126] Setting up pool4
+I0417 03:05:06.774724 19818 net.cpp:133] Top shape: 1 512 14 14 (100352)
+I0417 03:05:06.774740 19818 net.cpp:141] Memory required for data: 154316288
+I0417 03:05:06.774752 19818 layer_factory.hpp:77] Creating layer conv5_1_v
+I0417 03:05:06.774776 19818 net.cpp:88] Creating Layer conv5_1_v
+I0417 03:05:06.774790 19818 net.cpp:410] conv5_1_v <- pool4
+I0417 03:05:06.774832 19818 net.cpp:384] conv5_1_v -> conv5_1_v
+I0417 03:05:06.778637 19818 net.cpp:126] Setting up conv5_1_v
+I0417 03:05:06.778714 19818 net.cpp:133] Top shape: 1 200 14 14 (39200)
+I0417 03:05:06.778740 19818 net.cpp:141] Memory required for data: 154473088
+I0417 03:05:06.778769 19818 layer_factory.hpp:77] Creating layer conv5_1_h
+I0417 03:05:06.778798 19818 net.cpp:88] Creating Layer conv5_1_h
+I0417 03:05:06.778813 19818 net.cpp:410] conv5_1_h <- conv5_1_v
+I0417 03:05:06.778834 19818 net.cpp:384] conv5_1_h -> conv5_1
+I0417 03:05:06.782877 19818 net.cpp:126] Setting up conv5_1_h
+I0417 03:05:06.782954 19818 net.cpp:133] Top shape: 1 512 14 14 (100352)
+I0417 03:05:06.782979 19818 net.cpp:141] Memory required for data: 154874496
+I0417 03:05:06.783008 19818 layer_factory.hpp:77] Creating layer relu5_1
+I0417 03:05:06.783036 19818 net.cpp:88] Creating Layer relu5_1
+I0417 03:05:06.783052 19818 net.cpp:410] relu5_1 <- conv5_1
+I0417 03:05:06.783071 19818 net.cpp:371] relu5_1 -> conv5_1 (in-place)
+I0417 03:05:06.784039 19818 net.cpp:126] Setting up relu5_1
+I0417 03:05:06.784071 19818 net.cpp:133] Top shape: 1 512 14 14 (100352)
+I0417 03:05:06.784090 19818 net.cpp:141] Memory required for data: 155275904
+I0417 03:05:06.784104 19818 layer_factory.hpp:77] Creating layer conv5_2_v
+I0417 03:05:06.784129 19818 net.cpp:88] Creating Layer conv5_2_v
+I0417 03:05:06.784143 19818 net.cpp:410] conv5_2_v <- conv5_1
+I0417 03:05:06.784163 19818 net.cpp:384] conv5_2_v -> conv5_2_v
+I0417 03:05:06.788475 19818 net.cpp:126] Setting up conv5_2_v
+I0417 03:05:06.788545 19818 net.cpp:133] Top shape: 1 400 14 14 (78400)
+I0417 03:05:06.788570 19818 net.cpp:141] Memory required for data: 155589504
+I0417 03:05:06.788599 19818 layer_factory.hpp:77] Creating layer conv5_2_h
+I0417 03:05:06.788630 19818 net.cpp:88] Creating Layer conv5_2_h
+I0417 03:05:06.788647 19818 net.cpp:410] conv5_2_h <- conv5_2_v
+I0417 03:05:06.788669 19818 net.cpp:384] conv5_2_h -> conv5_2
+I0417 03:05:06.793153 19818 net.cpp:126] Setting up conv5_2_h
+I0417 03:05:06.793229 19818 net.cpp:133] Top shape: 1 512 14 14 (100352)
+I0417 03:05:06.793256 19818 net.cpp:141] Memory required for data: 155990912
+I0417 03:05:06.793284 19818 layer_factory.hpp:77] Creating layer relu5_2
+I0417 03:05:06.793310 19818 net.cpp:88] Creating Layer relu5_2
+I0417 03:05:06.793326 19818 net.cpp:410] relu5_2 <- conv5_2
+I0417 03:05:06.793354 19818 net.cpp:371] relu5_2 -> conv5_2 (in-place)
+I0417 03:05:06.794301 19818 net.cpp:126] Setting up relu5_2
+I0417 03:05:06.794330 19818 net.cpp:133] Top shape: 1 512 14 14 (100352)
+I0417 03:05:06.794349 19818 net.cpp:141] Memory required for data: 156392320
+I0417 03:05:06.794364 19818 layer_factory.hpp:77] Creating layer conv5_3_v
+I0417 03:05:06.794389 19818 net.cpp:88] Creating Layer conv5_3_v
+I0417 03:05:06.794409 19818 net.cpp:410] conv5_3_v <- conv5_2
+I0417 03:05:06.794428 19818 net.cpp:384] conv5_3_v -> conv5_3_v
+I0417 03:05:06.798660 19818 net.cpp:126] Setting up conv5_3_v
+I0417 03:05:06.798730 19818 net.cpp:133] Top shape: 1 400 14 14 (78400)
+I0417 03:05:06.798756 19818 net.cpp:141] Memory required for data: 156705920
+I0417 03:05:06.798785 19818 layer_factory.hpp:77] Creating layer conv5_3_h
+I0417 03:05:06.798815 19818 net.cpp:88] Creating Layer conv5_3_h
+I0417 03:05:06.798832 19818 net.cpp:410] conv5_3_h <- conv5_3_v
+I0417 03:05:06.798853 19818 net.cpp:384] conv5_3_h -> conv5_3
+I0417 03:05:06.803274 19818 net.cpp:126] Setting up conv5_3_h
+I0417 03:05:06.803349 19818 net.cpp:133] Top shape: 1 512 14 14 (100352)
+I0417 03:05:06.803373 19818 net.cpp:141] Memory required for data: 157107328
+I0417 03:05:06.803483 19818 layer_factory.hpp:77] Creating layer relu5_3
+I0417 03:05:06.803514 19818 net.cpp:88] Creating Layer relu5_3
+I0417 03:05:06.803530 19818 net.cpp:410] relu5_3 <- conv5_3
+I0417 03:05:06.803550 19818 net.cpp:371] relu5_3 -> conv5_3 (in-place)
+I0417 03:05:06.804637 19818 net.cpp:126] Setting up relu5_3
+I0417 03:05:06.804670 19818 net.cpp:133] Top shape: 1 512 14 14 (100352)
+I0417 03:05:06.804692 19818 net.cpp:141] Memory required for data: 157508736
+I0417 03:05:06.804710 19818 layer_factory.hpp:77] Creating layer conv5_4_v
+I0417 03:05:06.804736 19818 net.cpp:88] Creating Layer conv5_4_v
+I0417 03:05:06.804751 19818 net.cpp:410] conv5_4_v <- conv5_3
+I0417 03:05:06.804770 19818 net.cpp:384] conv5_4_v -> conv5_4_v
+I0417 03:05:06.809165 19818 net.cpp:126] Setting up conv5_4_v
+I0417 03:05:06.809238 19818 net.cpp:133] Top shape: 1 400 14 14 (78400)
+I0417 03:05:06.809264 19818 net.cpp:141] Memory required for data: 157822336
+I0417 03:05:06.809293 19818 layer_factory.hpp:77] Creating layer conv5_4_h
+I0417 03:05:06.809325 19818 net.cpp:88] Creating Layer conv5_4_h
+I0417 03:05:06.809342 19818 net.cpp:410] conv5_4_h <- conv5_4_v
+I0417 03:05:06.809363 19818 net.cpp:384] conv5_4_h -> conv5_4
+I0417 03:05:06.813889 19818 net.cpp:126] Setting up conv5_4_h
+I0417 03:05:06.813961 19818 net.cpp:133] Top shape: 1 512 14 14 (100352)
+I0417 03:05:06.813984 19818 net.cpp:141] Memory required for data: 158223744
+I0417 03:05:06.814043 19818 layer_factory.hpp:77] Creating layer relu5_4
+I0417 03:05:06.814070 19818 net.cpp:88] Creating Layer relu5_4
+I0417 03:05:06.814087 19818 net.cpp:410] relu5_4 <- conv5_4
+I0417 03:05:06.814106 19818 net.cpp:371] relu5_4 -> conv5_4 (in-place)
+I0417 03:05:06.814966 19818 net.cpp:126] Setting up relu5_4
+I0417 03:05:06.814992 19818 net.cpp:133] Top shape: 1 512 14 14 (100352)
+I0417 03:05:06.815011 19818 net.cpp:141] Memory required for data: 158625152
+I0417 03:05:06.815026 19818 layer_factory.hpp:77] Creating layer pool5
+I0417 03:05:06.815047 19818 net.cpp:88] Creating Layer pool5
+I0417 03:05:06.815060 19818 net.cpp:410] pool5 <- conv5_4
+I0417 03:05:06.815078 19818 net.cpp:384] pool5 -> pool5
+I0417 03:05:06.815110 19818 net.cpp:126] Setting up pool5
+I0417 03:05:06.815124 19818 net.cpp:133] Top shape: 1 512 7 7 (25088)
+I0417 03:05:06.815140 19818 net.cpp:141] Memory required for data: 158725504
+I0417 03:05:06.815172 19818 layer_factory.hpp:77] Creating layer fc6
+I0417 03:05:06.815193 19818 net.cpp:88] Creating Layer fc6
+I0417 03:05:06.815207 19818 net.cpp:410] fc6 <- pool5
+I0417 03:05:06.815223 19818 net.cpp:384] fc6 -> fc6
+I0417 03:05:07.175781 19818 net.cpp:126] Setting up fc6
+I0417 03:05:07.175868 19818 net.cpp:133] Top shape: 1 4096 (4096)
+I0417 03:05:07.175892 19818 net.cpp:141] Memory required for data: 158741888
+I0417 03:05:07.175978 19818 layer_factory.hpp:77] Creating layer relu6
+I0417 03:05:07.176097 19818 net.cpp:88] Creating Layer relu6
+I0417 03:05:07.176116 19818 net.cpp:410] relu6 <- fc6
+I0417 03:05:07.176187 19818 net.cpp:371] relu6 -> fc6 (in-place)
+I0417 03:05:07.177767 19818 net.cpp:126] Setting up relu6
+I0417 03:05:07.177804 19818 net.cpp:133] Top shape: 1 4096 (4096)
+I0417 03:05:07.177824 19818 net.cpp:141] Memory required for data: 158758272
+I0417 03:05:07.177839 19818 layer_factory.hpp:77] Creating layer drop6
+I0417 03:05:07.177862 19818 net.cpp:88] Creating Layer drop6
+I0417 03:05:07.177876 19818 net.cpp:410] drop6 <- fc6
+I0417 03:05:07.177896 19818 net.cpp:371] drop6 -> fc6 (in-place)
+I0417 03:05:07.177922 19818 net.cpp:126] Setting up drop6
+I0417 03:05:07.177934 19818 net.cpp:133] Top shape: 1 4096 (4096)
+I0417 03:05:07.177949 19818 net.cpp:141] Memory required for data: 158774656
+I0417 03:05:07.177961 19818 layer_factory.hpp:77] Creating layer fc7
+I0417 03:05:07.177981 19818 net.cpp:88] Creating Layer fc7
+I0417 03:05:07.178014 19818 net.cpp:410] fc7 <- fc6
+I0417 03:05:07.178032 19818 net.cpp:384] fc7 -> fc7
+I0417 03:05:07.237428 19818 net.cpp:126] Setting up fc7
+I0417 03:05:07.237514 19818 net.cpp:133] Top shape: 1 4096 (4096)
+I0417 03:05:07.237538 19818 net.cpp:141] Memory required for data: 158791040
+I0417 03:05:07.237570 19818 layer_factory.hpp:77] Creating layer relu7
+I0417 03:05:07.237596 19818 net.cpp:88] Creating Layer relu7
+I0417 03:05:07.237612 19818 net.cpp:410] relu7 <- fc7
+I0417 03:05:07.237632 19818 net.cpp:371] relu7 -> fc7 (in-place)
+I0417 03:05:07.238788 19818 net.cpp:126] Setting up relu7
+I0417 03:05:07.238816 19818 net.cpp:133] Top shape: 1 4096 (4096)
+I0417 03:05:07.238833 19818 net.cpp:141] Memory required for data: 158807424
+I0417 03:05:07.238847 19818 layer_factory.hpp:77] Creating layer drop7
+I0417 03:05:07.238868 19818 net.cpp:88] Creating Layer drop7
+I0417 03:05:07.238883 19818 net.cpp:410] drop7 <- fc7
+I0417 03:05:07.238899 19818 net.cpp:371] drop7 -> fc7 (in-place)
+I0417 03:05:07.238924 19818 net.cpp:126] Setting up drop7
+I0417 03:05:07.238936 19818 net.cpp:133] Top shape: 1 4096 (4096)
+I0417 03:05:07.238951 19818 net.cpp:141] Memory required for data: 158823808
+I0417 03:05:07.238987 19818 layer_factory.hpp:77] Creating layer fc8
+I0417 03:05:07.239008 19818 net.cpp:88] Creating Layer fc8
+I0417 03:05:07.239022 19818 net.cpp:410] fc8 <- fc7
+I0417 03:05:07.239044 19818 net.cpp:384] fc8 -> fc8
+I0417 03:05:07.243368 19818 net.cpp:126] Setting up fc8
+I0417 03:05:07.243482 19818 net.cpp:133] Top shape: 1 1000 (1000)
+I0417 03:05:07.243510 19818 net.cpp:141] Memory required for data: 158827808
+I0417 03:05:07.243540 19818 layer_factory.hpp:77] Creating layer prob
+I0417 03:05:07.243566 19818 net.cpp:88] Creating Layer prob
+I0417 03:05:07.243582 19818 net.cpp:410] prob <- fc8
+I0417 03:05:07.243603 19818 net.cpp:384] prob -> prob
+I0417 03:05:07.244765 19818 net.cpp:126] Setting up prob
+I0417 03:05:07.244794 19818 net.cpp:133] Top shape: 1 1000 (1000)
+I0417 03:05:07.244812 19818 net.cpp:141] Memory required for data: 158831808
+I0417 03:05:07.244827 19818 net.cpp:204] prob does not need backward computation.
+I0417 03:05:07.244839 19818 net.cpp:204] fc8 does not need backward computation.
+I0417 03:05:07.244853 19818 net.cpp:204] drop7 does not need backward computation.
+I0417 03:05:07.244865 19818 net.cpp:204] relu7 does not need backward computation.
+I0417 03:05:07.244877 19818 net.cpp:204] fc7 does not need backward computation.
+I0417 03:05:07.244889 19818 net.cpp:204] drop6 does not need backward computation.
+I0417 03:05:07.244901 19818 net.cpp:204] relu6 does not need backward computation.
+I0417 03:05:07.244913 19818 net.cpp:204] fc6 does not need backward computation.
+I0417 03:05:07.244954 19818 net.cpp:204] pool5 does not need backward computation.
+I0417 03:05:07.244969 19818 net.cpp:204] relu5_4 does not need backward computation.
+I0417 03:05:07.244982 19818 net.cpp:204] conv5_4_h does not need backward computation.
+I0417 03:05:07.244994 19818 net.cpp:204] conv5_4_v does not need backward computation.
+I0417 03:05:07.245007 19818 net.cpp:204] relu5_3 does not need backward computation.
+I0417 03:05:07.245020 19818 net.cpp:204] conv5_3_h does not need backward computation.
+I0417 03:05:07.245067 19818 net.cpp:204] conv5_3_v does not need backward computation.
+I0417 03:05:07.245084 19818 net.cpp:204] relu5_2 does not need backward computation.
+I0417 03:05:07.245096 19818 net.cpp:204] conv5_2_h does not need backward computation.
+I0417 03:05:07.245110 19818 net.cpp:204] conv5_2_v does not need backward computation.
+I0417 03:05:07.245123 19818 net.cpp:204] relu5_1 does not need backward computation.
+I0417 03:05:07.245136 19818 net.cpp:204] conv5_1_h does not need backward computation.
+I0417 03:05:07.245149 19818 net.cpp:204] conv5_1_v does not need backward computation.
+I0417 03:05:07.245162 19818 net.cpp:204] pool4 does not need backward computation.
+I0417 03:05:07.245175 19818 net.cpp:204] relu4_4 does not need backward computation.
+I0417 03:05:07.245189 19818 net.cpp:204] conv4_4_h does not need backward computation.
+I0417 03:05:07.245203 19818 net.cpp:204] conv4_4_v does not need backward computation.
+I0417 03:05:07.245215 19818 net.cpp:204] relu4_3 does not need backward computation.
+I0417 03:05:07.245229 19818 net.cpp:204] conv4_3_h does not need backward computation.
+I0417 03:05:07.245241 19818 net.cpp:204] conv4_3_v does not need backward computation.
+I0417 03:05:07.245254 19818 net.cpp:204] relu4_2 does not need backward computation.
+I0417 03:05:07.245267 19818 net.cpp:204] conv4_2_h does not need backward computation.
+I0417 03:05:07.245280 19818 net.cpp:204] conv4_2_v does not need backward computation.
+I0417 03:05:07.245295 19818 net.cpp:204] relu4_1 does not need backward computation.
+I0417 03:05:07.245306 19818 net.cpp:204] conv4_1_h does not need backward computation.
+I0417 03:05:07.245319 19818 net.cpp:204] conv4_1_v does not need backward computation.
+I0417 03:05:07.245337 19818 net.cpp:204] pool3 does not need backward computation.
+I0417 03:05:07.245348 19818 net.cpp:204] relu3_4 does not need backward computation.
+I0417 03:05:07.245362 19818 net.cpp:204] conv3_4_h does not need backward computation.
+I0417 03:05:07.245374 19818 net.cpp:204] conv3_4_v does not need backward computation.
+I0417 03:05:07.245388 19818 net.cpp:204] relu3_3 does not need backward computation.
+I0417 03:05:07.245419 19818 net.cpp:204] conv3_3_h does not need backward computation.
+I0417 03:05:07.245434 19818 net.cpp:204] conv3_3_v does not need backward computation.
+I0417 03:05:07.245450 19818 net.cpp:204] relu3_2 does not need backward computation.
+I0417 03:05:07.245462 19818 net.cpp:204] conv3_2_h does not need backward computation.
+I0417 03:05:07.245476 19818 net.cpp:204] conv3_2_v does not need backward computation.
+I0417 03:05:07.245488 19818 net.cpp:204] relu3_1 does not need backward computation.
+I0417 03:05:07.245501 19818 net.cpp:204] conv3_1_h does not need backward computation.
+I0417 03:05:07.245514 19818 net.cpp:204] conv3_1_v does not need backward computation.
+I0417 03:05:07.245528 19818 net.cpp:204] pool2 does not need backward computation.
+I0417 03:05:07.245541 19818 net.cpp:204] relu2_2 does not need backward computation.
+I0417 03:05:07.245554 19818 net.cpp:204] conv2_2_h does not need backward computation.
+I0417 03:05:07.245568 19818 net.cpp:204] conv2_2_v does not need backward computation.
+I0417 03:05:07.245580 19818 net.cpp:204] relu2_1 does not need backward computation.
+I0417 03:05:07.245594 19818 net.cpp:204] conv2_1_h does not need backward computation.
+I0417 03:05:07.245606 19818 net.cpp:204] conv2_1_v does not need backward computation.
+I0417 03:05:07.245620 19818 net.cpp:204] pool1 does not need backward computation.
+I0417 03:05:07.245632 19818 net.cpp:204] relu1_2 does not need backward computation.
+I0417 03:05:07.245645 19818 net.cpp:204] conv1_2_h does not need backward computation.
+I0417 03:05:07.245658 19818 net.cpp:204] conv1_2_v does not need backward computation.
+I0417 03:05:07.245671 19818 net.cpp:204] relu1_1 does not need backward computation.
+I0417 03:05:07.245684 19818 net.cpp:204] conv1_1_h does not need backward computation.
+I0417 03:05:07.245697 19818 net.cpp:204] conv1_1_v does not need backward computation.
+I0417 03:05:07.245709 19818 net.cpp:204] input does not need backward computation.
+I0417 03:05:07.245729 19818 net.cpp:246] This network produces output prob
+I0417 03:05:07.245808 19818 net.cpp:259] Network initialization done.
+[libprotobuf WARNING google/protobuf/io/coded_stream.cc:537] Reading dangerously large protocol message.  If the message turns out to be larger than 2147483647 bytes, parsing will be halted for security reasons.  To increase the limit (or to disable these warnings), see CodedInputStream::SetTotalBytesLimit() in google/protobuf/io/coded_stream.h.
+[libprotobuf WARNING google/protobuf/io/coded_stream.cc:78] The total number of bytes read was 574671192
+I0417 03:05:07.921777 19818 upgrade_proto.cpp:53] Attempting to upgrade input file specified using deprecated V1LayerParameter: /home/nvidia/caffe-build/models/vggnet/VGG_ILSVRC_19_layers.caffemodel
+I0417 03:05:09.516006 19818 upgrade_proto.cpp:61] Successfully upgraded file specified using deprecated V1LayerParameter
+I0417 03:05:09.540143 19818 upgrade_proto.cpp:67] Attempting to upgrade input file specified using deprecated input fields: /home/nvidia/caffe-build/models/vggnet/VGG_ILSVRC_19_layers.caffemodel
+I0417 03:05:09.540271 19818 upgrade_proto.cpp:70] Successfully upgraded file specified using deprecated input fields.
+W0417 03:05:09.540290 19818 upgrade_proto.cpp:72] Note that future Caffe releases will only support input layers and not input fields.
+I0417 03:05:09.540354 19818 net.cpp:793] Ignoring source layer conv1_1
+I0417 03:05:09.540380 19818 net.cpp:793] Ignoring source layer conv1_2
+I0417 03:05:09.540393 19818 net.cpp:793] Ignoring source layer conv2_1
+I0417 03:05:09.540406 19818 net.cpp:793] Ignoring source layer conv2_2
+I0417 03:05:09.540421 19818 net.cpp:793] Ignoring source layer conv3_1
+I0417 03:05:09.540434 19818 net.cpp:793] Ignoring source layer conv3_2
+I0417 03:05:09.540446 19818 net.cpp:793] Ignoring source layer conv3_3
+I0417 03:05:09.540459 19818 net.cpp:793] Ignoring source layer conv3_4
+I0417 03:05:09.540472 19818 net.cpp:793] Ignoring source layer conv4_1
+I0417 03:05:09.540486 19818 net.cpp:793] Ignoring source layer conv4_2
+I0417 03:05:09.540505 19818 net.cpp:793] Ignoring source layer conv4_3
+I0417 03:05:09.540518 19818 net.cpp:793] Ignoring source layer conv4_4
+I0417 03:05:09.540530 19818 net.cpp:793] Ignoring source layer conv5_1
+I0417 03:05:09.540544 19818 net.cpp:793] Ignoring source layer conv5_2
+I0417 03:05:09.540556 19818 net.cpp:793] Ignoring source layer conv5_3
+I0417 03:05:09.540570 19818 net.cpp:793] Ignoring source layer conv5_4

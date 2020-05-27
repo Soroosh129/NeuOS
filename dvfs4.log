@@ -1,0 +1,1740 @@
+loading weight: /home/nvidia/caffe-build/models/bvlc_reference_caffenet/bvlc_reference_caffenet.caffemodel
+loading prototxt: /home/nvidia/caffe-build/models/bvlc_reference_caffenet/deploy.prototxt
+=============raw.size: 14112
+---------- Prediction for /home/nvidia/caffe-build/examples/images/cat.jpg ----------
+*********************
+userspace
+userspace
+GPU freq: 1300500000
+userspace
+GPU freq: 1300500000
+EMC freq: 204000000
+*********************
+Latency(us)/Energy(mJ): 2 0 0 0 0 
+Latency(us)/Energy(mJ): 9192 38.9158 2.61817 9.8897 12.3837 
+Latency(us)/Energy(mJ): 54 0 0 0 0 
+Latency(us)/Energy(mJ): 435 2.65964 0.282036 0.705707 0.796573 
+Latency(us)/Energy(mJ): 414 1.32809 0.140835 0.352395 0.39483 
+Latency(us)/Energy(mJ): 8829 38.0169 5.38271 9.97868 10.6074 
+Latency(us)/Energy(mJ): 49 0 0 0 0 
+Latency(us)/Energy(mJ): 377 2.32068 0.399954 0.599931 0.602025 
+Latency(us)/Energy(mJ): 281 1.68543 0.290473 0.435709 0.43723 
+Latency(us)/Energy(mJ): 6027 27.1327 5.32976 6.97971 6.72545 
+Latency(us)/Energy(mJ): 82 0 0 0 0 
+Latency(us)/Energy(mJ): 3913 17.629 4.02124 4.4733 4.03446 
+Latency(us)/Energy(mJ): 40 0 0 0 0 
+Latency(us)/Energy(mJ): 3917 18.484 4.65918 4.65918 4.00299 
+Latency(us)/Energy(mJ): 32 0 0 0 0 
+Latency(us)/Energy(mJ): 131 1.37122 0.345519 0.345519 0.288837 
+Latency(us)/Energy(mJ): 13211 57.7199 14.4753 15.2058 11.8754 
+Latency(us)/Energy(mJ): 52 0 0 0 0 
+Latency(us)/Energy(mJ): 4 0 0 0 0 
+Latency(us)/Energy(mJ): 35179 154.269 42.6368 40.3499 30.4373 
+Latency(us)/Energy(mJ): 55 0 0 0 0 
+Latency(us)/Energy(mJ): 4 0 0 0 0 
+Latency(us)/Energy(mJ): 14525 64.1454 18.7885 16.5755 12.193 
+Latency(us)/Energy(mJ): 356 3.07718 0.893842 0.840858 0.580068 
+########### _slack -97131
+**********24
+====> Exec_us: 1038385
+====> Classify one image (mJ): 4566.4
+userspace
+userspace
+GPU freq: 1300500000
+userspace
+GPU freq: 1300500000
+EMC freq: 204000000
+##############1996 26
+Latency(us)/Energy(mJ): 24 0 0 0 0 
+userspace
+userspace
+GPU freq: 0
+EMC freq: 204000000
+##############2058 1.60771
+Latency(us)/Energy(mJ): 8703 154.297 42.3179 44.9844 27.3993 
+userspace
+userspace
+GPU freq: 0
+EMC freq: 204000000
+##############2067 10.4049
+Latency(us)/Energy(mJ): 393 111.222 30.0176 32.9855 19.2611 
+userspace
+userspace
+GPU freq: 0
+EMC freq: 204000000
+##############2067 854
+Latency(us)/Energy(mJ): 291 27.7237 7.35617 8.33828 4.79499 
+userspace
+userspace
+GPU freq: 0
+EMC freq: 204000000
+##############2085 5.45449
+Latency(us)/Energy(mJ): 1463 99.545 26.3794 30.3992 16.9283 
+userspace
+userspace
+GPU freq: 140250000
+userspace
+GPU freq: 140250000
+EMC freq: 204000000
+##############2141 1.78064
+Latency(us)/Energy(mJ): 8655 132.184 34.0434 41.368 22.2176 
+userspace
+userspace
+GPU freq: 140250000
+userspace
+GPU freq: 140250000
+EMC freq: 204000000
+##############2145 20.7279
+Latency(us)/Energy(mJ): 401 65.1337 17.0281 20.6918 10.6724 
+userspace
+userspace
+GPU freq: 140250000
+userspace
+GPU freq: 140250000
+EMC freq: 204000000
+##############2161 6.0047
+Latency(us)/Energy(mJ): 464 124.375 31.2852 40.3976 20.2132 
+userspace
+userspace
+GPU freq: 140250000
+userspace
+GPU freq: 140250000
+EMC freq: 204000000
+##############2181 4.80341
+Latency(us)/Energy(mJ): 533 145.193 36.0681 48.15 22.7437 
+userspace
+userspace
+GPU freq: 497250000
+userspace
+GPU freq: 497250000
+EMC freq: 204000000
+##############2227 2.17009
+Latency(us)/Energy(mJ): 5059 85.3804 20.5697 29.1703 13.3389 
+userspace
+userspace
+GPU freq: 497250000
+userspace
+GPU freq: 497250000
+EMC freq: 204000000
+##############2232 19.2919
+Latency(us)/Energy(mJ): 403 96.3117 22.7629 33.2739 14.7286 
+userspace
+userspace
+GPU freq: 675750000
+userspace
+GPU freq: 675750000
+EMC freq: 204000000
+##############2273 2.41561
+Latency(us)/Energy(mJ): 4908 195.198 43.7098 68.9626 29.0887 
+userspace
+userspace
+GPU freq: 675750000
+userspace
+GPU freq: 675750000
+EMC freq: 204000000
+##############2280 13.0023
+Latency(us)/Energy(mJ): 504 77.612 17.3967 28.1285 11.1951 
+userspace
+userspace
+GPU freq: 675750000
+userspace
+GPU freq: 675750000
+EMC freq: 204000000
+##############2316 2.77071
+Latency(us)/Energy(mJ): 7404 258.57 55.4012 96.0987 36.124 
+userspace
+userspace
+GPU freq: 675750000
+userspace
+GPU freq: 675750000
+EMC freq: 204000000
+##############2321 17.1014
+Latency(us)/Energy(mJ): 432 57.5898 11.5378 21.3398 8.03283 
+userspace
+userspace
+GPU freq: 675750000
+userspace
+GPU freq: 675750000
+EMC freq: 204000000
+##############2332 8.48574
+Latency(us)/Energy(mJ): 698 156.01 31.9191 56.7399 21.1734 
+userspace
+userspace
+GPU freq: 854250000
+userspace
+GPU freq: 854250000
+EMC freq: 204000000
+##############2368 2.71387
+Latency(us)/Energy(mJ): 1126 163.658 31.0188 62.5485 21.4505 
+userspace
+userspace
+GPU freq: 854250000
+userspace
+GPU freq: 854250000
+EMC freq: 204000000
+##############2381 7.37843
+Latency(us)/Energy(mJ): 584 31.9962 6.0153 12.7887 4.14475 
+userspace
+userspace
+GPU freq: 854250000
+userspace
+GPU freq: 854250000
+EMC freq: 204000000
+##############2382 56.6697
+Latency(us)/Energy(mJ): 54 27.9579 5.19533 11.0454 3.74132 
+userspace
+userspace
+GPU freq: 854250000
+userspace
+GPU freq: 854250000
+EMC freq: 204000000
+##############2414 3.06623
+Latency(us)/Energy(mJ): 617 64.3938 12.7335 24.9486 8.64496 
+userspace
+userspace
+GPU freq: 854250000
+userspace
+GPU freq: 854250000
+EMC freq: 204000000
+##############2425 8.33939
+Latency(us)/Energy(mJ): 447 129.825 26.0752 49.2321 17.509 
+userspace
+userspace
+GPU freq: 854250000
+userspace
+GPU freq: 854250000
+EMC freq: 204000000
+##############2426 69.8995
+Latency(us)/Energy(mJ): 72 127.692 24.6076 49.0554 17.0146 
+userspace
+userspace
+GPU freq: 1032750000
+userspace
+GPU freq: 1032750000
+EMC freq: 204000000
+##############2454 3.49719
+Latency(us)/Energy(mJ): 2395 501.518 92.0104 200.102 65.4335 
+userspace
+userspace
+GPU freq: 1032750000
+userspace
+GPU freq: 1032750000
+EMC freq: 204000000
+##############2454 125493
+Latency(us)/Energy(mJ): 3382 90.9012 15.8981 35.5738 11.9458 
+**********24
+====> Exec_us: 835965
+====> Classify one image (mJ): 3023.76
+userspace
+userspace
+GPU freq: 1032750000
+userspace
+GPU freq: 1032750000
+EMC freq: 204000000
+##############2457 26
+Latency(us)/Energy(mJ): 21 124.763 22.6326 45.2653 16.3048 
+userspace
+userspace
+GPU freq: 1032750000
+userspace
+GPU freq: 1032750000
+EMC freq: 204000000
+##############2519 1.60771
+Latency(us)/Energy(mJ): 19285 235.035 41.0232 92.3468 29.8166 
+userspace
+userspace
+GPU freq: 1211250000
+userspace
+GPU freq: 1211250000
+EMC freq: 204000000
+##############2528 10.4049
+Latency(us)/Energy(mJ): 1044 375.821 59.4017 155.11 45.6972 
+userspace
+userspace
+GPU freq: 1211250000
+userspace
+GPU freq: 1211250000
+EMC freq: 204000000
+##############2528 854
+Latency(us)/Energy(mJ): 456 8.69117 1.42621 3.57176 1.01205 
+userspace
+userspace
+GPU freq: 1211250000
+userspace
+GPU freq: 1211250000
+EMC freq: 204000000
+##############2546 5.45449
+Latency(us)/Energy(mJ): 1375 61.2733 8.47429 25.445 7.2098 
+userspace
+userspace
+GPU freq: 1211250000
+userspace
+GPU freq: 1211250000
+EMC freq: 204000000
+##############2602 1.78064
+Latency(us)/Energy(mJ): 8364 171.328 23.6955 72.2682 20.1597 
+userspace
+userspace
+GPU freq: 1300500000
+userspace
+GPU freq: 1300500000
+EMC freq: 204000000
+##############2606 20.7279
+Latency(us)/Energy(mJ): 474 107.228 14.6631 46.3554 12.3185 
+userspace
+userspace
+GPU freq: 1300500000
+userspace
+GPU freq: 1300500000
+EMC freq: 204000000
+##############2622 6.0047
+Latency(us)/Energy(mJ): 585 54.4052 7.39743 23.6834 6.10444 
+userspace
+userspace
+GPU freq: 1300500000
+userspace
+GPU freq: 1300500000
+EMC freq: 204000000
+##############2642 4.80341
+Latency(us)/Energy(mJ): 495 117.311 16.2446 50.5711 13.0127 
+userspace
+userspace
+GPU freq: 0
+EMC freq: 204000000
+##############2688 2.17009
+Latency(us)/Energy(mJ): 4846 135.343 19.0427 58.2777 14.9792 
+userspace
+userspace
+GPU freq: 0
+EMC freq: 204000000
+##############2693 19.2919
+Latency(us)/Energy(mJ): 375 46.2446 6.50661 19.8669 4.88847 
+userspace
+userspace
+GPU freq: 0
+EMC freq: 204000000
+##############2734 2.41561
+Latency(us)/Energy(mJ): 4419 109.843 15.6055 46.8572 11.7245 
+userspace
+userspace
+GPU freq: 0
+EMC freq: 204000000
+##############2741 13.0023
+Latency(us)/Energy(mJ): 546 76.455 10.8977 32.7216 8.18754 
+userspace
+userspace
+GPU freq: 140250000
+userspace
+GPU freq: 140250000
+EMC freq: 204000000
+##############2777 2.77071
+Latency(us)/Energy(mJ): 4244 59.1181 8.33562 26.6871 6.26263 
+userspace
+userspace
+GPU freq: 140250000
+userspace
+GPU freq: 140250000
+EMC freq: 204000000
+##############2782 17.1014
+Latency(us)/Energy(mJ): 758 121.694 17.1663 54.9592 12.8972 
+userspace
+userspace
+GPU freq: 140250000
+userspace
+GPU freq: 140250000
+EMC freq: 204000000
+##############2793 8.48574
+Latency(us)/Energy(mJ): 722 78.8831 11.2606 36.0516 8.16926 
+userspace
+userspace
+GPU freq: 140250000
+userspace
+GPU freq: 140250000
+EMC freq: 204000000
+##############2829 2.71387
+Latency(us)/Energy(mJ): 602 67.6707 7.94954 30.9272 6.77718 
+userspace
+userspace
+GPU freq: 140250000
+userspace
+GPU freq: 140250000
+EMC freq: 204000000
+##############2842 7.37843
+Latency(us)/Energy(mJ): 565 67.0074 8.86243 30.0577 7.11601 
+userspace
+userspace
+GPU freq: 140250000
+userspace
+GPU freq: 140250000
+EMC freq: 204000000
+##############2843 56.6697
+Latency(us)/Energy(mJ): 56 94.3791 14.4231 40.5804 10.7838 
+userspace
+userspace
+GPU freq: 497250000
+userspace
+GPU freq: 497250000
+EMC freq: 204000000
+##############2875 3.06623
+Latency(us)/Energy(mJ): 950 136.367 21.9034 58.4888 15.3294 
+userspace
+userspace
+GPU freq: 497250000
+userspace
+GPU freq: 497250000
+EMC freq: 204000000
+##############2886 8.33939
+Latency(us)/Energy(mJ): 680 85.9319 13.0558 35.0294 9.9255 
+userspace
+userspace
+GPU freq: 497250000
+userspace
+GPU freq: 497250000
+EMC freq: 204000000
+##############2887 69.8995
+Latency(us)/Energy(mJ): 60 30.7937 4.98533 12.4851 3.53762 
+userspace
+userspace
+GPU freq: 497250000
+userspace
+GPU freq: 497250000
+EMC freq: 204000000
+##############2915 3.49719
+Latency(us)/Energy(mJ): 592 38.8662 6.32498 15.8401 4.48825 
+userspace
+userspace
+GPU freq: 497250000
+userspace
+GPU freq: 497250000
+EMC freq: 204000000
+##############2915 125493
+Latency(us)/Energy(mJ): 768 7.10589 1.16607 2.92026 0.82745 
+**********24
+====> Exec_us: 918227
+====> Classify one image (mJ): 2579.8
+userspace
+userspace
+GPU freq: 497250000
+userspace
+GPU freq: 497250000
+EMC freq: 204000000
+##############2918 26
+Latency(us)/Energy(mJ): 21 0 0 0 0 
+userspace
+userspace
+GPU freq: 675750000
+userspace
+GPU freq: 675750000
+EMC freq: 204000000
+##############2980 1.60771
+Latency(us)/Energy(mJ): 11792 126.992 20.0437 52.5464 14.8889 
+userspace
+userspace
+GPU freq: 675750000
+userspace
+GPU freq: 675750000
+EMC freq: 204000000
+##############2989 10.4049
+Latency(us)/Energy(mJ): 572 109.313 17.5467 45.4051 12.8654 
+userspace
+userspace
+GPU freq: 675750000
+userspace
+GPU freq: 675750000
+EMC freq: 204000000
+##############2989 854
+Latency(us)/Energy(mJ): 205 0 0 0 0 
+userspace
+userspace
+GPU freq: 675750000
+userspace
+GPU freq: 675750000
+EMC freq: 204000000
+##############3007 5.45449
+Latency(us)/Energy(mJ): 497 37.1159 5.15012 15.4639 4.38165 
+userspace
+userspace
+GPU freq: 854250000
+userspace
+GPU freq: 854250000
+EMC freq: 204000000
+##############3063 1.78064
+Latency(us)/Energy(mJ): 7930 147.448 20.4458 61.3909 16.8188 
+userspace
+userspace
+GPU freq: 854250000
+userspace
+GPU freq: 854250000
+EMC freq: 204000000
+##############3067 20.7279
+Latency(us)/Energy(mJ): 455 72.954 10.9163 30.2177 8.18205 
+userspace
+userspace
+GPU freq: 854250000
+userspace
+GPU freq: 854250000
+EMC freq: 204000000
+##############3083 6.0047
+Latency(us)/Energy(mJ): 553 107.056 14.8548 44.6034 11.8994 
+userspace
+userspace
+GPU freq: 854250000
+userspace
+GPU freq: 854250000
+EMC freq: 204000000
+##############3103 4.80341
+Latency(us)/Energy(mJ): 1024 41.6166 5.696 18.2362 4.56277 
+userspace
+userspace
+GPU freq: 1032750000
+userspace
+GPU freq: 1032750000
+EMC freq: 204000000
+##############3149 2.17009
+Latency(us)/Energy(mJ): 9598 135.185 18.2195 60.7102 14.7821 
+userspace
+userspace
+GPU freq: 1032750000
+userspace
+GPU freq: 1032750000
+EMC freq: 204000000
+##############3154 19.2919
+Latency(us)/Energy(mJ): 256 22.103 2.90549 9.8878 2.47195 
+userspace
+userspace
+GPU freq: 1211250000
+userspace
+GPU freq: 1211250000
+EMC freq: 204000000
+##############3195 2.41561
+Latency(us)/Energy(mJ): 4316 62.3981 9.53175 27.5535 6.88837 
+userspace
+userspace
+GPU freq: 1211250000
+userspace
+GPU freq: 1211250000
+EMC freq: 204000000
+##############3202 13.0023
+Latency(us)/Energy(mJ): 701 31.3448 4.87633 13.8411 3.46028 
+userspace
+userspace
+GPU freq: 1211250000
+userspace
+GPU freq: 1211250000
+EMC freq: 204000000
+##############3238 2.77071
+Latency(us)/Energy(mJ): 4252 127.895 18.5371 56.8009 13.8317 
+userspace
+userspace
+GPU freq: 1211250000
+userspace
+GPU freq: 1211250000
+EMC freq: 204000000
+##############3243 17.1014
+Latency(us)/Energy(mJ): 500 48.1146 6.32477 21.5241 5.06644 
+userspace
+userspace
+GPU freq: 1211250000
+userspace
+GPU freq: 1211250000
+EMC freq: 204000000
+##############3254 8.48574
+Latency(us)/Energy(mJ): 498 128.452 17.109 58.2244 13.7051 
+userspace
+userspace
+GPU freq: 1300500000
+userspace
+GPU freq: 1300500000
+EMC freq: 204000000
+##############3290 2.71387
+Latency(us)/Energy(mJ): 986 285.928 38.4972 129.718 29.8509 
+userspace
+userspace
+GPU freq: 1300500000
+userspace
+GPU freq: 1300500000
+EMC freq: 204000000
+##############3303 7.37843
+Latency(us)/Energy(mJ): 356 9.15097 1.26977 4.06525 0.953988 
+userspace
+userspace
+GPU freq: 1300500000
+userspace
+GPU freq: 1300500000
+EMC freq: 204000000
+##############3304 56.6697
+Latency(us)/Energy(mJ): 54 176.902 26.4394 76.5598 19.8806 
+userspace
+userspace
+GPU freq: 1300500000
+userspace
+GPU freq: 1300500000
+EMC freq: 204000000
+##############3336 3.06623
+Latency(us)/Energy(mJ): 598 103.699 13.9461 44.6493 11.5595 
+userspace
+userspace
+GPU freq: 1300500000
+userspace
+GPU freq: 1300500000
+EMC freq: 204000000
+##############3347 8.33939
+Latency(us)/Energy(mJ): 481 68.3041 10.0601 29.1514 7.7467 
+userspace
+userspace
+GPU freq: 1300500000
+userspace
+GPU freq: 1300500000
+EMC freq: 204000000
+##############3348 69.8995
+Latency(us)/Energy(mJ): 53 89.6633 14.0908 39.9958 9.99895 
+userspace
+userspace
+GPU freq: 0
+EMC freq: 204000000
+##############3376 3.49719
+Latency(us)/Energy(mJ): 1323 181.442 24.1684 79.9965 20.0064 
+userspace
+userspace
+GPU freq: 0
+EMC freq: 204000000
+##############3376 125493
+Latency(us)/Energy(mJ): 1208 30.2824 4.1447 13.2696 3.3201 
+**********24
+====> Exec_us: 781212
+====> Classify one image (mJ): 2216.57
+userspace
+userspace
+GPU freq: 0
+EMC freq: 204000000
+##############3379 26
+Latency(us)/Energy(mJ): 22 111.212 15.848 47.5856 12.0882 
+userspace
+userspace
+GPU freq: 0
+EMC freq: 204000000
+##############3441 1.60771
+Latency(us)/Energy(mJ): 8600 213.223 27.6609 91.6464 22.9316 
+userspace
+userspace
+GPU freq: 140250000
+userspace
+GPU freq: 140250000
+EMC freq: 204000000
+##############3450 10.4049
+Latency(us)/Energy(mJ): 711 201.505 26.8842 87.0527 21.6423 
+userspace
+userspace
+GPU freq: 140250000
+userspace
+GPU freq: 140250000
+EMC freq: 204000000
+##############3450 854
+Latency(us)/Energy(mJ): 324 9.6772 1.13521 3.98254 0.997496 
+userspace
+userspace
+GPU freq: 140250000
+userspace
+GPU freq: 140250000
+EMC freq: 204000000
+##############3468 5.45449
+Latency(us)/Energy(mJ): 689 92.9878 11.07 38.8357 9.72706 
+userspace
+userspace
+GPU freq: 140250000
+userspace
+GPU freq: 140250000
+EMC freq: 204000000
+##############3524 1.78064
+Latency(us)/Energy(mJ): 8315 162.77 19.5721 69.0873 17.5581 
+userspace
+userspace
+GPU freq: 497250000
+userspace
+GPU freq: 497250000
+EMC freq: 204000000
+##############3528 20.7279
+Latency(us)/Energy(mJ): 498 76.3358 11.0539 33.1907 8.30492 
+userspace
+userspace
+GPU freq: 497250000
+userspace
+GPU freq: 497250000
+EMC freq: 204000000
+##############3544 6.0047
+Latency(us)/Energy(mJ): 3399 305.129 40.382 130.23 32.2942 
+userspace
+userspace
+GPU freq: 497250000
+userspace
+GPU freq: 497250000
+EMC freq: 204000000
+##############3564 4.80341
+Latency(us)/Energy(mJ): 579 145.745 17.8882 62.7555 15.7182 
+userspace
+userspace
+GPU freq: 497250000
+userspace
+GPU freq: 497250000
+EMC freq: 204000000
+##############3610 2.17009
+Latency(us)/Energy(mJ): 6918 226.208 27.2051 101.507 23.9048 
+userspace
+userspace
+GPU freq: 675750000
+userspace
+GPU freq: 675750000
+EMC freq: 204000000
+##############3615 19.2919
+Latency(us)/Energy(mJ): 558 196.209 23.2264 87.3463 20.4087 
+userspace
+userspace
+GPU freq: 675750000
+userspace
+GPU freq: 675750000
+EMC freq: 204000000
+##############3656 2.41561
+Latency(us)/Energy(mJ): 4398 98.7112 11.4741 43.4285 10.7969 
+userspace
+userspace
+GPU freq: 675750000
+userspace
+GPU freq: 675750000
+EMC freq: 204000000
+##############3663 13.0023
+Latency(us)/Energy(mJ): 482 36.9814 4.25688 17.0694 4.00566 
+userspace
+userspace
+GPU freq: 854250000
+userspace
+GPU freq: 854250000
+EMC freq: 204000000
+##############3699 2.77071
+Latency(us)/Energy(mJ): 14054 178.164 20.69 77.8079 18.417 
+userspace
+userspace
+GPU freq: 854250000
+userspace
+GPU freq: 854250000
+EMC freq: 204000000
+##############3704 17.1014
+Latency(us)/Energy(mJ): 407 115.736 13.7781 51.8146 12.1066 
+userspace
+userspace
+GPU freq: 854250000
+userspace
+GPU freq: 854250000
+EMC freq: 204000000
+##############3715 8.48574
+Latency(us)/Energy(mJ): 594 96.2364 11.4567 43.0848 10.0669 
+userspace
+userspace
+GPU freq: 854250000
+userspace
+GPU freq: 854250000
+EMC freq: 204000000
+##############3751 2.71387
+Latency(us)/Energy(mJ): 596 70.5293 8.39635 31.5758 7.37777 
+userspace
+userspace
+GPU freq: 854250000
+userspace
+GPU freq: 854250000
+EMC freq: 204000000
+##############3764 7.37843
+Latency(us)/Energy(mJ): 830 115.293 15.3837 49.8945 12.6925 
+userspace
+userspace
+GPU freq: 854250000
+userspace
+GPU freq: 854250000
+EMC freq: 204000000
+##############3765 56.6697
+Latency(us)/Energy(mJ): 61 107.962 15.0221 45.7555 12.0335 
+userspace
+userspace
+GPU freq: 1032750000
+userspace
+GPU freq: 1032750000
+EMC freq: 204000000
+##############3797 3.06623
+Latency(us)/Energy(mJ): 1029 65.191 9.04576 28.9606 7.24608 
+userspace
+userspace
+GPU freq: 1032750000
+userspace
+GPU freq: 1032750000
+EMC freq: 204000000
+##############3808 8.33939
+Latency(us)/Energy(mJ): 440 63.9173 8.72259 27.926 7.42105 
+userspace
+userspace
+GPU freq: 1032750000
+userspace
+GPU freq: 1032750000
+EMC freq: 204000000
+##############3809 69.8995
+Latency(us)/Energy(mJ): 40 45.8364 6.10512 19.546 5.19415 
+userspace
+userspace
+GPU freq: 1032750000
+userspace
+GPU freq: 1032750000
+EMC freq: 204000000
+##############3837 3.49719
+Latency(us)/Energy(mJ): 577 136.502 18.2676 62.1673 15.226 
+userspace
+userspace
+GPU freq: 1032750000
+userspace
+GPU freq: 1032750000
+EMC freq: 204000000
+##############3837 125493
+Latency(us)/Energy(mJ): 926 0 0 0 0 
+**********24
+====> Exec_us: 1141607
+====> Classify one image (mJ): 2997.19
+userspace
+userspace
+GPU freq: 1032750000
+userspace
+GPU freq: 1032750000
+EMC freq: 204000000
+##############3840 26
+Latency(us)/Energy(mJ): 27 51.1031 6.90045 22.0923 5.60748 
+userspace
+userspace
+GPU freq: 1211250000
+userspace
+GPU freq: 1211250000
+EMC freq: 204000000
+##############3902 1.60771
+Latency(us)/Energy(mJ): 8995 66.4928 8.97853 30.5552 7.19222 
+userspace
+userspace
+GPU freq: 1211250000
+userspace
+GPU freq: 1211250000
+EMC freq: 204000000
+##############3911 10.4049
+Latency(us)/Energy(mJ): 327 53.5359 7.16212 24.3737 5.97526 
+userspace
+userspace
+GPU freq: 1211250000
+userspace
+GPU freq: 1211250000
+EMC freq: 204000000
+##############3911 854
+Latency(us)/Energy(mJ): 234 10.4305 1.40843 4.7931 1.12822 
+userspace
+userspace
+GPU freq: 1211250000
+userspace
+GPU freq: 1211250000
+EMC freq: 204000000
+##############3929 5.45449
+Latency(us)/Energy(mJ): 836 60.4613 8.14844 27.7303 6.52729 
+userspace
+userspace
+GPU freq: 1300500000
+userspace
+GPU freq: 1300500000
+EMC freq: 204000000
+##############3985 1.78064
+Latency(us)/Energy(mJ): 8064 148.376 19.9557 67.912 15.9854 
+userspace
+userspace
+GPU freq: 1300500000
+userspace
+GPU freq: 1300500000
+EMC freq: 204000000
+##############3989 20.7279
+Latency(us)/Energy(mJ): 375 29.1897 3.90328 13.2834 3.12671 
+userspace
+userspace
+GPU freq: 1300500000
+userspace
+GPU freq: 1300500000
+EMC freq: 204000000
+##############4005 6.0047
+Latency(us)/Energy(mJ): 699 88.8221 11.9937 39.2214 9.60748 
+userspace
+userspace
+GPU freq: 1300500000
+userspace
+GPU freq: 1300500000
+EMC freq: 204000000
+##############4025 4.80341
+Latency(us)/Energy(mJ): 563 97.9485 13.226 43.9298 10.5946 
+userspace
+userspace
+GPU freq: 0
+EMC freq: 204000000
+##############4071 2.17009
+Latency(us)/Energy(mJ): 5133 95.9825 12.9471 44.0609 10.3713 
+userspace
+userspace
+GPU freq: 0
+EMC freq: 204000000
+##############4076 19.2919
+Latency(us)/Energy(mJ): 403 37.7974 5.03438 17.1327 4.03277 
+userspace
+userspace
+GPU freq: 140250000
+userspace
+GPU freq: 140250000
+EMC freq: 204000000
+##############4117 2.41561
+Latency(us)/Energy(mJ): 4456 55.5552 7.381 26.4133 5.91253 
+userspace
+userspace
+GPU freq: 140250000
+userspace
+GPU freq: 140250000
+EMC freq: 204000000
+##############4124 13.0023
+Latency(us)/Energy(mJ): 527 89.3275 11.7423 42.2969 9.40613 
+userspace
+userspace
+GPU freq: 140250000
+userspace
+GPU freq: 140250000
+EMC freq: 204000000
+##############4160 2.77071
+Latency(us)/Energy(mJ): 4738 38.9956 5.12606 18.4645 4.10621 
+userspace
+userspace
+GPU freq: 140250000
+userspace
+GPU freq: 140250000
+EMC freq: 204000000
+##############4165 17.1014
+Latency(us)/Energy(mJ): 692 65.5563 8.663 31.2049 6.93947 
+userspace
+userspace
+GPU freq: 140250000
+userspace
+GPU freq: 140250000
+EMC freq: 204000000
+##############4176 8.48574
+Latency(us)/Energy(mJ): 559 49.96 6.56734 23.6562 5.26075 
+userspace
+userspace
+GPU freq: 497250000
+userspace
+GPU freq: 497250000
+EMC freq: 204000000
+##############4212 2.71387
+Latency(us)/Energy(mJ): 1028 256.002 33.2313 118.866 26.6199 
+userspace
+userspace
+GPU freq: 497250000
+userspace
+GPU freq: 497250000
+EMC freq: 204000000
+##############4225 7.37843
+Latency(us)/Energy(mJ): 1458 42.0994 5.60738 19.0827 4.49177 
+userspace
+userspace
+GPU freq: 497250000
+userspace
+GPU freq: 497250000
+EMC freq: 204000000
+##############4226 56.6697
+Latency(us)/Energy(mJ): 53 143.096 21.6452 63.5271 16.3429 
+userspace
+userspace
+GPU freq: 497250000
+userspace
+GPU freq: 497250000
+EMC freq: 204000000
+##############4258 3.06623
+Latency(us)/Energy(mJ): 655 126.258 18.6645 56.1132 14.0283 
+userspace
+userspace
+GPU freq: 497250000
+userspace
+GPU freq: 497250000
+EMC freq: 204000000
+##############4269 8.33939
+Latency(us)/Energy(mJ): 876 91.99 13.7005 40.4625 10.5167 
+userspace
+userspace
+GPU freq: 497250000
+userspace
+GPU freq: 497250000
+EMC freq: 204000000
+##############4270 69.8995
+Latency(us)/Energy(mJ): 50 60.2588 9.2919 26.3744 6.99936 
+userspace
+userspace
+GPU freq: 675750000
+userspace
+GPU freq: 675750000
+EMC freq: 204000000
+##############4298 3.49719
+Latency(us)/Energy(mJ): 960 264.567 36.1491 116.768 29.3916 
+userspace
+userspace
+GPU freq: 675750000
+userspace
+GPU freq: 675750000
+EMC freq: 204000000
+##############4298 125493
+Latency(us)/Energy(mJ): 1822 9.90247 1.35534 4.3392 1.08569 
+**********24
+====> Exec_us: 729369
+====> Classify one image (mJ): 2111.45
+userspace
+userspace
+GPU freq: 675750000
+userspace
+GPU freq: 675750000
+EMC freq: 204000000
+##############4301 26
+Latency(us)/Energy(mJ): 22 15.2257 2.14226 6.43238 1.71605 
+userspace
+userspace
+GPU freq: 675750000
+userspace
+GPU freq: 675750000
+EMC freq: 204000000
+##############4363 1.60771
+Latency(us)/Energy(mJ): 10771 83.2772 11.7171 35.1819 9.38594 
+userspace
+userspace
+GPU freq: 854250000
+userspace
+GPU freq: 854250000
+EMC freq: 204000000
+##############4372 10.4049
+Latency(us)/Energy(mJ): 1886 199.135 28.1534 83.1909 22.4171 
+userspace
+userspace
+GPU freq: 854250000
+userspace
+GPU freq: 854250000
+EMC freq: 204000000
+##############4372 854
+Latency(us)/Energy(mJ): 363 10.7302 1.57651 4.41589 1.18445 
+userspace
+userspace
+GPU freq: 854250000
+userspace
+GPU freq: 854250000
+EMC freq: 204000000
+##############4390 5.45449
+Latency(us)/Energy(mJ): 475 21.7256 3.19199 8.94092 2.39817 
+userspace
+userspace
+GPU freq: 854250000
+userspace
+GPU freq: 854250000
+EMC freq: 204000000
+##############4446 1.78064
+Latency(us)/Energy(mJ): 8335 129.13 18.9548 53.0934 14.2409 
+userspace
+userspace
+GPU freq: 854250000
+userspace
+GPU freq: 854250000
+EMC freq: 204000000
+##############4450 20.7279
+Latency(us)/Energy(mJ): 197 13.897 2.01238 6.0424 1.51192 
+userspace
+userspace
+GPU freq: 1032750000
+userspace
+GPU freq: 1032750000
+EMC freq: 204000000
+##############4466 6.0047
+Latency(us)/Energy(mJ): 700 96.9167 13.8349 41.5409 10.3943 
+userspace
+userspace
+GPU freq: 1032750000
+userspace
+GPU freq: 1032750000
+EMC freq: 204000000
+##############4486 4.80341
+Latency(us)/Energy(mJ): 526 132.156 18.8872 56.7111 14.1901 
+userspace
+userspace
+GPU freq: 1032750000
+userspace
+GPU freq: 1032750000
+EMC freq: 204000000
+##############4532 2.17009
+Latency(us)/Energy(mJ): 5169 92.5753 13.4055 40.2517 10.0717 
+userspace
+userspace
+GPU freq: 1211250000
+userspace
+GPU freq: 1211250000
+EMC freq: 204000000
+##############4537 19.2919
+Latency(us)/Energy(mJ): 653 88.7205 12.7168 38.1836 9.55423 
+userspace
+userspace
+GPU freq: 1211250000
+userspace
+GPU freq: 1211250000
+EMC freq: 204000000
+##############4578 2.41561
+Latency(us)/Energy(mJ): 4406 48.7687 7.06203 21.2046 5.19688 
+userspace
+userspace
+GPU freq: 1211250000
+userspace
+GPU freq: 1211250000
+EMC freq: 204000000
+##############4585 13.0023
+Latency(us)/Energy(mJ): 409 34.4637 4.9385 14.8284 3.71034 
+userspace
+userspace
+GPU freq: 1300500000
+userspace
+GPU freq: 1300500000
+EMC freq: 204000000
+##############4621 2.77071
+Latency(us)/Energy(mJ): 4193 50.0305 7.14187 21.4443 5.193 
+userspace
+userspace
+GPU freq: 1300500000
+userspace
+GPU freq: 1300500000
+EMC freq: 204000000
+##############4626 17.1014
+Latency(us)/Energy(mJ): 437 35.3633 5.04813 15.4579 3.79271 
+userspace
+userspace
+GPU freq: 1300500000
+userspace
+GPU freq: 1300500000
+EMC freq: 204000000
+##############4637 8.48574
+Latency(us)/Energy(mJ): 745 83.3369 11.7255 37.54 8.41375 
+userspace
+userspace
+GPU freq: 1300500000
+userspace
+GPU freq: 1300500000
+EMC freq: 204000000
+##############4673 2.71387
+Latency(us)/Energy(mJ): 547 183.831 26.6338 81.3283 18.6855 
+userspace
+userspace
+GPU freq: 1300500000
+userspace
+GPU freq: 1300500000
+EMC freq: 204000000
+##############4686 7.37843
+Latency(us)/Energy(mJ): 673 110.515 15.2827 48.7257 12.1407 
+userspace
+userspace
+GPU freq: 1300500000
+userspace
+GPU freq: 1300500000
+EMC freq: 204000000
+##############4687 56.6697
+Latency(us)/Energy(mJ): 145 93.4671 14.8448 38.9418 10.389 
+userspace
+userspace
+GPU freq: 0
+EMC freq: 800000000
+##############4719 3.06623
+Latency(us)/Energy(mJ): 191 157.786 21.7129 68.2254 17.393 
+userspace
+userspace
+GPU freq: 0
+EMC freq: 800000000
+##############4730 8.33939
+Latency(us)/Energy(mJ): 181 41.4437 5.59057 17.8986 4.60151 
+userspace
+userspace
+GPU freq: 0
+EMC freq: 800000000
+##############4731 69.8995
+Latency(us)/Energy(mJ): 16 67.1747 9.00221 28.8212 7.65895 
+userspace
+userspace
+GPU freq: 0
+EMC freq: 800000000
+##############4759 3.49719
+Latency(us)/Energy(mJ): 195 10.4022 1.40461 4.49697 1.19503 
+userspace
+userspace
+GPU freq: 0
+EMC freq: 800000000
+##############4759 125493
+Latency(us)/Energy(mJ): 436 21.3816 2.88716 9.24343 2.45635 
+**********24
+====> Exec_us: 740798
+====> Classify one image (mJ): 1989.21
+userspace
+userspace
+GPU freq: 0
+EMC freq: 800000000
+##############4762 26
+Latency(us)/Energy(mJ): 7 18.7987 2.53839 8.12683 2.29252 
+userspace
+userspace
+GPU freq: 140250000
+userspace
+GPU freq: 140250000
+EMC freq: 800000000
+##############4824 1.60771
+Latency(us)/Energy(mJ): 3033 28.8784 3.89946 12.4844 3.52176 
+userspace
+userspace
+GPU freq: 140250000
+userspace
+GPU freq: 140250000
+EMC freq: 800000000
+##############4833 10.4049
+Latency(us)/Energy(mJ): 128 51.2807 6.86378 21.3042 6.19896 
+userspace
+userspace
+GPU freq: 140250000
+userspace
+GPU freq: 140250000
+EMC freq: 800000000
+##############4833 854
+Latency(us)/Energy(mJ): 155 13.6201 1.81412 5.4471 1.6384 
+userspace
+userspace
+GPU freq: 140250000
+userspace
+GPU freq: 140250000
+EMC freq: 800000000
+##############4851 5.45449
+Latency(us)/Energy(mJ): 163 26.9104 3.58431 11.4754 3.41541 
+userspace
+userspace
+GPU freq: 497250000
+userspace
+GPU freq: 497250000
+EMC freq: 800000000
+##############4907 1.78064
+Latency(us)/Energy(mJ): 2655 78.9446 10.5149 32.8888 10.0195 
+userspace
+userspace
+GPU freq: 497250000
+userspace
+GPU freq: 497250000
+EMC freq: 800000000
+##############4911 20.7279
+Latency(us)/Energy(mJ): 153 79.3054 10.4179 32.5853 10.1675 
+userspace
+userspace
+GPU freq: 497250000
+userspace
+GPU freq: 497250000
+EMC freq: 800000000
+##############4927 6.0047
+Latency(us)/Energy(mJ): 153 92.4387 11.9944 38.401 12.0258 
+userspace
+userspace
+GPU freq: 497250000
+userspace
+GPU freq: 497250000
+EMC freq: 800000000
+##############4947 4.80341
+Latency(us)/Energy(mJ): 261 21.7562 2.82298 9.03797 2.83037 
+userspace
+userspace
+GPU freq: 675750000
+userspace
+GPU freq: 675750000
+EMC freq: 800000000
+##############4993 2.17009
+Latency(us)/Energy(mJ): 1915 98.9857 12.9525 41.4683 12.9864 
+userspace
+userspace
+GPU freq: 675750000
+userspace
+GPU freq: 675750000
+EMC freq: 800000000
+##############4998 19.2919
+Latency(us)/Energy(mJ): 122 10.9789 1.4432 4.62049 1.44697 
+userspace
+userspace
+GPU freq: 675750000
+userspace
+GPU freq: 675750000
+EMC freq: 800000000
+##############5039 2.41561
+Latency(us)/Energy(mJ): 1599 35.2927 4.57942 14.6613 4.5914 
+userspace
+userspace
+GPU freq: 854250000
+userspace
+GPU freq: 854250000
+EMC freq: 800000000
+##############5046 13.0023
+Latency(us)/Energy(mJ): 222 59.5924 7.73244 24.756 7.75269 
+userspace
+userspace
+GPU freq: 854250000
+userspace
+GPU freq: 854250000
+EMC freq: 800000000
+##############5082 2.77071
+Latency(us)/Energy(mJ): 1566 61.0468 7.92115 25.3601 7.94189 
+userspace
+userspace
+GPU freq: 854250000
+userspace
+GPU freq: 854250000
+EMC freq: 800000000
+##############5087 17.1014
+Latency(us)/Energy(mJ): 119 30.8148 3.99839 12.8011 4.00886 
+userspace
+userspace
+GPU freq: 854250000
+userspace
+GPU freq: 854250000
+EMC freq: 800000000
+##############5098 8.48574
+Latency(us)/Energy(mJ): 177 73.812 9.5775 30.6631 9.60258 
+userspace
+userspace
+GPU freq: 1032750000
+userspace
+GPU freq: 1032750000
+EMC freq: 800000000
+##############5134 2.71387
+Latency(us)/Energy(mJ): 220 89.3128 11.5238 36.8942 11.554 
+userspace
+userspace
+GPU freq: 1032750000
+userspace
+GPU freq: 1032750000
+EMC freq: 800000000
+##############5147 7.37843
+Latency(us)/Energy(mJ): 1341 83.1377 11.2125 33.4393 11.7524 
+userspace
+userspace
+GPU freq: 1032750000
+userspace
+GPU freq: 1032750000
+EMC freq: 800000000
+##############5148 56.6697
+Latency(us)/Energy(mJ): 14 40.9184 5.8405 16.2035 5.82956 
+userspace
+userspace
+GPU freq: 1032750000
+userspace
+GPU freq: 1032750000
+EMC freq: 800000000
+##############5180 3.06623
+Latency(us)/Energy(mJ): 196 99.5521 12.4318 39.8013 14.1682 
+userspace
+userspace
+GPU freq: 1032750000
+userspace
+GPU freq: 1032750000
+EMC freq: 800000000
+##############5191 8.33939
+Latency(us)/Energy(mJ): 146 47.6917 6.47509 18.8954 6.798 
+userspace
+userspace
+GPU freq: 1032750000
+userspace
+GPU freq: 1032750000
+EMC freq: 800000000
+##############5192 69.8995
+Latency(us)/Energy(mJ): 11 0 0 0 0 
+userspace
+userspace
+GPU freq: 1211250000
+userspace
+GPU freq: 1211250000
+EMC freq: 800000000
+##############5220 3.49719
+Latency(us)/Energy(mJ): 202 104.998 12.9509 41.4634 14.9837 
+userspace
+userspace
+GPU freq: 1211250000
+userspace
+GPU freq: 1211250000
+EMC freq: 800000000
+##############5220 125493
+Latency(us)/Energy(mJ): 270 0 0 0 0 
+**********24
+====> Exec_us: 433351
+====> Classify one image (mJ): 1281.08
+userspace
+userspace
+GPU freq: 1211250000
+userspace
+GPU freq: 1211250000
+EMC freq: 800000000
+##############5223 26
+Latency(us)/Energy(mJ): 6 81.9472 10.1482 32.4902 11.689 
+userspace
+userspace
+GPU freq: 1211250000
+userspace
+GPU freq: 1211250000
+EMC freq: 800000000
+##############5285 1.60771
+Latency(us)/Energy(mJ): 2703 62.6227 7.92115 25.3601 9.12384 
+userspace
+userspace
+GPU freq: 1300500000
+userspace
+GPU freq: 1300500000
+EMC freq: 800000000
+##############5294 10.4049
+Latency(us)/Energy(mJ): 217 121.183 15.207 47.3534 18.3121 
+userspace
+userspace
+GPU freq: 1300500000
+userspace
+GPU freq: 1300500000
+EMC freq: 800000000
+##############5294 854
+Latency(us)/Energy(mJ): 84 0 0 0 0 
+userspace
+userspace
+GPU freq: 1300500000
+userspace
+GPU freq: 1300500000
+EMC freq: 800000000
+##############5312 5.45449
+Latency(us)/Energy(mJ): 184 81.996 10.3717 31.1422 12.4895 
+userspace
+userspace
+GPU freq: 1300500000
+userspace
+GPU freq: 1300500000
+EMC freq: 800000000
+##############5368 1.78064
+Latency(us)/Energy(mJ): 2647 90.6936 11.4718 34.4456 13.8143 
+userspace
+userspace
+GPU freq: 1300500000
+userspace
+GPU freq: 1300500000
+EMC freq: 800000000
+##############5372 20.7279
+Latency(us)/Energy(mJ): 171 39.2072 4.89609 14.7011 5.89582 
+userspace
+userspace
+GPU freq: 0
+EMC freq: 800000000
+##############5388 6.0047
+Latency(us)/Energy(mJ): 149 73.0025 9.23409 27.7264 11.1196 
+userspace
+userspace
+GPU freq: 0
+EMC freq: 800000000
+##############5408 4.80341
+Latency(us)/Energy(mJ): 170 47.7522 6.04018 18.1364 7.27352 
+userspace
+userspace
+GPU freq: 0
+EMC freq: 800000000
+##############5454 2.17009
+Latency(us)/Energy(mJ): 1850 56.3804 7.13156 22.3234 8.58774 
+userspace
+userspace
+GPU freq: 0
+EMC freq: 800000000
+##############5459 19.2919
+Latency(us)/Energy(mJ): 185 67.1467 8.49339 27.1922 10.173 
+userspace
+userspace
+GPU freq: 140250000
+userspace
+GPU freq: 140250000
+EMC freq: 800000000
+##############5500 2.41561
+Latency(us)/Energy(mJ): 3040 59.2977 7.50057 24.0136 8.6394 
+userspace
+userspace
+GPU freq: 140250000
+userspace
+GPU freq: 140250000
+EMC freq: 800000000
+##############5507 13.0023
+Latency(us)/Energy(mJ): 240 94.7867 12.062 36.9353 14.0271 
+userspace
+userspace
+GPU freq: 140250000
+userspace
+GPU freq: 140250000
+EMC freq: 800000000
+##############5543 2.77071
+Latency(us)/Energy(mJ): 1637 92.2317 11.7652 37.6672 13.5516 
+userspace
+userspace
+GPU freq: 497250000
+userspace
+GPU freq: 497250000
+EMC freq: 800000000
+##############5548 17.1014
+Latency(us)/Energy(mJ): 200 132.243 16.9952 51.2538 19.5756 
+userspace
+userspace
+GPU freq: 497250000
+userspace
+GPU freq: 497250000
+EMC freq: 800000000
+##############5559 8.48574
+Latency(us)/Energy(mJ): 153 91.3684 11.9493 35.8793 13.7636 
+userspace
+userspace
+GPU freq: 497250000
+userspace
+GPU freq: 497250000
+EMC freq: 800000000
+##############5595 2.71387
+Latency(us)/Energy(mJ): 244 74.4243 9.65696 28.9962 11.1232 
+userspace
+userspace
+GPU freq: 497250000
+userspace
+GPU freq: 497250000
+EMC freq: 800000000
+##############5608 7.37843
+Latency(us)/Energy(mJ): 165 59.9599 7.63847 24.4551 9.83861 
+userspace
+userspace
+GPU freq: 497250000
+userspace
+GPU freq: 497250000
+EMC freq: 800000000
+##############5609 56.6697
+Latency(us)/Energy(mJ): 17 43.6925 5.38926 17.2541 7.02578 
+userspace
+userspace
+GPU freq: 675750000
+userspace
+GPU freq: 675750000
+EMC freq: 800000000
+##############5641 3.06623
+Latency(us)/Energy(mJ): 261 175.212 21.5777 69.0824 27.522 
+userspace
+userspace
+GPU freq: 675750000
+userspace
+GPU freq: 675750000
+EMC freq: 800000000
+##############5652 8.33939
+Latency(us)/Energy(mJ): 187 50.3698 6.25563 20.0278 8.08413 
+userspace
+userspace
+GPU freq: 675750000
+userspace
+GPU freq: 675750000
+EMC freq: 800000000
+##############5653 69.8995
+Latency(us)/Energy(mJ): 12 34.2931 4.22989 13.5423 5.51435 
+userspace
+userspace
+GPU freq: 675750000
+userspace
+GPU freq: 675750000
+EMC freq: 800000000
+##############5681 3.49719
+Latency(us)/Energy(mJ): 189 156.087 19.5003 61.2539 24.829 
+userspace
+userspace
+GPU freq: 675750000
+userspace
+GPU freq: 675750000
+EMC freq: 800000000
+##############5681 125493
+Latency(us)/Energy(mJ): 353 0 0 0 0 
+**********24
+====> Exec_us: 599157
+====> Classify one image (mJ): 1812.89
+userspace
+userspace
+GPU freq: 675750000
+userspace
+GPU freq: 675750000
+EMC freq: 800000000
+##############5684 26
+Latency(us)/Energy(mJ): 7 57.0485 7.25647 21.7884 9.09908 
+userspace
+userspace
+GPU freq: 854250000
+userspace
+GPU freq: 854250000
+EMC freq: 800000000
+##############5746 1.60771
+Latency(us)/Energy(mJ): 2896 88.2296 11.2365 33.739 14.0898 
+userspace
+userspace
+GPU freq: 854250000
+userspace
+GPU freq: 854250000
+EMC freq: 800000000
+##############5755 10.4049
+Latency(us)/Energy(mJ): 136 29.6069 3.76652 11.3094 4.72294 
+userspace
+userspace
+GPU freq: 854250000
+userspace
+GPU freq: 854250000
+EMC freq: 800000000
+##############5755 854
+Latency(us)/Energy(mJ): 96 0 0 0 0 
+userspace
+userspace
+GPU freq: 854250000
+userspace
+GPU freq: 854250000
+EMC freq: 800000000
+##############5773 5.45449
+Latency(us)/Energy(mJ): 188 74.2311 9.41439 28.2678 11.805 
+userspace
+userspace
+GPU freq: 1032750000
+userspace
+GPU freq: 1032750000
+EMC freq: 800000000
+##############5829 1.78064
+Latency(us)/Energy(mJ): 2809 37.1339 4.69707 14.8643 5.88978 
+userspace
+userspace
+GPU freq: 1032750000
+userspace
+GPU freq: 1032750000
+EMC freq: 800000000
+##############5833 20.7279
+Latency(us)/Energy(mJ): 139 92.1021 11.5559 36.111 14.4902 
+userspace
+userspace
+GPU freq: 1032750000
+userspace
+GPU freq: 1032750000
+EMC freq: 800000000
+##############5849 6.0047
+Latency(us)/Energy(mJ): 139 30.9127 3.91015 11.7407 4.90304 
+userspace
+userspace
+GPU freq: 1032750000
+userspace
+GPU freq: 1032750000
+EMC freq: 800000000
+##############5869 4.80341
+Latency(us)/Energy(mJ): 186 46.4869 5.88013 17.6558 7.37325 
+userspace
+userspace
+GPU freq: 1211250000
+userspace
+GPU freq: 1211250000
+EMC freq: 800000000
+##############5915 2.17009
+Latency(us)/Energy(mJ): 1836 56.6718 7.13156 22.8322 8.74249 
+userspace
+userspace
+GPU freq: 1211250000
+userspace
+GPU freq: 1211250000
+EMC freq: 800000000
+##############5920 19.2919
+Latency(us)/Energy(mJ): 151 62.3424 7.78516 24.9247 9.44295 
+userspace
+userspace
+GPU freq: 1211250000
+userspace
+GPU freq: 1211250000
+EMC freq: 800000000
+##############5961 2.41561
+Latency(us)/Energy(mJ): 1669 51.9863 6.57575 21.0527 7.91844 
+userspace
+userspace
+GPU freq: 1300500000
+userspace
+GPU freq: 1300500000
+EMC freq: 800000000
+##############5968 13.0023
+Latency(us)/Energy(mJ): 304 82.5257 10.3193 33.0381 12.4264 
+userspace
+userspace
+GPU freq: 1300500000
+userspace
+GPU freq: 1300500000
+EMC freq: 800000000
+##############6004 2.77071
+Latency(us)/Energy(mJ): 1656 29.0666 3.62976 11.6209 4.37092 
+userspace
+userspace
+GPU freq: 1300500000
+userspace
+GPU freq: 1300500000
+EMC freq: 800000000
+##############6009 17.1014
+Latency(us)/Energy(mJ): 180 8.9392 1.13072 3.62008 1.3616 
+userspace
+userspace
+GPU freq: 1300500000
+userspace
+GPU freq: 1300500000
+EMC freq: 800000000
+##############6020 8.48574
+Latency(us)/Energy(mJ): 128 22.7651 2.84284 9.10157 3.42332 
+userspace
+userspace
+GPU freq: 0
+EMC freq: 800000000
+##############6056 2.71387
+Latency(us)/Energy(mJ): 207 75.3974 9.35862 29.9623 11.2695 
+userspace
+userspace
+GPU freq: 0
+EMC freq: 800000000
+##############6069 7.37843
+Latency(us)/Energy(mJ): 189 115.901 15.6212 44.2453 18.2395 
+userspace
+userspace
+GPU freq: 0
+EMC freq: 800000000
+##############6070 56.6697
+Latency(us)/Energy(mJ): 17 60.2171 7.33746 22.0124 9.56558 
+userspace
+userspace
+GPU freq: 0
+EMC freq: 800000000
+##############6102 3.06623
+Latency(us)/Energy(mJ): 203 79.5437 9.75819 29.3001 12.4515 
+userspace
+userspace
+GPU freq: 0
+EMC freq: 800000000
+##############6113 8.33939
+Latency(us)/Energy(mJ): 149 54.5926 6.88707 20.0515 8.65392 
+userspace
+userspace
+GPU freq: 0
+EMC freq: 800000000
+##############6114 69.8995
+Latency(us)/Energy(mJ): 17 54.3546 6.62312 19.8763 8.63432 
+userspace
+userspace
+GPU freq: 140250000
+userspace
+GPU freq: 140250000
+EMC freq: 800000000
+##############6142 3.49719
+Latency(us)/Energy(mJ): 192 82.6596 10.1623 30.5066 13.2483 
+userspace
+userspace
+GPU freq: 140250000
+userspace
+GPU freq: 140250000
+EMC freq: 800000000
+##############6142 125493
+Latency(us)/Energy(mJ): 367 0 0 0 0 
+**********24
+====> Exec_us: 431675
+====> Classify one image (mJ): 1328.41
+0.3134 - "n02123045 tabby, tabby cat"
+0.2380 - "n02123159 tiger cat"
+0.1235 - "n02124075 Egyptian cat"
+0.1003 - "n02119022 red fox, Vulpes vulpes"
+0.0715 - "n02127052 lynx, catamount"

@@ -1,0 +1,137 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+) dest:copy	lowrankcnn/cifar/fbcunn_files/AbstractParallel.lua	/^        withDevice(dest_gpuid, function() dest:copy(source) end)$/;"	f
+) return testLoader:get_batch	lowrankcnn/cifar/test.lua	/^   return function() return testLoader:get_batch(false) end$/;"	f
+AbstractParallel._getBuffer	lowrankcnn/cifar/fbcunn_files/AbstractParallel.lua	/^function AbstractParallel._getBuffer()$/;"	f
+AbstractParallel:__init	lowrankcnn/cifar/fbcunn_files/AbstractParallel.lua	/^function AbstractParallel:__init(dimension)$/;"	f
+AbstractParallel:_distributeGradOutput	lowrankcnn/cifar/fbcunn_files/AbstractParallel.lua	/^function AbstractParallel:_distributeGradOutput(_input, gradOutput)$/;"	f
+AbstractParallel:_freeCaches	lowrankcnn/cifar/fbcunn_files/AbstractParallel.lua	/^function AbstractParallel:_freeCaches()$/;"	f
+AbstractParallel:_mixGrads	lowrankcnn/cifar/fbcunn_files/AbstractParallel.lua	/^function AbstractParallel:_mixGrads()$/;"	f
+AbstractParallel:accGradParameters	lowrankcnn/cifar/fbcunn_files/AbstractParallel.lua	/^function AbstractParallel:accGradParameters(_input, _gradOutput, scale)$/;"	f
+AbstractParallel:accUpdateGradParameters	lowrankcnn/cifar/fbcunn_files/AbstractParallel.lua	/^function AbstractParallel:accUpdateGradParameters(_input, _gradOutput, lr)$/;"	f
+AbstractParallel:add	lowrankcnn/cifar/fbcunn_files/AbstractParallel.lua	/^function AbstractParallel:add(module, gpuid)$/;"	f
+AbstractParallel:clone	lowrankcnn/cifar/fbcunn_files/AbstractParallel.lua	/^function AbstractParallel:clone()$/;"	f
+AbstractParallel:get	lowrankcnn/cifar/fbcunn_files/AbstractParallel.lua	/^function AbstractParallel:get(index)$/;"	f
+AbstractParallel:gpuSend	lowrankcnn/cifar/fbcunn_files/AbstractParallel.lua	/^function AbstractParallel:gpuSend(dest, source)$/;"	f
+AbstractParallel:nextGPU	lowrankcnn/cifar/fbcunn_files/AbstractParallel.lua	/^function AbstractParallel:nextGPU()$/;"	f
+AbstractParallel:reset	lowrankcnn/cifar/fbcunn_files/AbstractParallel.lua	/^function AbstractParallel:reset(stdv)$/;"	f
+AbstractParallel:share	lowrankcnn/cifar/fbcunn_files/AbstractParallel.lua	/^function AbstractParallel:share(mlp,...)$/;"	f
+AbstractParallel:updateGradInput	lowrankcnn/cifar/fbcunn_files/AbstractParallel.lua	/^function AbstractParallel:updateGradInput(_input, gradOutput)$/;"	f
+AbstractParallel:updateOutput	lowrankcnn/cifar/fbcunn_files/AbstractParallel.lua	/^function AbstractParallel:updateOutput(input)$/;"	f
+AbstractParallel:updateParameters	lowrankcnn/cifar/fbcunn_files/AbstractParallel.lua	/^function AbstractParallel:updateParameters(learningRate)$/;"	f
+AbstractParallel:zeroGradParameters	lowrankcnn/cifar/fbcunn_files/AbstractParallel.lua	/^function AbstractParallel:zeroGradParameters()$/;"	f
+CAFFE_ROOT	lowrank_approx.py	/^CAFFE_ROOT = '..\/..\/'$/;"	v
+CAFFE_ROOT	lowrankcnn/imagenet/lowrank_approx.py	/^CAFFE_ROOT = '.\/caffe'$/;"	v
+DataParallel:__tostring__	lowrankcnn/cifar/fbcunn_files/DataParallel.lua	/^function DataParallel:__tostring__()$/;"	f
+DataParallel:_combine_gradients	lowrankcnn/cifar/fbcunn_files/DataParallel.lua	/^function DataParallel:_combine_gradients(row, gradients)$/;"	f
+DataParallel:_distributeInput	lowrankcnn/cifar/fbcunn_files/DataParallel.lua	/^function DataParallel:_distributeInput(input)$/;"	f
+DataParallel:_mixGrads	lowrankcnn/cifar/fbcunn_files/DataParallel.lua	/^function DataParallel:_mixGrads()$/;"	f
+DataParallel:accUpdateGradParameters	lowrankcnn/cifar/fbcunn_files/DataParallel.lua	/^function DataParallel:accUpdateGradParameters(_input, _gradOutput, lr)$/;"	f
+DataParallel:name	lowrankcnn/cifar/fbcunn_files/DataParallel.lua	/^function DataParallel:name()$/;"	f
+DataParallel:updateGradInput	lowrankcnn/cifar/fbcunn_files/DataParallel.lua	/^function DataParallel:updateGradInput(_input, gradOutput)$/;"	f
+M.parse	lowrankcnn/cifar/opts.lua	/^function M.parse(arg)$/;"	f
+ModelParallel:__init	lowrankcnn/cifar/fbcunn_files/ModelParallel.lua	/^function ModelParallel:__init(dimension)$/;"	f
+ModelParallel:__tostring__	lowrankcnn/cifar/fbcunn_files/ModelParallel.lua	/^function ModelParallel:__tostring__()$/;"	f
+ModelParallel:_distributeInput	lowrankcnn/cifar/fbcunn_files/ModelParallel.lua	/^function ModelParallel:_distributeInput(input)$/;"	f
+ModelParallel:_freeCaches	lowrankcnn/cifar/fbcunn_files/ModelParallel.lua	/^function ModelParallel:_freeCaches()$/;"	f
+ModelParallel:add	lowrankcnn/cifar/fbcunn_files/ModelParallel.lua	/^function ModelParallel:add(module, gpuid)$/;"	f
+ModelParallel:get	lowrankcnn/cifar/fbcunn_files/ModelParallel.lua	/^function ModelParallel:get(index)$/;"	f
+ModelParallel:name	lowrankcnn/cifar/fbcunn_files/ModelParallel.lua	/^function ModelParallel:name()$/;"	f
+ModelParallel:nextGPU	lowrankcnn/cifar/fbcunn_files/ModelParallel.lua	/^function ModelParallel:nextGPU()$/;"	f
+ModelParallel:updateGradInput	lowrankcnn/cifar/fbcunn_files/ModelParallel.lua	/^function ModelParallel:updateGradInput(_input, gradOutput)$/;"	f
+Optim.weight_bias_parameters	lowrankcnn/cifar/fbcunn_files/Optim.lua	/^function Optim.weight_bias_parameters(module)$/;"	f
+Optim:__init	lowrankcnn/cifar/fbcunn_files/Optim.lua	/^function Optim:__init(model, optState, checkpoint_data)$/;"	f
+Optim:optimize	lowrankcnn/cifar/fbcunn_files/Optim.lua	/^function Optim:optimize(optimMethod, inputs, targets, criterion)$/;"	f
+Optim:save	lowrankcnn/cifar/fbcunn_files/Optim.lua	/^function Optim:save()$/;"	f
+Optim:setParameters	lowrankcnn/cifar/fbcunn_files/Optim.lua	/^function Optim:setParameters(newParams)$/;"	f
+Optim:type	lowrankcnn/cifar/fbcunn_files/Optim.lua	/^function Optim:type(t)$/;"	f
+_create_new	lowrank_approx.py	/^    def _create_new(name):$/;"	f	function:vh_decompose
+_create_new	lowrankcnn/imagenet/lowrank_approx.py	/^    def _create_new(name):$/;"	f	function:vh_decompose
+_type_all	lowrankcnn/cifar/fbcunn_files/Optim.lua	/^local function _type_all(obj, t)$/;"	f
+approx_lowrank_weights	lowrank_approx.py	/^def approx_lowrank_weights(orig_model, orig_weights, conf,$/;"	f
+approx_lowrank_weights	lowrankcnn/imagenet/lowrank_approx.py	/^def approx_lowrank_weights(orig_model, orig_weights, conf,$/;"	f
+args	lowrank_approx.py	/^    args = parser.parse_args()$/;"	v
+args	lowrankcnn/imagenet/lowrank_approx.py	/^    args = parser.parse_args()$/;"	v
+createModel	lowrankcnn/cifar/models/adaframe_cudnn.lua	/^function createModel(nGPU)$/;"	f
+createModel	lowrankcnn/cifar/models/alexnet_ccn2.lua	/^function createModel(nGPU)$/;"	f
+createModel	lowrankcnn/cifar/models/alexnet_cudnn.lua	/^function createModel(nGPU)$/;"	f
+createModel	lowrankcnn/cifar/models/alexnet_cunn.lua	/^function createModel(nGPU)$/;"	f
+createModel	lowrankcnn/cifar/models/alexnet_fbcunn.lua	/^function createModel(nGPU)$/;"	f
+createModel	lowrankcnn/cifar/models/alexnetowt_ccn2.lua	/^function createModel(nGPU)$/;"	f
+createModel	lowrankcnn/cifar/models/alexnetowt_cudnn.lua	/^function createModel(nGPU)$/;"	f
+createModel	lowrankcnn/cifar/models/alexnetowtbn_cudnn.lua	/^function createModel(nGPU)$/;"	f
+createModel	lowrankcnn/cifar/models/baseline_cudnn.lua	/^function createModel(nGPU)$/;"	f
+createModel	lowrankcnn/cifar/models/baseline_lowrank_cudnn.lua	/^function createModel(nGPU)$/;"	f
+createModel	lowrankcnn/cifar/models/googlenet_cudnn.lua	/^function createModel(nGPU)$/;"	f
+createModel	lowrankcnn/cifar/models/iris_cudnn.lua	/^   function createModel(nGPU)$/;"	f
+createModel	lowrankcnn/cifar/models/iris_small_cudnn.lua	/^function createModel(nGPU)$/;"	f
+createModel	lowrankcnn/cifar/models/lowrank_nin_2_cudnn.lua	/^function createModel(nGPU)$/;"	f
+createModel	lowrankcnn/cifar/models/lowrank_nin_cudnn.lua	/^function createModel(nGPU)$/;"	f
+createModel	lowrankcnn/cifar/models/nin_cudnn.lua	/^function createModel(nGPU)$/;"	f
+createModel	lowrankcnn/cifar/models/overfeat_cudnn.lua	/^function createModel(nGPU)$/;"	f
+createModel	lowrankcnn/cifar/models/overfeat_cunn.lua	/^function createModel(nGPU)$/;"	f
+createModel	lowrankcnn/cifar/models/overfeat_fbcunn.lua	/^function createModel(nGPU)$/;"	f
+createModel	lowrankcnn/cifar/models/small_alexnet_cudnn.lua	/^function createModel(nGPU)$/;"	f
+createModel	lowrankcnn/cifar/models/test_nin_cudnn.lua	/^function createModel(nGPU)$/;"	f
+createModel	lowrankcnn/cifar/models/vgg_cudnn.lua	/^function createModel(nGPU)$/;"	f
+dataset:__init	lowrankcnn/cifar/dataset.lua	/^function dataset:__init(...)$/;"	f
+dataset:get	lowrankcnn/cifar/dataset.lua	/^function dataset:get(i1, i2)$/;"	f
+dataset:getByClass	lowrankcnn/cifar/dataset.lua	/^function dataset:getByClass(class)$/;"	f
+dataset:sample	lowrankcnn/cifar/dataset.lua	/^function dataset:sample(quantity)$/;"	f
+dataset:size	lowrankcnn/cifar/dataset.lua	/^function dataset:size(class, list)$/;"	f
+deepcopy	lowrankcnn/cifar/fbcunn_files/Optim.lua	/^local function deepcopy(x)$/;"	f
+donkeys:addjob	lowrankcnn/cifar/data.lua	/^      function donkeys:addjob(f1, f2) f2(f1()) end$/;"	f
+donkeys:addjob(function() return testLoader:size() end, function(c) nTest 	lowrankcnn/cifar/data.lua	/^donkeys:addjob(function() return testLoader:size() end, function(c) nTest = c end)$/;"	f
+donkeys:addjob(function() return trainLoader.classes end, function(c) classes 	lowrankcnn/cifar/data.lua	/^donkeys:addjob(function() return trainLoader.classes end, function(c) classes = c end)$/;"	f
+donkeys:synchronize	lowrankcnn/cifar/data.lua	/^      function donkeys:synchronize() end$/;"	f
+fEvalMod	lowrankcnn/cifar/fbcunn_files/Optim.lua	/^    local function fEvalMod(x)$/;"	f
+get_device_for_module	lowrankcnn/cifar/fbcunn_files/Optim.lua	/^local function get_device_for_module(mod)$/;"	f
+help	lowrank_approx.py	/^        help="Caffemodel of the original net")$/;"	v
+help	lowrank_approx.py	/^        help="JSON config file specifying the low-rank approximation")$/;"	v
+help	lowrank_approx.py	/^        help="Path to the caffemodel of the low-rank approximated net")$/;"	v
+help	lowrank_approx.py	/^        help="Path to the prototxt of the low-rank approximated net")$/;"	v
+help	lowrank_approx.py	/^        help="Prototxt of the original net")$/;"	v
+help	lowrankcnn/imagenet/lowrank_approx.py	/^        help="Caffemodel of the original net")$/;"	v
+help	lowrankcnn/imagenet/lowrank_approx.py	/^        help="JSON config file specifying the low-rank approximation")$/;"	v
+help	lowrankcnn/imagenet/lowrank_approx.py	/^        help="Path to the caffemodel of the low-rank approximated net")$/;"	v
+help	lowrankcnn/imagenet/lowrank_approx.py	/^        help="Path to the prototxt of the low-rank approximated net")$/;"	v
+help	lowrankcnn/imagenet/lowrank_approx.py	/^        help="Prototxt of the original net")$/;"	v
+inception	lowrankcnn/cifar/models/googlenet_cudnn.lua	/^local function inception(input_size, config)$/;"	f
+inputSlice	lowrankcnn/cifar/fbcunn_files/DataParallel.lua	/^    local function inputSlice(i)$/;"	f
+loadImage	lowrankcnn/cifar/donkey.lua	/^local function loadImage(path)$/;"	f
+load_config	lowrank_approx.py	/^def load_config(config_file):$/;"	f
+load_config	lowrankcnn/imagenet/lowrank_approx.py	/^def load_config(config_file):$/;"	f
+local function tableFind(t, o) for k,v in pairs(t) do if v 	lowrankcnn/cifar/dataset.lua	/^   local function tableFind(t, o) for k,v in pairs(t) do if v == o then return k end end end$/;"	f
+local testDataIterator 	lowrankcnn/cifar/test.lua	/^local testDataIterator = function()$/;"	f
+local testHook 	lowrankcnn/cifar/donkey.lua	/^local testHook = function(self, path)$/;"	f
+local trainHook 	lowrankcnn/cifar/donkey.lua	/^local trainHook = function(self, path)$/;"	f
+m) table.insert	lowrankcnn/cifar/fbcunn_files/Optim.lua	/^        self.model:for_each(function(m) table.insert(modules, m) end)$/;"	f
+main	lowrank_approx.py	/^def main(args):$/;"	f
+main	lowrankcnn/imagenet/lowrank_approx.py	/^def main(args):$/;"	f
+make_lowrank_model	lowrank_approx.py	/^def make_lowrank_model(input_file, conf, output_file):$/;"	f
+make_lowrank_model	lowrankcnn/imagenet/lowrank_approx.py	/^def make_lowrank_model(input_file, conf, output_file):$/;"	f
+on_device_for_module	lowrankcnn/cifar/fbcunn_files/Optim.lua	/^local function on_device_for_module(mod, f)$/;"	f
+paramsForEpoch	lowrankcnn/cifar/train.lua	/^local function paramsForEpoch(epoch)$/;"	f
+parser	lowrank_approx.py	/^    parser = ArgumentParser(description="Low-rank approximation")$/;"	v
+parser	lowrankcnn/imagenet/lowrank_approx.py	/^    parser = ArgumentParser(description="Low-rank approximation")$/;"	v
+receiveTensor	lowrankcnn/cifar/util.lua	/^function receiveTensor(obj, buffer)$/;"	f
+ripairs	lowrankcnn/cifar/fbcunn_files/ModelParallel.lua	/^local function ripairs(t)$/;"	f
+ripairs_it	lowrankcnn/cifar/fbcunn_files/ModelParallel.lua	/^    local function ripairs_it(t, i)$/;"	f
+sanitize	lowrankcnn/cifar/train.lua	/^   local function sanitize(net)$/;"	f
+sendTensor	lowrankcnn/cifar/util.lua	/^function sendTensor(inputs)$/;"	f
+setFloatStorage	lowrankcnn/cifar/util.lua	/^function setFloatStorage(tensor, storage_p)$/;"	f
+setLongStorage	lowrankcnn/cifar/util.lua	/^function setLongStorage(tensor, storage_p)$/;"	f
+splice	lowrankcnn/cifar/fbcunn_files/Optim.lua	/^    local function splice(dest, src)$/;"	f
+tableToOutput	lowrankcnn/cifar/dataset.lua	/^local function tableToOutput(self, dataTable, scalarTable)$/;"	f
+test	lowrankcnn/cifar/test.lua	/^function test()$/;"	f
+testBatch	lowrankcnn/cifar/test.lua	/^function testBatch(inputsThread, labelsThread)$/;"	f
+train	lowrankcnn/cifar/train.lua	/^function train()$/;"	f
+trainBatch	lowrankcnn/cifar/train.lua	/^function trainBatch(inputsThread, labelsThread)$/;"	f
+type	lowrankcnn/cifar/dataset.lua	/^    type="function",$/;"	f
+vh_decompose	lowrank_approx.py	/^def vh_decompose(conv, K):$/;"	f
+vh_decompose	lowrankcnn/imagenet/lowrank_approx.py	/^def vh_decompose(conv, K):$/;"	f
+{check	lowrankcnn/cifar/dataset.lua	/^   {check=function(paths)$/;"	f

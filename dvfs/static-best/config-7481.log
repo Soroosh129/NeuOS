@@ -1,0 +1,32 @@
+loading weight: /home/nvidia/caffe-build/models/bvlc_alexnet/bvlc_alexnet.caffemodel
+loading prototxt: /home/nvidia/caffe-build/models/bvlc_alexnet/deploy.prototxt
+---------- Prediction for /home/nvidia/caffe-build/examples/images/cat.jpg ----------
+Latency(us)/Energy(mJ): 0 0 0 0 0 
+Latency(us)/Energy(mJ): 2653 10.6372 0.541455 2.21537 3.63413 
+Latency(us)/Energy(mJ): 32 0 0 0 0 
+Latency(us)/Energy(mJ): 232 0.799933 0.071609 0.157878 0.266513 
+Latency(us)/Energy(mJ): 102 0.807661 0.0719137 0.15855 0.269081 
+Latency(us)/Energy(mJ): 2442 10.9787 1.25115 1.9553 3.59613 
+Latency(us)/Energy(mJ): 29 0 0 0 0 
+Latency(us)/Energy(mJ): 204 0.886866 0.128675 0.14291 0.283572 
+Latency(us)/Energy(mJ): 89 0.535292 0.0776653 0.0862572 0.171158 
+Latency(us)/Energy(mJ): 1811 9.08996 1.43383 1.43093 2.87 
+Latency(us)/Energy(mJ): 29 0 0 0 0 
+Latency(us)/Energy(mJ): 1592 7.90009 1.45242 1.19844 2.42206 
+Latency(us)/Energy(mJ): 29 0 0 0 0 
+Latency(us)/Energy(mJ): 1135 5.82181 1.16307 0.861656 1.75409 
+Latency(us)/Energy(mJ): 32 0.596971 0.121859 0.0870583 0.179251 
+Latency(us)/Energy(mJ): 44 0.391092 0.079833 0.0570342 0.117432 
+Latency(us)/Energy(mJ): 1587 7.79639 1.59703 1.14095 2.34484 
+Latency(us)/Energy(mJ): 31 0.611482 0.123034 0.0878976 0.187661 
+Latency(us)/Energy(mJ): 1 0 0 0 0 
+Latency(us)/Energy(mJ): 4985 29.5895 6.22621 3.78047 9.47814 
+Latency(us)/Energy(mJ): 30 0 0 0 0 
+Latency(us)/Energy(mJ): 1 0 0 0 0 
+Latency(us)/Energy(mJ): 2159 15.2587 3.3391 1.71759 5.10584 
+Latency(us)/Energy(mJ): 204 1.31854 0.286395 0.143291 0.445462 
+0.3094 - "n02124075 Egyptian cat"
+0.1761 - "n02123159 tiger cat"
+0.1221 - "n02123045 tabby, tabby cat"
+0.1132 - "n02119022 red fox, Vulpes vulpes"
+0.0421 - "n02085620 Chihuahua"

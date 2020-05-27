@@ -11,7 +11,7 @@ To install, create a build folder:
     cd build
     cmake .. -DCUDA_USE_STATIC_CUDA_RUNTIME=OFF
 
-Make sure to install all the required dependencies from the original Caffe installation guide below before you compile Caffe or after you get errors :). To replicate the results in the paper, make sure CUDNN is installed and configured for Caffe (i.e., by uncommenting the ``USE_CUDNN :=1`` flag in ``Makefile.config``).
+Make sure to install all the required dependencies from the original Caffe installation guide below before you compile Caffe or after you get errors :). Same goes for data, mean files, etc.. To replicate the results in the paper, make sure CUDNN is installed and configured for Caffe (i.e., by uncommenting the ``USE_CUDNN :=1`` flag in ``Makefile.config``).
 
 ## Step 3
 Download your desired weights or train them in the form of a ``.caffemodel`` and put them in the ``models`` folder. You also need the lowrank version of your model. We have provided a few python scripts in ``models/lowrank`` that convert the DNNs used in the paper to their lowrank version. However, extending this technique to other DNNs is very easy by just using one of these scripts as a template.
@@ -35,14 +35,14 @@ In the same folder, you find the run-cudnn.sh, which has the following format (a
       $weight \
       /home/nvidia/caffe-build/data/ilsvrc12/imagenet_mean.binaryproto \
       /home/nvidia/caffe-build/data/ilsvrc12/synset_words.txt \
-      /home/nvidia/caffe-build/examples/images/cat.jpg \
-      15 \	     # Number of iterations (for research purposes and getting the average execution times)
+      /home/nvidia/caffe-build/examples/images/cat.jpg \ # The data you want to use
+      15 \	         # Number of iterations (for research purposes and getting the average execution times)
       25 \           # Deadline
       5 \            # Initial slack (useless for now)
       DVFS configs \ # The index for possible DVFS configurations.
-      $HASH_TABLE \
-      $lowrank_proto \
-      $lowrank_weight'
+      $HASH_TABLE \     # The hash tables
+      $lowrank_proto \  # The structure of the lowrank
+      $lowrank_weight'  # The weights of the lowrank
     
 
 You can also use the ``parrallel.sh`` to run multiple instances of DNNs at the same time.

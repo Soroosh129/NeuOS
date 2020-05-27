@@ -1,0 +1,13 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+includedir=${prefix}/include/energymon
+libdir=${prefix}/lib
+
+Name: energymon-cray-pm
+Description: EnergyMon implementations for Cray Power Monitoring
+Version: 0.2.0
+Requires: 
+Requires.private: 
+Cflags: -I${includedir}
+Libs: -L${libdir} -lenergymon-cray-pm
+Libs.private: 

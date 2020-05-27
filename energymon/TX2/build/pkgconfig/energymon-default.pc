@@ -1,0 +1,13 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+includedir=${prefix}/include/energymon
+libdir=${prefix}/lib
+
+Name: energymon-default
+Description: EnergyMon implementation for ODROID systems
+Version: 0.2.0
+Requires: 
+Requires.private: 
+Cflags: -I${includedir}
+Libs: -L${libdir} -lenergymon-default
+Libs.private: -lpthread

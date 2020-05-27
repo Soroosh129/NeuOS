@@ -1,0 +1,1 @@
+/usr/bin/cc  -fPIC  -Wall -Wno-unknown-pragmas -Wextra -pedantic -std=gnu99 -O3 -DNDEBUG  -shared -Wl,-soname,libenergymon-shmem.so -o ../lib/libenergymon-shmem.so CMakeFiles/energymon-shmem.dir/energymon-shmem.c.o CMakeFiles/energymon-shmem.dir/__/src/energymon-util.c.o 

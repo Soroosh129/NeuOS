@@ -1,0 +1,13 @@
+prefix=/home/nvidia/energymon/build
+exec_prefix=${prefix}
+includedir=/home/nvidia/energymon/msr
+libdir=${prefix}/lib
+
+Name: energymon-msr
+Description: EnergyMon implementation for Intel Model Specific Register
+Version: 0.2.0
+Requires: 
+Requires.private: 
+Cflags: -I/home/nvidia/energymon/inc -I${includedir}
+Libs: -L${libdir} -lenergymon-msr
+Libs.private: 

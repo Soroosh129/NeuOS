@@ -1,0 +1,29 @@
+version: 1.0.{build}-{branch}
+
+environment:
+  matrix:
+    - GENERATOR: "MinGW Makefiles"
+
+configuration:
+  - Debug
+  - Release
+
+before_build:
+  # TODO: Install optional dependencies like hidapi-libusb, libusb-1.0, libftdi
+  # Workaround for CMake not wanting sh.exe on PATH for MinGW
+  - set PATH=%PATH:C:\Program Files\Git\usr\bin;=%
+  - set PATH=C:\MinGW\bin;%PATH%
+  - mkdir _build
+  - cd _build
+
+build_script:
+  # Test with stricter flags
+  - set CFLAGS="-D_FORTIFY_SOURCE=2 -fstack-protector -g3 -pedantic -W -Wall -Wbad-function-cast -Wcast-align \
+      -Wcast-qual -Wdisabled-optimization -Wendif-labels -Wfloat-equal -Wformat=2 -Wformat-nonliteral -Winline \
+      -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-unused-parameter -Wpointer-arith -Wshadow \
+      -Wstrict-prototypes -Wstack-protector -Wswitch -Wundef -Wwrite-strings -std=c99"
+  - cmake -G "%GENERATOR%" -DCMAKE_BUILD_TYPE=%CONFIGURATION% -DCMAKE_C_FLAGS="%CFLAGS%" ..
+  - cmake --build . --config %CONFIGURATION%
+
+test_script:
+  - ctest -VV --config %CONFIGURATION%

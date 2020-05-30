@@ -13,7 +13,8 @@
 #include <stdlib.h>
 using namespace std;
 
-
+/* These paths are specific to TX2. The AGX paths will follow soon. */
+/* You can also check NVIDIA's Thermal Design Guide for the equivalant paths on other boards. */
 #define BIG_CLUSTER_GOVERNOR "/sys/devices/system/cpu/cpufreq/policy1/scaling_governor"
 #define BIG_CLUSTER_FREQ "/sys/devices/system/cpu/cpufreq/policy1/scaling_setspeed"
 #define BIG_CLUSTER_MAX "/sys/devices/system/cpu/cpufreq/policy1/scaling_max_freq"

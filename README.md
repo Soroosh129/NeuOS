@@ -16,17 +16,17 @@ Install Energymon located in ``energymon/TX2`` (the AGX version will follow soon
     cmake --version
 You can download the latest version of CMake and compile it yourself from https://cmake.org/download/ .
 
+Make sure to install all the required dependencies from the original Caffe installation guide below before you compile Caffe or after you get errors :). The suggested dependencies can be installed by:
+
+    sudo apt install libgflags-dev libgoogle-glog-dev protobuf-compiler liblmdb-dev libleveldb-dev libsnappy-dev libatlas-base-dev doxygen
+
+Same goes for data, mean files, etc. which will come later. 
+
 To install NeuOS, create a ``build`` folder:
 
     mkdir build
     cd build
     cmake .. -DCUDA_USE_STATIC_CUDA_RUNTIME=OFF
-
-Make sure to install all the required dependencies from the original Caffe installation guide below before you compile Caffe or after you get errors :). The suggested dependencies can be installed by:
-
-    sudo apt install libgflags-dev libgoogle-glog-dev protobuf-compiler liblmdb-dev libleveldb-dev libsnappy-dev libatlas-base-dev doxygen
-
-Same goes for data, mean files, etc.. 
 
 To replicate the results in the paper, make sure CUDNN is installed and configured for Caffe (i.e., by uncommenting the ``USE_CUDNN :=1`` flag in ``Makefile.config``).
 

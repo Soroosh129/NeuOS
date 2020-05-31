@@ -82,6 +82,8 @@ Please cite NeuOS in your publications if it helps your research (please also ci
 
     coming soon
 
+---
+
 # Caffe
 
 [![Build Status](https://travis-ci.org/BVLC/caffe.svg?branch=master)](https://travis-ci.org/BVLC/caffe)

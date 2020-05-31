@@ -53,6 +53,9 @@ We have created a custom ``classification.cpp``, along with its own makefile in 
 Make sure to modify the ``Makefile`` to reflect the folder structure on your device.
 
 ## Step 6
+Go to the ``power-utility`` folder and run ``sudo ./enable-dvfs.sh`` for the appropriate platform.
+
+## Step 6
 In the same folder, you find the ``run-cudnn.sh``, which has the following format (also note the preloading of your newly compiled Caffe, which is now the default TX2/AGX folder structure but should be changed according to your installation):
 
     ./classify.bin \

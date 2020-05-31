@@ -2,7 +2,7 @@
 This is an implementation of the paper "A Latency-Predictable Multi-Dimensional Optimization Framework forDNN-driven Autonomous Systems". 
 
 ## Step 1
-Install Energymon located in ``energymon/TX2`` (the AGX version will follow soon):
+Install Energymon located in ``energymon/TX2`` for Jetson TX2 and in ``energymon/AGX`` for Jetson AGX Xavier:
 
     mkdir build
     cd build

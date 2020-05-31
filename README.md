@@ -73,7 +73,7 @@ In the same folder, you find the ``run-cudnn.sh``, which has the following forma
       $lowrank_weight'  # The weights of the lowrank
     
 
-You can re-use ``run-cudnn.sh`` or run using your own command. You can also use the ``parrallel.sh`` to run multiple instances of DNNs at the same time. Again please make sure the paths in the scripts reflect your own absolute paths.
+You can re-use ``run-cudnn.sh`` or run using your own command. You can also use the ``parrallel.sh`` to run multiple instances of DNNs at the same time. Again please make sure the paths in the scripts reflect your own absolute paths. Also please make sure the DVFS configs point to the appropriate file (e.g., ``all-AGX.config`` for the AGX).
 
 **Please see inside the power-utility folder for some useful scripts such as enabling the DVFS adjustments by adjusting the permissions**
 

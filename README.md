@@ -17,7 +17,15 @@ To install, create a build folder:
     cd build
     cmake .. -DCUDA_USE_STATIC_CUDA_RUNTIME=OFF
 
-Make sure to install all the required dependencies from the original Caffe installation guide below before you compile Caffe or after you get errors :). Same goes for data, mean files, etc.. To replicate the results in the paper, make sure CUDNN is installed and configured for Caffe (i.e., by uncommenting the ``USE_CUDNN :=1`` flag in ``Makefile.config``).
+Make sure to install all the required dependencies from the original Caffe installation guide below before you compile Caffe or after you get errors :). The suggested dependencies can be installed by:
+
+    sudo apt install libgflags-dev libgoogle-glog-dev protobuf-compiler liblmdb-dev libleveldb-dev libsnappy-dev libatlas-base-dev doxygen
+
+Same goes for data, mean files, etc.. 
+
+To replicate the results in the paper, make sure CUDNN is installed and configured for Caffe (i.e., by uncommenting the ``USE_CUDNN :=1`` flag in ``Makefile.config``).
+
+** This version of NeuOS supports CUDA 9.2 and earlier because some functions require CUBLAS. I am working to upgrade functions to CUDA 10.1 for compatibility with the latest version of Jetpack and/or CUDA. **
 
 ## Step 3
 Download your desired weights or train them in the form of a ``.caffemodel`` and put them in the ``models`` folder. You also need the lowrank version of your model. We have provided a few python scripts in ``models/lowrank`` that convert the DNNs used in the paper to their lowrank version. However, extending this technique to other DNNs is very easy by just using one of these scripts as a template.

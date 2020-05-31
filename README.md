@@ -2,7 +2,13 @@
 This is an implementation of the paper "A Latency-Predictable Multi-Dimensional Optimization Framework forDNN-driven Autonomous Systems". 
 
 ## Step 1
-Install the energymon located in energymon/TX2 following the instructions in the README file (the AGX version will follow soon).
+Install Energymon located in ``energymon/TX2`` (the AGX version will follow soon):
+
+    mkdir build
+    cd build
+    cmake ..
+    make
+    sudo make install
 
 ## Step 2
 To install, create a build folder:

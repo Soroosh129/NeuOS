@@ -72,6 +72,8 @@ In the same folder, you find the ``run-cudnn.sh``, which has the following forma
 
 You can re-use ``run-cudnn.sh`` or run using your own command. You can also use the ``parrallel.sh`` to run multiple instances of DNNs at the same time.
 
+**Please see inside the power-utility folder for some useful scripts such as enabling the DVFS adjustments by adjusting the permissions**
+
 Please cite NeuOS in your publications if it helps your research (please also cite Caffe below):
 
     coming soon

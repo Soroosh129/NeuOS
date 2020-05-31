@@ -12,7 +12,7 @@
 #include <cstdlib>
 #include <energymon/energymon-odroid.h>
 #include <energymon/energymon-time-util.h>
-#include "setconfig.h"
+//#include "setconfig.h"
 
 using namespace caffe;  // NOLINT(build/namespaces)
 using std::string;

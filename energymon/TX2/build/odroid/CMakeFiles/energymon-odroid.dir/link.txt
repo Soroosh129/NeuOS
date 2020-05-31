@@ -1,1 +1,2 @@
-/usr/bin/cc  -fPIC  -Wall -Wno-unknown-pragmas -Wextra -pedantic -std=gnu99 -O3 -DNDEBUG  -shared -Wl,-soname,libenergymon-odroid.so -o ../lib/libenergymon-odroid.so CMakeFiles/energymon-odroid.dir/energymon-odroid.c.o CMakeFiles/energymon-odroid.dir/__/src/energymon-util.c.o CMakeFiles/energymon-odroid.dir/__/src/energymon-time-util.c.o CMakeFiles/energymon-odroid.dir/__/src/ptime/ptime.c.o -lpthread 
+/usr/bin/ar qc ../lib/libenergymon-odroid.a  CMakeFiles/energymon-odroid.dir/energymon-odroid.c.o CMakeFiles/energymon-odroid.dir/__/src/energymon-util.c.o CMakeFiles/energymon-odroid.dir/__/src/energymon-time-util.c.o CMakeFiles/energymon-odroid.dir/__/src/ptime/ptime.c.o
+/usr/bin/ranlib ../lib/libenergymon-odroid.a

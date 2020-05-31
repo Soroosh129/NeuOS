@@ -1,1 +1,0 @@
-/usr/bin/cc   -Wall -Wno-unknown-pragmas -Wextra -pedantic -std=gnu99 -O3 -DNDEBUG   CMakeFiles/energymon-shmem-example.dir/example/energymon-shmem-example.c.o  -o ../bin/energymon-shmem-example -rdynamic ../lib/libenergymon-default.so -lpthread -Wl,-rpath,/home/nvidia/energymon/build/lib 

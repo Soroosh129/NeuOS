@@ -1,1 +1,0 @@
-/usr/bin/cc  -fPIC  -Wall -Wno-unknown-pragmas -Wextra -pedantic -std=gnu99 -O3 -DNDEBUG  -shared -Wl,-soname,libenergymon-msr.so -o ../lib/libenergymon-msr.so CMakeFiles/energymon-msr.dir/energymon-msr.c.o CMakeFiles/energymon-msr.dir/__/src/energymon-util.c.o 

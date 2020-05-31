@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -10,23 +10,23 @@
 energymon.h
 ../inc/energymon.h
 
+../inc/energymon-time-util.h
+inttypes.h
+-
+time.h
+-
+
+../inc/energymon-util.h
+stddef.h
+-
+
 ../inc/energymon.h
 inttypes.h
 -
 stddef.h
 -
 
-../src/energymon-time-util.h
-inttypes.h
--
-time.h
--
-
-../src/energymon-util.h
-stddef.h
--
-
-/home/nvidia/energymon/odroid/energymon-odroid.c
+/media/SSD/Projects/NeuOS/energymon/TX2/odroid/energymon-odroid.c
 dirent.h
 -
 errno.h
@@ -48,53 +48,53 @@ time.h
 unistd.h
 -
 energymon.h
-/home/nvidia/energymon/odroid/energymon.h
+/media/SSD/Projects/NeuOS/energymon/TX2/odroid/energymon.h
 energymon-odroid.h
-/home/nvidia/energymon/odroid/energymon-odroid.h
+/media/SSD/Projects/NeuOS/energymon/TX2/odroid/energymon-odroid.h
 energymon-time-util.h
-/home/nvidia/energymon/odroid/energymon-time-util.h
+/media/SSD/Projects/NeuOS/energymon/TX2/odroid/energymon-time-util.h
 energymon-util.h
-/home/nvidia/energymon/odroid/energymon-util.h
+/media/SSD/Projects/NeuOS/energymon/TX2/odroid/energymon-util.h
 energymon-default.h
-/home/nvidia/energymon/odroid/energymon-default.h
+/media/SSD/Projects/NeuOS/energymon/TX2/odroid/energymon-default.h
 
-/home/nvidia/energymon/odroid/energymon-odroid.h
+/media/SSD/Projects/NeuOS/energymon/TX2/odroid/energymon-odroid.h
 inttypes.h
 -
 stddef.h
 -
 energymon.h
-/home/nvidia/energymon/odroid/energymon.h
+/media/SSD/Projects/NeuOS/energymon/TX2/odroid/energymon.h
 
-/home/nvidia/energymon/src/energymon-time-util.c
+/media/SSD/Projects/NeuOS/energymon/TX2/src/energymon-time-util.c
 inttypes.h
 -
 time.h
 -
 energymon-time-util.h
-/home/nvidia/energymon/src/energymon-time-util.h
+/media/SSD/Projects/NeuOS/energymon/TX2/src/energymon-time-util.h
 ptime/ptime.h
-/home/nvidia/energymon/src/ptime/ptime.h
+/media/SSD/Projects/NeuOS/energymon/TX2/src/ptime/ptime.h
 
-/home/nvidia/energymon/src/energymon-time-util.h
+/media/SSD/Projects/NeuOS/energymon/TX2/src/energymon-time-util.h
 inttypes.h
 -
 time.h
 -
 
-/home/nvidia/energymon/src/energymon-util.c
+/media/SSD/Projects/NeuOS/energymon/TX2/src/energymon-util.c
 errno.h
 -
 stddef.h
 -
 energymon-util.h
-/home/nvidia/energymon/src/energymon-util.h
+/media/SSD/Projects/NeuOS/energymon/TX2/src/energymon-util.h
 
-/home/nvidia/energymon/src/energymon-util.h
+/media/SSD/Projects/NeuOS/energymon/TX2/src/energymon-util.h
 stddef.h
 -
 
-/home/nvidia/energymon/src/ptime/ptime.c
+/media/SSD/Projects/NeuOS/energymon/TX2/src/ptime/ptime.c
 errno.h
 -
 inttypes.h
@@ -104,7 +104,7 @@ stdlib.h
 time.h
 -
 ptime.h
-/home/nvidia/energymon/src/ptime/ptime.h
+/media/SSD/Projects/NeuOS/energymon/TX2/src/ptime/ptime.h
 mach/clock.h
 -
 mach/mach.h
@@ -112,7 +112,7 @@ mach/mach.h
 Windows.h
 -
 
-/home/nvidia/energymon/src/ptime/ptime.h
+/media/SSD/Projects/NeuOS/energymon/TX2/src/ptime/ptime.h
 inttypes.h
 -
 time.h

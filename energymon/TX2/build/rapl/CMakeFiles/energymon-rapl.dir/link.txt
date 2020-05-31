@@ -1,1 +1,0 @@
-/usr/bin/cc  -fPIC  -Wall -Wno-unknown-pragmas -Wextra -pedantic -std=gnu99 -O3 -DNDEBUG  -shared -Wl,-soname,libenergymon-rapl.so -o ../lib/libenergymon-rapl.so CMakeFiles/energymon-rapl.dir/energymon-rapl.c.o CMakeFiles/energymon-rapl.dir/__/src/energymon-util.c.o 

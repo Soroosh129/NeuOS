@@ -1,1 +1,0 @@
-/usr/bin/cc  -fPIC  -Wall -Wno-unknown-pragmas -Wextra -pedantic -std=gnu99 -O3 -DNDEBUG  -shared -Wl,-soname,libenergymon-dummy.so -o ../lib/libenergymon-dummy.so CMakeFiles/energymon-dummy.dir/energymon-dummy.c.o CMakeFiles/energymon-dummy.dir/__/src/energymon-util.c.o 

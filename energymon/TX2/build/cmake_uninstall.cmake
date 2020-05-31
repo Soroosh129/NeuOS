@@ -1,8 +1,8 @@
-if(NOT EXISTS "/home/nvidia/energymon/build/install_manifest.txt")
-  message(FATAL_ERROR "Cannot find install manifest: /home/nvidia/energymon/build/install_manifest.txt")
-endif(NOT EXISTS "/home/nvidia/energymon/build/install_manifest.txt")
+if(NOT EXISTS "/media/SSD/Projects/NeuOS/energymon/TX2/build/install_manifest.txt")
+  message(FATAL_ERROR "Cannot find install manifest: /media/SSD/Projects/NeuOS/energymon/TX2/build/install_manifest.txt")
+endif(NOT EXISTS "/media/SSD/Projects/NeuOS/energymon/TX2/build/install_manifest.txt")
 
-file(READ "/home/nvidia/energymon/build/install_manifest.txt" files)
+file(READ "/media/SSD/Projects/NeuOS/energymon/TX2/build/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 foreach(file ${files})
   message(STATUS "Uninstalling $ENV{DESTDIR}${file}")

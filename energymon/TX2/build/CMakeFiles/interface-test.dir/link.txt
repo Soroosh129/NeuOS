@@ -1,1 +1,0 @@
-/usr/bin/cc   -Wall -Wno-unknown-pragmas -Wextra -pedantic -std=gnu99 -O3 -DNDEBUG   CMakeFiles/interface-test.dir/test/interface_test.c.o  -o bin/interface-test -rdynamic lib/libenergymon-default.so -lpthread -Wl,-rpath,/home/nvidia/energymon/build/lib 

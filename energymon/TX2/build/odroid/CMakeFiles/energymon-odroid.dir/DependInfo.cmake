@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/nvidia/energymon/src/energymon-time-util.c" "/home/nvidia/energymon/build/odroid/CMakeFiles/energymon-odroid.dir/__/src/energymon-time-util.c.o"
-  "/home/nvidia/energymon/src/energymon-util.c" "/home/nvidia/energymon/build/odroid/CMakeFiles/energymon-odroid.dir/__/src/energymon-util.c.o"
-  "/home/nvidia/energymon/src/ptime/ptime.c" "/home/nvidia/energymon/build/odroid/CMakeFiles/energymon-odroid.dir/__/src/ptime/ptime.c.o"
-  "/home/nvidia/energymon/odroid/energymon-odroid.c" "/home/nvidia/energymon/build/odroid/CMakeFiles/energymon-odroid.dir/energymon-odroid.c.o"
+  "/media/SSD/Projects/NeuOS/energymon/TX2/src/energymon-time-util.c" "/media/SSD/Projects/NeuOS/energymon/TX2/build/odroid/CMakeFiles/energymon-odroid.dir/__/src/energymon-time-util.c.o"
+  "/media/SSD/Projects/NeuOS/energymon/TX2/src/energymon-util.c" "/media/SSD/Projects/NeuOS/energymon/TX2/build/odroid/CMakeFiles/energymon-odroid.dir/__/src/energymon-util.c.o"
+  "/media/SSD/Projects/NeuOS/energymon/TX2/src/ptime/ptime.c" "/media/SSD/Projects/NeuOS/energymon/TX2/build/odroid/CMakeFiles/energymon-odroid.dir/__/src/ptime/ptime.c.o"
+  "/media/SSD/Projects/NeuOS/energymon/TX2/odroid/energymon-odroid.c" "/media/SSD/Projects/NeuOS/energymon/TX2/build/odroid/CMakeFiles/energymon-odroid.dir/energymon-odroid.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

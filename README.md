@@ -16,11 +16,15 @@ Install Energymon located in ``energymon/TX2`` (the AGX version will follow soon
     cmake --version
 You can download the latest version of CMake and compile it yourself from https://cmake.org/download/ .
 
-Make sure to install all the required dependencies from the original Caffe installation guide below before you compile Caffe or after you get errors :). The suggested dependencies can be installed by:
+You also need a fairly recent OpenCV (the one provided by NVIDIA in Jetpack doesn't cut it). Thankfully, there are very nice tutorials available for compiling your own OpenCV on the Jetson platforms at https://github.com/jetsonhacks/buildOpenCVXavier for AGX and at https://github.com/jetsonhacks/buildOpenCVTX2 for TX2 (JetsonHacks has all sorts of cool tutorials for these platforms).
+
+We have tested NeuOS on Jetpack 4.3 (L4T 32.3.1) with CUDA 10.0. Future releases might not work. Try at your own risk. 
+
+Please also make sure to install all the required dependencies from the original Caffe installation guide below before you compile Caffe or after you get errors :). The suggested dependencies can be installed by:
 
     sudo apt install libgflags-dev libgoogle-glog-dev protobuf-compiler liblmdb-dev libleveldb-dev libsnappy-dev libatlas-base-dev doxygen
 
-Same goes for data, mean files, etc. which will come later. 
+Same goes for data, mean files, etc. which will come later (familierizing yourself with Caffe can help you better understand this setup process). 
 
 To install NeuOS, create a ``build`` folder:
 

@@ -35,10 +35,10 @@ int energymon_get_default(energymon* em) {
 //#define INA231_DEFAULT_UPDATE_INTERVAL_US 263808
 
 #define INA3221_DIR "/sys/bus/i2c/drivers/ina3221x"
-#define INA3221_IN_POWER INA3221_DIR"/0-0041/iio_device/in_power2_input"
-#define INA3221_GPU_POWER INA3221_DIR"/0-0040/iio_device/in_power0_input"
-#define INA3221_CPU_POWER INA3221_DIR"/0-0040/iio_device/in_power1_input"
-#define INA3221_DDR_POWER INA3221_DIR"/0-0041/iio_device/in_power1_input"
+#define INA3221_IN_POWER INA3221_DIR"/1-0041/iio_device/in_power2_input"
+#define INA3221_GPU_POWER INA3221_DIR"/1-0040/iio_device/in_power0_input"
+#define INA3221_CPU_POWER INA3221_DIR"/1-0040/iio_device/in_power1_input"
+#define INA3221_DDR_POWER INA3221_DIR"/1-0041/iio_device/in_power1_input"
 #define INA3221_DEFAULT_UPDATE_INTERVAL_US 110 //Default ina3221
 //#define INA3221_DEFAULT_UPDATE_INTERVAL_US 1100 //Default ina3221
 //#define INA3221_DEFAULT_UPDATE_INTERVAL_US 1000

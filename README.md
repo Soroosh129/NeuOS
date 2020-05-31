@@ -11,7 +11,12 @@ Install Energymon located in ``energymon/TX2`` (the AGX version will follow soon
     sudo make install
 
 ## Step 2
-To install, create a build folder:
+**Before continueing, please make sure your cmake is at least version 3.12.2. You can check this by running:**
+    
+    cmake --version
+You can download the latest version of CMake and compile it yourself from https://cmake.org/download/ .
+
+To install NeuOS, create a ``build`` folder:
 
     mkdir build
     cd build
@@ -25,7 +30,6 @@ Same goes for data, mean files, etc..
 
 To replicate the results in the paper, make sure CUDNN is installed and configured for Caffe (i.e., by uncommenting the ``USE_CUDNN :=1`` flag in ``Makefile.config``).
 
-**This version of NeuOS supports CUDA 9.2 and earlier because some functions require CUBLAS. I am working to upgrade functions to CUDA 10.1 for compatibility with the latest version of Jetpack and/or CUDA.**
 
 ## Step 3
 Download your desired weights or train them in the form of a ``.caffemodel`` and put them in the ``models`` folder. You also need the lowrank version of your model. We have provided a few python scripts in ``models/lowrank`` that convert the DNNs used in the paper to their lowrank version. However, extending this technique to other DNNs is very easy by just using one of these scripts as a template.

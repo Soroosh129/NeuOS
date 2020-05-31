@@ -53,6 +53,9 @@ We have created a custom ``classification.cpp``, along with its own makefile in 
 Make sure to modify the ``Makefile`` to reflect the folder structure on your device.
 
 ## Step 6
+Go to the ``power-utility`` folder and run ``sudo ./enable-dvfs.sh`` for the appropriate platform.
+
+## Step 7
 In the same folder, you find the ``run-cudnn.sh``, which has the following format (also note the preloading of your newly compiled Caffe, which is now the default TX2/AGX folder structure but should be changed according to your installation):
 
     ./classify.bin \
@@ -70,7 +73,7 @@ In the same folder, you find the ``run-cudnn.sh``, which has the following forma
       $lowrank_weight'  # The weights of the lowrank
     
 
-You can re-use ``run-cudnn.sh`` or run using your own command. You can also use the ``parrallel.sh`` to run multiple instances of DNNs at the same time.
+You can re-use ``run-cudnn.sh`` or run using your own command. You can also use the ``parrallel.sh`` to run multiple instances of DNNs at the same time. Again please make sure the paths in the scripts reflect your own absolute paths.
 
 **Please see inside the power-utility folder for some useful scripts such as enabling the DVFS adjustments by adjusting the permissions**
 

@@ -74,6 +74,10 @@ You can re-use ``run-cudnn.sh`` or run using your own command. You can also use 
 
 **Please see inside the power-utility folder for some useful scripts such as enabling the DVFS adjustments by adjusting the permissions**
 
+
+## Special Instructions for AGX
+Currently, there are some non-trivial differences between the implementation of AGX and TX2. The project by default works with TX2 out of the box. For AGX, I have put the different source files in a separate folder called ``AGX`` with the correct structure. If you are running and compiling NeuOS on the AGX Xavier, copy and replace the files in the AGX folder with the same structure into Caffe.
+
 Please cite NeuOS in your publications if it helps your research (please also cite Caffe below):
 
     coming soon

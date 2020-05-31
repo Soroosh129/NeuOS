@@ -27,6 +27,7 @@ To install NeuOS, create a ``build`` folder:
     mkdir build
     cd build
     cmake .. -DCUDA_USE_STATIC_CUDA_RUNTIME=OFF
+    make
 
 To replicate the results in the paper, make sure CUDNN is installed and configured for Caffe (i.e., by uncommenting the ``USE_CUDNN :=1`` flag in ``Makefile.config``).
 

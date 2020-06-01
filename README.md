@@ -45,18 +45,20 @@ You need a hash table for DVFS configurations and their impact on performance an
 You also need a file containing all the possible DVFS configurations for your system, including memory, etc. in a partially sorted format. We have provided an ``all-TX2.config`` for the Jetson TX2 and an ``all-AGX.config`` for Jetson AGX Xavier.
 
 ## Step 5
+Go to the ``power-utility`` folder and run ``sudo ./enable-dvfs.sh`` for the appropriate platform.
+
+## Step 6
 We have created a custom ``classification.cpp``, along with its own makefile in ``examples/triangle``:
 
     cd examples/triangle
     make
 
-Make sure to modify the ``Makefile`` to reflect the folder structure on your device.
-
-## Step 6
-Go to the ``power-utility`` folder and run ``sudo ./enable-dvfs.sh`` for the appropriate platform.
+Make sure to modify the ``Makefile`` to reflect the folder structure on your device. This will generate an executable called ``classify.bin``.
 
 ## Step 7
-In the same folder, you find the ``run-cudnn.sh``, which has the following format (also note the preloading of your newly compiled Caffe, which is now the default TX2/AGX folder structure but should be changed according to your installation):
+Because of the way NeuOS manipulates system files, the best way to run ``classify.bin`` is in the root environment, for example, by using ``sudo -i``.
+
+In the same folder as ``classify.bin``, you find the ``run-cudnn.sh``, which has the following format (also note the preloading of your newly compiled Caffe, which is now the default TX2/AGX folder structure but should be changed according to your installation):
 
     ./classify.bin \
       $proto \

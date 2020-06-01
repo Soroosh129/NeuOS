@@ -32,7 +32,7 @@ echo "loading weight: $weight"
 echo "loading prototxt: $proto"
 
 #./build/tools/caffe test --model=models/bvlc_alexnet/deploy.prototxt --weights=models/bvlc_alexnet/bvlc_alexnet.caffemodel --iterations=10 --gpu 0
-LD_PRELOAD="/usr/local/lib/libenergymon-odroid.so /home/nvidia/NeuOS/build/lib/libcaffe.so.1.0.0" \
+LD_PRELOAD="/home/nvidia/NeuOS/build/lib/libcaffe.so.1.0.0" \
   ./classify.bin \
   $proto \
   $weight \

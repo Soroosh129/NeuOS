@@ -6,45 +6,47 @@
 #include <sstream>
 #include <vector>
 #include <fstream>
+#include <utility>
+#include <dirent.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <inttypes.h>
 using namespace std;
 
 //#define INA3221_DIR "/sys/bus/i2c/drivers/ina3221x"
 #define CLUSTER_GOVERNOR "/sys/devices/system/cpu/cpufreq/policy0/scaling_governor"
 #define CLUSTER_FREQ "/sys/devices/system/cpu/cpufreq/policy0/scaling_setspeed"
+#define CLUSTER_MAX "/sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq"                                                                                                   
+#define CLUSTER_MIN "/sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq"
+
 #define GPU_GOVERNOR "/sys/devices/17000000.gv11b/devfreq/17000000.gv11b/governor"
 #define GPU_FREQ "/sys/devices/17000000.gv11b/devfreq/17000000.gv11b/userspace/set_freq"
 #define GPU_ONLINE "/sys/devices/gpu.0/force_idle"
+#define GPU_MAX "/sys/devices/17000000.gv11b/devfreq/17000000.gv11b/max_freq"  
+#define GPU_MIN "/sys/devices/17000000.gv11b/devfreq/17000000.gv11b/min_freq"                                                                                                                                                                                 
+
 #define CPU_ONLINE "/sys/devices/system/cpu/cpu%d/online"
 #define EMC_FREQ "/sys/kernel/debug/bpmp/debug/clk/emc/rate"
 #define EMC_MIN "/sys/kernel/debug/bpmp/debug/clk/emc/min_rate"
 #define EMC_MAX "/sys/kernel/debug/bpmp/debug/clk/emc/max_rate"
 
 int setClusterFreq(uint64_t freq){
-	FILE * f_gov = fopen(CLUSTER_GOVERNOR, "r");
-	if(f_gov == NULL){
-		cerr << "File open failure"  << endl;
-		return -1;
-	}
-	char buffer[128];
-	fgets(buffer, 128, f_gov);
-	// The last char is '\n', should switch it to '\0'
-	buffer[strlen(buffer)-1]='\0';
-	cout << buffer << endl;
-	char mode [] = "userspace";
-	if(strcmp(buffer, mode)!=0){
-		cout << "Need privilege to change BIG governor!"  << endl;
-		fclose(f_gov);
-		return -1;
-	}
-	FILE* f_freq = fopen(CLUSTER_FREQ,"w");
-	if(f_freq == NULL){
-		cerr << "File open failure for CPU freq"  << endl;
-		return -1;
-	}
-	const char* tmp = to_string(freq).c_str();
-	fputs(tmp, f_freq);
-	fclose(f_gov);
-	fclose(f_freq);
+        FILE* f_freq = fopen(CLUSTER_FREQ,"w");
+        FILE* f_max = fopen(CLUSTER_MAX, "w");
+        FILE* f_min = fopen(CLUSTER_MIN, "w");
+        if(f_freq == NULL || f_max ==NULL || f_min ==NULL){
+	                fprintf(stderr, "File open failure\n");
+		                return -1;
+			        }
+        char buff[128];
+        sprintf(buff, "%" PRIu64, freq);
+        fputs(buff, f_freq);
+        fputs(buff, f_min);
+        fputs(buff, f_max);
+        fclose(f_freq);
+        fclose(f_min);
+        fclose(f_max);	
 	return 0;
 }
 int setCoreOnline(int core, int flag){

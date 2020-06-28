@@ -86,13 +86,13 @@ Currently, there are some non-trivial differences between the implementation of 
 Please cite NeuOS in your publications if it helps your research (please also cite Caffe below):
 
     @inproceedings {soroush2020neuos,
-    title = {NeuOS: A Latency-Predictable Multi-Dimensional Optimization Framework for DNN-driven Autonomous Systems},
-    booktitle = {2020 {USENIX} Annual Technical Conference ({USENIX} {ATC} 20)},
-    year = {2020},
-    url = {https://www.usenix.org/conference/atc20/presentation/bateni},
-    publisher = {{USENIX} Association},
-    month = jul,
-}
+        title = {NeuOS: A Latency-Predictable Multi-Dimensional Optimization Framework for DNN-driven Autonomous Systems},
+        booktitle = {2020 {USENIX} Annual Technical Conference ({USENIX} {ATC} 20)},
+        year = {2020},
+        url = {https://www.usenix.org/conference/atc20/presentation/bateni},
+        publisher = {{USENIX} Association},
+        month = jul,
+    }
 
 ---
 

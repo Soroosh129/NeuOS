@@ -56,6 +56,15 @@ We have created a custom ``classification.cpp``, along with its own makefile in 
 Make sure to modify the ``Makefile`` to reflect the folder structure on your device. This will generate an executable called ``classify.bin``.
 
 ## Step 7
+Currently, the implementation is hard coded to read the following three files:
+
+    /home/nvidia/approxfile
+    /home/nvidia/datafile
+    /home/nvidia/concurrfile
+
+Please make sure you have created them before going to the next step (thanks to @liusiping10).
+
+## Step 8
 Because of the way NeuOS manipulates system files, the best way to run ``classify.bin`` is in the root environment, for example, by using ``sudo -i``.
 
 In the same folder as ``classify.bin``, you find the ``run-cudnn.sh``, which has the following format (also note the preloading of your newly compiled Caffe, which is now the default TX2/AGX folder structure but should be changed according to your installation):

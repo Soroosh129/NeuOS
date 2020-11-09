@@ -43,7 +43,7 @@ int setBigClusterFreq(uint64_t freq){
 	FILE* f_max = fopen(BIG_CLUSTER_MAX, "w");
 	FILE* f_min = fopen(BIG_CLUSTER_MIN, "w");
 	if(f_freq == NULL || f_max ==NULL || f_min ==NULL){
-		fprintf(stderr, "File open failure\n");
+		fprintf(stderr, "File open failure (setBigClusterFreq)\n");
 		return -1;
 	}
 	char buff[128];
@@ -61,7 +61,7 @@ int setLittleClusterFreq(uint64_t freq){
 	FILE* f_max = fopen(LITTLE_CLUSTER_MAX, "w");
 	FILE* f_min = fopen(LITTLE_CLUSTER_MIN, "w");
 	if(f_freq == NULL || f_max ==NULL || f_min ==NULL){
-		fprintf(stderr, "File open failure\n");
+		fprintf(stderr, "File open failure (setLittleClusterFreq)\n");
 		return -1;
 	}
 	char buff[128];
@@ -125,7 +125,7 @@ int setBigCoresOnline(int mask[]){
 		sprintf(buffer, CPU_ONLINE, bigIdx[i]);
 		FILE* f_online=fopen(buffer,"w");
 		if(f_online==NULL){
-			fprintf(stderr, "Failed to set small cores online\n");
+			fprintf(stderr, "Failed to set big cores online\n");
 			return -1;
 		}
 		if(mask[i]==0){
@@ -146,7 +146,7 @@ int setBigCoresOnline(int cores){
 		sprintf(buffer, CPU_ONLINE, bigIdx[i]);
 		FILE* f_online=fopen(buffer,"w");
 		if(f_online==NULL){
-			fprintf(stderr, "Failed to set small cores online\n");
+			fprintf(stderr, "Failed to set big cores online\n");
 			return -1;
 		}
 		if(i>=cores){
@@ -194,7 +194,7 @@ int setEmcFreq(uint64_t emcFreq){
 	FILE* f_max = fopen(EMC_MAX, "w");
 	FILE* f_min = fopen(EMC_MIN, "w");
 	if(f_freq == NULL || f_max ==NULL || f_min ==NULL){
-		fprintf(stderr, "File open failure\n");
+		fprintf(stderr, "File open failure (setEmcFreq)\n");
 		return -1;
 	}
 	char buff[128];

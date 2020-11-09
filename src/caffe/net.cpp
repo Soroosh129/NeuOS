@@ -32,7 +32,7 @@
 #define SHM_SIZE 10
 #define DEADLINE 30
 
-//#define MAX_ACC
+#define MAX_ACC
 //#define MIN_ENG
 
 using namespace std;
@@ -671,11 +671,21 @@ namespace caffe {
 	//}
 
 	template <typename Dtype>
+                void Net<Dtype>::shutdown_config()
+                {
+		is_config_on=false;
+	}
+
+	template <typename Dtype>
 		void Net<Dtype>::warmup()
 		{
 			//for(int i=0;i<24;i++){
 			//	deadlines.push_back(i*1.0);
 			//}
+			
+			if(!is_config_on)
+				return;
+
 			srand (time(NULL));
 			int conf = rand()%configurations.size();
 			cout << "*********************Configuration size: " << configurations.size() << endl;
@@ -889,7 +899,8 @@ namespace caffe {
 						start_total = em.fread(&em, start_nj);
 						energymon_gettime_us(&ts);
 						//cout<< "Slack:" <<_slack <<" Deadline:" <<deadlines[i-1] << " History:[" <<  history[i-1][0].speedup << " " << rev_history[i-1][0]  << " " <<  history[i][0].speedup << " " << rev_history[i][0] << "]"<< endl;
-						current_configuration[i] = schedule(priority,_slack, deadlines[i],deadlines[i-1], (float)exec_us/iteration + sched_us, _Uncertainty[i],current_configuration[i-1],current_configuration[i], history[i-1], rev_history[i-1], history[i], rev_history[i]);
+						if(is_config_on)
+							current_configuration[i] = schedule(priority,_slack, deadlines[i],deadlines[i-1], (float)exec_us/iteration + sched_us, _Uncertainty[i],current_configuration[i-1],current_configuration[i], history[i-1], rev_history[i-1], history[i], rev_history[i]);
 						//cout << "Done scheduling." << endl;
 
 
@@ -899,6 +910,7 @@ namespace caffe {
 						xup_exec_us += sched_us;
 						xup_energy_mj += (double)(end_total-start_total)/1000000.0;
 
+						if(is_config_on) {
 
 						if(current_configuration[i] >= configurations.size()){
 							current_configuration[i] = configurations.size()-1;
@@ -950,6 +962,7 @@ namespace caffe {
 							setEmcFreq(cur.mem_freq);
 
 						//cout <<"############## Configuration:" << current_configuration[i] << " Uncertainty:" << _Uncertainty[i] << endl;
+						}
 					}
 				}	
 
@@ -1560,3 +1573,4 @@ namespace caffe {
 	INSTANTIATE_CLASS(Net);
 
 }  // namespace caffe
+

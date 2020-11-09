@@ -54,6 +54,19 @@ class Classifier {
 				const string& lowrank_trained_file
 				);
 
+		Classifier(const string& model_file,
+				const string& trained_file,
+				const string& mean_file,
+				const string& label_file,
+				const string& config_file,
+				const string& Uncertainty_file,
+				float slack, 
+				float period,
+				const string& lowrank_model_file,
+				const string& lowrank_trained_file,
+				int   config_mode
+				);
+
 
 		std::vector<Prediction> Classify(const cv::Mat& img, int N = 5);
 		std::vector< vector<Prediction> > ClassifyBatch(const vector< cv::Mat > imgs, int num_classes = 5);
@@ -256,6 +269,65 @@ Classifier::Classifier(const string& model_file,
 }
 
 
+Classifier::Classifier(const string& model_file,
+		const string& trained_file,
+		const string& mean_file,
+		const string& label_file,
+		const string& config_file,
+		const string& Uncertainty_file,
+		float slack,
+		float period,
+		const string& lowrank_model_file,
+		const string& lowrank_trained_file,
+		int           config_mode)
+ {
+	#ifdef CPU_ONLY
+	Caffe::set_mode(Caffe::CPU);
+	#else
+	Caffe::set_mode(Caffe::GPU);
+	#endif
+
+
+	_slack = slack;
+
+	/* Load the network. */
+	net_.reset(new Net<float>(model_file, TEST));
+	net_->lowrank.reset(new Net<float>(lowrank_model_file, TEST));
+	
+	net_->CopyTrainedLayersFrom(trained_file);
+	net_->lowrank->CopyTrainedLayersFrom(lowrank_trained_file);
+
+	
+	/* For DVFS */
+	if(config_mode)
+		net_->setup_DVFS(period,config_file,Uncertainty_file);
+	else
+		net_->shutdown_config();
+
+	CHECK_EQ(net_->num_inputs(), 1) << "Network should have exactly one input.";
+	CHECK_EQ(net_->num_outputs(), 1) << "Network should have exactly one output.";
+
+	Blob<float>* input_layer = net_->input_blobs()[0];
+	num_channels_ = input_layer->channels();
+	CHECK(num_channels_ == 3 || num_channels_ == 1)
+		<< "Input layer should have 1 or 3 channels.";
+	input_geometry_ = cv::Size(input_layer->width(), input_layer->height());
+
+	/* Load the binaryproto mean file. */
+	SetMean(mean_file);
+
+	/* Load labels. */
+	std::ifstream labels(label_file.c_str());
+	CHECK(labels) << "Unable to open labels file " << label_file;
+	string line;
+	while (std::getline(labels, line))
+		labels_.push_back(string(line));
+
+	Blob<float>* output_layer = net_->output_blobs()[0];
+	CHECK_EQ(labels_.size(), output_layer->channels())
+		<< "Number of labels is different from the output layer dimension.";
+}
+
 static bool PairCompare(const std::pair<float, int>& lhs,
 		const std::pair<float, int>& rhs) {
 	return lhs.first > rhs.first;
@@ -441,6 +513,7 @@ int main(int argc, char** argv) {
 	float slack = atof(argv[8]); // useless
 	string config_file = argv[9];
 	string Uncertainty_file = argv[10];
+	int config_mode = atoi(argv[11]); // 0:config off, 1:config on
 
 	std::cout << "---------- Prediction for "<< file << " ----------" << std::endl;
 
@@ -448,7 +521,8 @@ int main(int argc, char** argv) {
 	CHECK(!img.empty()) << "Unable to decode image " << file;
 
 	//Classifier classifier(model_file, trained_file, mean_file, label_file,config_file,Uncertainty_file,slack, period);
-	Classifier classifier(model_file, trained_file, mean_file, label_file,config_file,Uncertainty_file,slack, period,lowrank_model_file,lowrank_trained_file);
+	//Classifier classifier(model_file, trained_file, mean_file, label_file,config_file,Uncertainty_file,slack, period,lowrank_model_file,lowrank_trained_file);
+	Classifier classifier(model_file, trained_file, mean_file, label_file,config_file,Uncertainty_file,slack, period,lowrank_model_file,lowrank_trained_file,config_mode);
 
 	int N=5; // Show top 5 results
 

@@ -33,11 +33,13 @@ class Net {
   struct config 
   {
 	  int ID;
+	  //int CPU_mask[8]; // for AGX
 	  int small_mask[4];
 	  int large_mask[2];
 	  int GPU_freq;
-	  int small_freq;
+	  //int CPU_freq; // for AGX
 	  int large_freq;
+	  int small_freq;
 	  int mem_freq;
   };
   float _slack;
@@ -50,6 +52,7 @@ class Net {
   bool isWarmup = true;
   map<int,hist_ent> history[250];
   map<string,int> rev_history[250];
+  bool is_config_on = true;
 
 public:
   explicit Net(const NetParameter& param);
@@ -284,6 +287,7 @@ public:
 
  
   /*DVFS Setup */
+  void shutdown_config();
   void setup_DVFS(float period, const string conf_path, const string Uncertainty_path);
   void warmup();
   //int setConfig(config &con);

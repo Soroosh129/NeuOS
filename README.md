@@ -105,7 +105,8 @@ In the same folder as ``classify.bin``, you find the ``run-cudnn.sh``, which has
   $DVFS_configs \ # The index for possible DVFS configurations.
   $HASH_TABLE \     # The hash tables
   $lowrank_proto \  # The structure of the lowrank
-  $lowrank_weight  # The weights of the lowrank
+  $lowrank_weight \  # The weights of the lowrank
+  1 # Whether open configuration: 0-shutdown all dvfs configuration, 1-open configuration
 ```
 
 

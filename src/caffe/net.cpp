@@ -28,6 +28,7 @@
 #include "triangle/schedule.h"
 #include "DVFS/setconfig.h"
 #include <time.h>       /* time */
+#include <sys/timeb.h>  /* time */
 
 #define SHM_SIZE 10
 #define DEADLINE 30
@@ -853,7 +854,17 @@ namespace caffe {
 			std::cout << "Concorrency= " <<  local_index << std::endl; 
 
 
-
+			struct timeb t1;
+			ftime(&t1);
+		        if(t1.millitm >= 100) {
+                		cout << "timestamp: " << t1.time << "." << t1.millitm << endl;
+		        }
+		        else if(t1.millitm >= 10) {
+		                cout << "timestamp: " << t1.time << ".0" << t1.millitm << endl;
+		        }
+		        else {
+        		        cout << "timestamp: " << t1.time << ".00" << t1.millitm << endl;
+		        }
 
 
 
